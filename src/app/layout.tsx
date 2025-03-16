@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { LanguageProvider } from "../context/LanguageContext";
 import DynamicHtmlLang from "../components/DynamicHtmlLang";
 import DynamicTitle from "../components/DynamicTitle";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,6 +87,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <SpeedInsights />
         </LanguageProvider>
       </body>
     </DynamicHtmlLang>

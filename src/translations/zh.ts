@@ -36,7 +36,7 @@ const zh = {
   },
   products: {
     title: '我们的产品',
-    subtitle: '探索我们全面的高质量轴承和相关产品，旨在满足各行业和应用的需求。',
+    subtitle: '探索我们全面的高质量轴承和相关产品，设计满足各种行业和应用的需求。',
     categories: {
       ballBearings: '球轴承',
       rollerBearings: '滚子轴承',
@@ -47,7 +47,19 @@ const zh = {
     items: {
       deepGrooveBallBearing: {
         name: '深沟球轴承',
-        description: '多功能轴承类型，适用于具有径向和轴向双向负载的高速应用。',
+        description: '多功能轴承类型，适用于具有双向径向和轴向载荷的高速应用。',
+      },
+      taperedRollerBearing: {
+        name: '圆锥滚子轴承',
+        description: '设计用于处理组合载荷，这些轴承具有带有锥形滚子的锥形内外滚道。',
+      },
+      sphericalRollerBearing: {
+        name: '调心滚子轴承',
+        description: '自调心轴承，具有高负载能力，适用于发生不对中或轴偏转的应用。',
+      },
+      linearGuide: {
+        name: '直线导轨系统',
+        description: '精密工程直线运动系统，用于工业机械和自动化中的平稳、精确运动。',
       },
       // Add more product translations as needed
     },

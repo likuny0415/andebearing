@@ -49,6 +49,18 @@ const en = {
         name: 'Deep Groove Ball Bearing',
         description: 'Versatile bearing type suitable for high-speed applications with radial and axial loads in both directions.',
       },
+      taperedRollerBearing: {
+        name: 'Tapered Roller Bearing',
+        description: 'Designed to handle combined loads, these bearings have tapered inner and outer raceways with tapered rollers.',
+      },
+      sphericalRollerBearing: {
+        name: 'Spherical Roller Bearing',
+        description: 'Self-aligning bearings with high load capacity, suitable for applications where misalignment or shaft deflection occurs.',
+      },
+      linearGuide: {
+        name: 'Linear Guide System',
+        description: 'Precision-engineered linear motion systems for smooth, accurate movement in industrial machinery and automation.',
+      },
       // Add more product translations as needed
     },
   },

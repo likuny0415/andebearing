@@ -65,14 +65,15 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href={createLink('/')} className="flex items-center">
-          <span className="text-2xl font-bold text-blue-800">
-            {language === 'zh' ? '苏州北人轴承销售有限公司' : 'Suzhou Bei Ren Bearing Sales Co., Ltd.'}
+          {/* Responsive company name - different sizes for different screens */}
+          <span className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 max-w-[200px] sm:max-w-xs md:max-w-none truncate">
+            {language === 'zh' ? '苏州北人轴承销售有限公司' : 'Suzhou Bei Ren Bearing'}
           </span>
         </Link>
 
         <div className="flex items-center">
           {/* Language Switcher */}
-          <div className="mr-4 md:mr-6 z-50">
+          <div className="mr-2 md:mr-6 z-50">
             <LanguageSwitcher />
           </div>
 
@@ -80,6 +81,7 @@ export default function Header() {
           <button 
             className="md:hidden p-2 ml-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -87,7 +89,7 @@ export default function Header() {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4 lg:space-x-8">
             <Link href={createLink('/')} className={getLinkClass('/')}>
               {t('common.homepage')}
             </Link>

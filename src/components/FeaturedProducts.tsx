@@ -10,31 +10,35 @@ const featuredProducts = [
     nameKey: 'products.items.deepGrooveBallBearing.name',
     category: 'products.categories.ballBearings',
     descriptionKey: 'products.items.deepGrooveBallBearing.description',
-    imageSrc: '/images/deep-groove-ball-bearing.jpg',
+    // Use a placeholder image that doesn't rely on external files
+    imageSrc: null as string | null,
     price: 'From $12.99'
   },
   {
     id: 'tapered-roller-bearing',
-    nameKey: 'Tapered Roller Bearing',
+    nameKey: 'products.items.taperedRollerBearing.name',
     category: 'products.categories.rollerBearings',
-    descriptionKey: 'Designed to handle combined loads, these bearings have tapered inner and outer raceways with tapered rollers.',
-    imageSrc: '/images/tapered-roller-bearing.jpg',
+    descriptionKey: 'products.items.taperedRollerBearing.description',
+    // Use a placeholder image that doesn't rely on external files
+    imageSrc: null as string | null,
     price: 'From $24.99'
   },
   {
     id: 'spherical-roller-bearing',
-    nameKey: 'Spherical Roller Bearing',
+    nameKey: 'products.items.sphericalRollerBearing.name',
     category: 'products.categories.rollerBearings',
-    descriptionKey: 'Self-aligning bearings with high load capacity, suitable for applications where misalignment or shaft deflection occurs.',
-    imageSrc: '/images/spherical-roller-bearing.jpg',
+    descriptionKey: 'products.items.sphericalRollerBearing.description',
+    // Use a placeholder image that doesn't rely on external files
+    imageSrc: null as string | null,
     price: 'From $39.99'
   },
   {
     id: 'linear-guide',
-    nameKey: 'Linear Guide System',
+    nameKey: 'products.items.linearGuide.name',
     category: 'products.categories.linearMotion',
-    descriptionKey: 'Precision-engineered linear motion systems for smooth, accurate movement in industrial machinery and automation.',
-    imageSrc: '/images/linear-guide.jpg',
+    descriptionKey: 'products.items.linearGuide.description',
+    // Use a placeholder image that doesn't rely on external files
+    imageSrc: null as string | null,
     price: 'From $89.99'
   }
 ];

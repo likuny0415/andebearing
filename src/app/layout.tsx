@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LanguageProvider } from "../context/LanguageContext";
 import DynamicHtmlLang from "../components/DynamicHtmlLang";
+import DynamicTitle from "../components/DynamicTitle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// This metadata is used as a fallback and for SEO
 export const metadata: Metadata = {
   title: "Suzhou Bei Ren Bearing Sales Co., Ltd. - High-Quality Bearings for Every Industry",
   description: "Suzhou Bei Ren Bearing Sales Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries.",
@@ -32,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <LanguageProvider>
+          <DynamicTitle />
           <Header />
           <main className="flex-grow">
             {children}

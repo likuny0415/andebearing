@@ -14,6 +14,10 @@ const en = {
     sending: 'Sending...',
     thankYou: 'Thank you for your message! We\'ll get back to you as soon as possible.',
   },
+  metadata: {
+    title: 'Suzhou Bei Ren Bearing Sales Co., Ltd. - High-Quality Bearings for Every Industry',
+    description: 'Suzhou Bei Ren Bearing Sales Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries.',
+  },
   home: {
     hero: {
       title: 'Precision Bearings for Every Industry',

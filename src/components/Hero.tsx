@@ -38,18 +38,16 @@ export default function Hero() {
           
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
-              {/* Placeholder for a bearing image - you should replace this with an actual image */}
-              <div className="bg-white rounded-lg shadow-xl p-8 aspect-square flex items-center justify-center">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-3/4 h-3/4 rounded-full border-8 border-gray-300 relative">
-                      <div className="absolute inset-0 border-4 border-dashed border-blue-500 rounded-full animate-spin-slow"></div>
-                      <div className="absolute inset-[15%] rounded-full bg-gray-200 flex items-center justify-center">
-                        <div className="w-1/3 h-1/3 rounded-full bg-blue-600"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {/* Company logo image only */}
+              <div className="bg-white rounded-lg shadow-xl p-4 aspect-square flex items-center justify-center">
+                <Image 
+                  src="/images/company_log.png"
+                  alt="Company Logo"
+                  width={300}
+                  height={300}
+                  className="object-contain"
+                  priority
+                />
               </div>
             </div>
           </div>

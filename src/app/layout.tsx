@@ -20,33 +20,38 @@ const geistMono = Geist_Mono({
 
 // This metadata is used as a fallback and for SEO
 export const metadata: Metadata = {
-  title: "Suzhou Bei Ren Bearing Sales Co., Ltd. | 苏州北人轴承销售有限公司",
-  description: "Suzhou Bei Ren Bearing Sales Co., Ltd. provides high-quality precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries. 苏州北人轴承销售有限公司为汽车、制造业、能源、农业和其他行业提供高质量精密轴承和相关产品。",
-  keywords: ["bearings", "Suzhou bearings", "Bei Ren bearings", "precision bearings", "industrial bearings", "轴承", "苏州轴承", "北人轴承", "精密轴承", "工业轴承", "ball bearings", "roller bearings", "深沟球轴承", "滚子轴承"],
-  authors: [{ name: "Suzhou Bei Ren Bearing Sales Co., Ltd." }],
-  creator: "Suzhou Bei Ren Bearing Sales Co., Ltd.",
-  publisher: "Suzhou Bei Ren Bearing Sales Co., Ltd.",
+  title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
+  description: "ANDE Precision Bearing Technology Co., Ltd. provides high-quality precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries. 江苏安德精工轴承科技有限公司为汽车、制造业、能源、农业和其他行业提供高质量精密轴承和相关产品。",
+  keywords: ["bearings", "ANDE bearings", "precision bearings", "industrial bearings", "轴承", "安德轴承", "精密轴承", "工业轴承", "ball bearings", "roller bearings", "深沟球轴承", "滚子轴承"],
+  authors: [{ name: "ANDE Precision Bearing Technology Co., Ltd." }],
+  creator: "ANDE Precision Bearing Technology Co., Ltd.",
+  publisher: "ANDE Precision Bearing Technology Co., Ltd.",
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' }
+    ]
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     alternateLocale: "zh_CN",
-    title: "Suzhou Bei Ren Bearing Sales Co., Ltd. | 苏州北人轴承销售有限公司",
+    title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
     description: "High-quality precision bearings for every industry | 为各行业提供高质量精密轴承",
-    siteName: "Suzhou Bei Ren Bearing Sales Co., Ltd.",
+    siteName: "ANDE Precision Bearing Technology Co., Ltd.",
     images: [
       {
-        url: "/images/og-image.jpg", // You'll need to create this image
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Suzhou Bei Ren Bearing Sales Co., Ltd. logo and products",
+        alt: "ANDE - Precision Bearing Technology Co., Ltd. logo and products",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suzhou Bei Ren Bearing Sales Co., Ltd. | 苏州北人轴承销售有限公司",
+    title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
     description: "High-quality precision bearings for every industry | 为各行业提供高质量精密轴承",
-    images: ["/images/twitter-image.jpg"], // You'll need to create this image
+    images: ["/images/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -59,10 +64,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://beiren-bearing.com", // Replace with your actual domain
+    canonical: "https://ande-bearing.com", // Replace with your actual domain
     languages: {
-      'en': 'https://beiren-bearing.com/en',
-      'zh': 'https://beiren-bearing.com/zh',
+      'en': 'https://ande-bearing.com/en',
+      'zh': 'https://ande-bearing.com/zh',
     },
   },
   verification: {
@@ -79,6 +84,7 @@ export default function RootLayout({
     <DynamicHtmlLang>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        suppressHydrationWarning={true}
       >
         <LanguageProvider>
           <DynamicTitle />

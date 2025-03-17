@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page Not Found | Suzhou Bei Ren Bearing Sales Co., Ltd.',
+  title: 'Page Not Found | ANDE Precision Bearing Technology Co., Ltd.',
   description: 'The page you are looking for does not exist. Please navigate back to our homepage.',
   robots: {
     index: false,

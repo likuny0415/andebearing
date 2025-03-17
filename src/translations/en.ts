@@ -15,8 +15,8 @@ const en = {
     thankYou: 'Thank you for your message! We\'ll get back to you as soon as possible.',
   },
   metadata: {
-    title: 'Suzhou Bei Ren Bearing Sales Co., Ltd. - High-Quality Bearings for Every Industry',
-    description: 'Suzhou Bei Ren Bearing Sales Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries.',
+    title: 'ANDE Precision Bearing Technology Co., Ltd. - High-Quality Bearings for Every Industry',
+    description: 'ANDE Precision Bearing Technology Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries.',
   },
   home: {
     hero: {
@@ -69,10 +69,10 @@ const en = {
     },
   },
   about: {
-    title: 'About Suzhou Bei Ren Bearing Sales Co., Ltd.',
+    title: 'About ANDE Precision Bearing Technology Co., Ltd.',
     story: {
       title: 'Our Story',
-      paragraph1: 'Founded in 1985, Suzhou Bei Ren Bearing Sales Co., Ltd. has grown from a small local supplier to a global provider of high-quality bearings and related products. Our journey began with a simple mission: to provide reliable bearing solutions that help our customers succeed.',
+      paragraph1: 'Founded in 1985, ANDE Precision Bearing Technology Co., Ltd. has grown from a small local supplier to a global provider of high-quality bearings and related products. Our journey began with a simple mission: to provide reliable bearing solutions that help our customers succeed.',
       paragraph2: 'Over the years, we have expanded our product range and technical expertise to serve a wide variety of industries, from automotive and manufacturing to energy and agriculture. Today, we are proud to be a trusted partner for businesses around the world.',
       paragraph3: 'Our commitment to quality, innovation, and customer service has been the foundation of our success, and it continues to drive everything we do.',
     },
@@ -111,33 +111,34 @@ const en = {
       email: 'Email',
       businessHours: 'Business Hours',
       businessHoursDetails: 'Monday - Friday: 8:00 AM - 5:00 PM\nSaturday: 9:00 AM - 1:00 PM\nSunday: Closed',
+      title: 'Contact Information',
     },
     findUs: 'Find Us',
     locations: {
       title: 'Our Locations',
       headquarters: {
         title: 'Headquarters',
-        address: 'B9-10, Building 22\nHardware & Electromechanical Market\nZhangjiagang, Suzhou\nJiangsu Province, China',
-        email: 'kuny.li0145@gmail.com',
+        address: 'No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China',
+        email: 'andeprecisionbearing@gmail.com',
         phone: '(+86) 13906240166',
       },
       manufacturing: {
         title: 'Manufacturing Facility',
         address: '456 Production Avenue\nManufacturing Zone\nDetroit, MI 48201',
-        email: 'production@beiren-bearing.com',
+        email: 'production@ande-bearing.com',
         phone: '(234) 567-8901',
       },
       distribution: {
         title: 'Distribution Center',
         address: '789 Logistics Boulevard\nWarehouse District\nChicago, IL 60607',
-        email: 'distribution@beiren-bearing.com',
+        email: 'distribution@ande-bearing.com',
         phone: '(345) 678-9012',
       },
     },
   },
   footer: {
     description: 'Your trusted partner for high-quality bearings and related products for all industrial applications.',
-    copyright: '© 2025 Suzhou Bei Ren Bearing Sales Co., Ltd. All rights reserved.',
+    copyright: '© 2025 ANDE Precision Bearing Technology Co., Ltd. All rights reserved.',
     links: {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',

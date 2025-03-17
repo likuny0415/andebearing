@@ -15,8 +15,8 @@ const zh = {
     thankYou: '感谢您的留言！我们将尽快回复您。',
   },
   metadata: {
-    title: '苏州北人轴承销售有限公司 - 为各行业提供高质量轴承',
-    description: '苏州北人轴承销售有限公司为汽车、制造业、能源、农业和其他行业提供精密轴承和相关产品。',
+    title: '江苏安德精工轴承科技有限公司 - 为各行业提供高质量轴承',
+    description: '江苏安德精工轴承科技有限公司为汽车、制造业、能源、农业和其他行业提供精密轴承和相关产品。',
   },
   home: {
     hero: {
@@ -69,10 +69,10 @@ const zh = {
     },
   },
   about: {
-    title: '关于苏州北人轴承销售有限公司',
+    title: '关于江苏安德精工轴承科技有限公司',
     story: {
       title: '我们的故事',
-      paragraph1: '苏州北人轴承销售有限公司成立于1985年，从一家小型本地供应商发展成为全球高质量轴承和相关产品的提供商。我们的旅程始于一个简单的使命：提供可靠的轴承解决方案，帮助客户取得成功。',
+      paragraph1: '江苏安德精工轴承科技有限公司成立于1985年，从一家小型本地供应商发展成为全球高质量轴承和相关产品的提供商。我们的旅程始于一个简单的使命：提供可靠的轴承解决方案，帮助客户取得成功。',
       paragraph2: '多年来，我们扩展了产品范围和技术专长，为从汽车和制造业到能源和农业的各种行业提供服务。今天，我们很自豪能成为全球企业的可信赖合作伙伴。',
       paragraph3: '我们对质量、创新和客户服务的承诺是我们成功的基础，并继续推动我们所做的一切。',
     },
@@ -111,33 +111,34 @@ const zh = {
       email: '电子邮件',
       businessHours: '营业时间',
       businessHoursDetails: '周一至周五：上午8:00 - 下午5:00\n周六：上午9:00 - 下午1:00\n周日：休息',
+      title: '联系方式',
     },
     findUs: '查找我们',
     locations: {
       title: '我们的位置',
       headquarters: {
         title: '总部',
-        address: '江苏省苏州市张家港市五金机电市场22幢B9-10',
-        email: 'kuny.li0145@gmail.com',
+        address: '江阴市华士工业园区连心路23号',
+        email: 'andeprecisionbearing@gmail.com',
         phone: '(+86) 13906240166',
       },
       manufacturing: {
         title: '制造工厂',
         address: '456 生产大道\n制造区\n底特律，密歇根州 48201',
-        email: 'production@beiren-bearing.com',
+        email: 'production@ande-bearing.com',
         phone: '(234) 567-8901',
       },
       distribution: {
         title: '配送中心',
         address: '789 物流大道\n仓库区\n芝加哥，伊利诺伊州 60607',
-        email: 'distribution@beiren-bearing.com',
+        email: 'distribution@ande-bearing.com',
         phone: '(345) 678-9012',
       },
     },
   },
   footer: {
     description: '您值得信赖的高质量轴承和相关产品合作伙伴，适用于所有工业应用。',
-    copyright: '© 2025 苏州北人轴承销售有限公司。保留所有权利。',
+    copyright: '© 2025 江苏安德精工轴承科技有限公司。保留所有权利。',
     links: {
       privacy: '隐私政策',
       terms: '服务条款',

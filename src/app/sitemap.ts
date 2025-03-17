@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://beiren-bearing.com'; // Replace with your actual domain
+  const baseUrl = 'https://www.beirenbearing.online/'; // Replace with your actual domain
 
   // Define your routes
   const routes = [

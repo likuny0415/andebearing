@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import GoogleMap from './GoogleMap';
 
 export default function ContactPageContent() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,6 +14,11 @@ export default function ContactPageContent() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Get the address based on the current language
+  const factoryAddress = language === 'zh' 
+    ? t('contact.locations.headquarters.address')
+    : t('contact.locations.headquarters.address');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -49,7 +55,7 @@ export default function ContactPageContent() {
           
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-2">{t('contact.locations.headquarters.title')}</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-4">
               {t('contact.locations.headquarters.address').split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
@@ -57,6 +63,11 @@ export default function ContactPageContent() {
                 </span>
               ))}
             </p>
+            
+            {/* Google Map */}
+            <div className="mt-4 mb-6">
+              <GoogleMap address={factoryAddress} height="300px" />
+            </div>
           </div>
           
           <div className="mb-8">

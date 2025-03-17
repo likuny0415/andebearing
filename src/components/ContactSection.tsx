@@ -2,15 +2,21 @@
 
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import GoogleMap from './GoogleMap';
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     message: '',
   });
+  
+  // Get the address based on the current language
+  const factoryAddress = language === 'zh' 
+    ? t('contact.locations.headquarters.address')
+    : t('contact.locations.headquarters.address');
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -80,6 +86,11 @@ export default function ContactSection() {
                         ))}
                       </p>
                     </div>
+                  </div>
+                  
+                  {/* Add Google Map */}
+                  <div className="mt-4 rounded-lg overflow-hidden">
+                    <GoogleMap address={factoryAddress} height="200px" />
                   </div>
                   
                   <div className="flex items-start">

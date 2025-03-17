@@ -75,16 +75,16 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between bg-gray-200 hover:bg-gray-300 active:bg-gray-300 px-3 py-2.5 sm:py-2 rounded-md text-base sm:text-sm w-36 sm:w-32 touch-manipulation"
+        className="flex items-center justify-between bg-gray-200 hover:bg-gray-300 active:bg-gray-300 px-2.5 py-1.5 rounded-md text-sm w-28 touch-manipulation"
         aria-label="Select language"
       >
         <div className="flex items-center">
-          <span className="mr-2 text-lg sm:text-base">{currentLanguage.flag}</span>
+          <span className="mr-1.5 text-base">{currentLanguage.flag}</span>
           <span>{currentLanguage.name}</span>
         </div>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          className={`h-4 w-4 sm:h-3 sm:w-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+          className={`h-3 w-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
           fill="none" 
           viewBox="0 0 24 24" 
           stroke="currentColor"
@@ -94,17 +94,17 @@ export default function LanguageSwitcher() {
       </button>
       
       {isOpen && (
-        <div className="absolute right-0 mt-1 w-36 sm:w-32 bg-white rounded-md shadow-lg z-50 overflow-hidden">
+        <div className="absolute right-0 mt-1 w-28 bg-white rounded-md shadow-lg z-50 overflow-hidden">
           <div>
             {languages.map((language) => (
               <button
                 key={language.code}
                 onClick={() => switchLanguage(language.code)}
-                className={`w-full text-left px-4 py-3 sm:px-3 sm:py-2 flex items-center text-base sm:text-sm touch-manipulation ${
+                className={`w-full text-left px-3 py-2 flex items-center text-sm touch-manipulation ${
                   currentLang === language.code ? 'bg-blue-50' : 'hover:bg-gray-100 active:bg-gray-100'
                 }`}
               >
-                <span className="mr-2 text-lg sm:text-base">{language.flag}</span>
+                <span className="mr-1.5 text-base">{language.flag}</span>
                 <span>{language.name}</span>
               </button>
             ))}

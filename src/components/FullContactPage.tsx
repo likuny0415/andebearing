@@ -2,9 +2,15 @@
 
 import ContactSection from "./ContactSection";
 import { useLanguage } from "../context/LanguageContext";
+import GoogleMap from "./GoogleMap";
 
 export default function FullContactPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Get the address based on the current language
+  const factoryAddress = language === 'zh' 
+    ? t('contact.locations.headquarters.address')
+    : t('contact.locations.headquarters.address');
   
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -23,11 +29,9 @@ export default function FullContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('contact.findUs')}</h2>
-            <div className="bg-gray-200 rounded-lg overflow-hidden h-96">
-              {/* Placeholder for Google Maps - in a real application, you would integrate Google Maps here */}
-              <div className="w-full h-full flex items-center justify-center bg-gray-300">
-                <p className="text-gray-600">Map would be displayed here</p>
-              </div>
+            <div className="rounded-lg overflow-hidden h-96">
+              {/* Google Maps integration */}
+              <GoogleMap address={factoryAddress} height="100%" />
             </div>
             
             <div className="mt-12">

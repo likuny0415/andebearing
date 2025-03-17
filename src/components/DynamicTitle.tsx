@@ -16,30 +16,30 @@ export default function DynamicTitle() {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": isZh ? "苏州北人轴承销售有限公司" : "Suzhou Bei Ren Bearing Sales Co., Ltd.",
-      "alternateName": isZh ? "北人轴承" : "Bei Ren Bearing",
-      "url": `https://beiren-bearing.com${pathname}`, // Replace with your actual domain
-      "logo": "https://beiren-bearing.com/images/logo.png", // Replace with your actual logo path
+      "name": isZh ? "江苏安德精工轴承科技有限公司" : "ANDE Precision Bearing Technology Co., Ltd.",
+      "alternateName": isZh ? "安德轴承" : "ANDE Bearing",
+      "url": `https://ande-bearing.com${pathname}`, // Replace with your actual domain
+      "logo": "https://ande-bearing.com/images/logo.png", // Replace with your actual logo path
       "description": t('metadata.description'),
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "B9-10, Building 22, Hardware & Electromechanical Market",
-        "addressLocality": "Zhangjiagang, Suzhou",
-        "addressRegion": "Jiangsu Province",
-        "postalCode": "215600",
+        "streetAddress": "No. 23 Lianxin Road, Huashi Industrial Park",
+        "addressLocality": "Jiangyin",
+        "addressRegion": "Jiangsu",
+        "postalCode": "214400",
         "addressCountry": "CN"
       },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "(+86) 13906240166",
         "contactType": "customer service",
-        "email": "kuny.li0145@gmail.com",
+        "email": "andeprecisionbearing@gmail.com",
         "availableLanguage": ["English", "Chinese"]
       },
       "sameAs": [
-        "https://www.facebook.com/beirenbearing", // Replace with your actual social media links
-        "https://www.linkedin.com/company/beirenbearing",
-        "https://twitter.com/beirenbearing"
+        "https://www.facebook.com/andebearing", // Replace with your actual social media links
+        "https://www.linkedin.com/company/andebearing",
+        "https://twitter.com/andebearing"
       ]
     };
 
@@ -51,7 +51,7 @@ export default function DynamicTitle() {
       "description": isZh ? "高质量精密轴承，适用于各种工业应用" : "High-quality precision bearings for various industrial applications",
       "brand": {
         "@type": "Brand",
-        "name": isZh ? "北人轴承" : "Bei Ren Bearing"
+        "name": isZh ? "安德轴承" : "ANDE Bearing"
       },
       "offers": {
         "@type": "AggregateOffer",

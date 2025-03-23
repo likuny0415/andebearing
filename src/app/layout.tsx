@@ -20,24 +20,24 @@ const geistMono = Geist_Mono({
 
 // This metadata is used as a fallback and for SEO
 export const metadata: Metadata = {
-  title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
-  description: "ANDE Precision Bearing Technology Co., Ltd. provides high-quality precision bearings and related products for automotive, manufacturing, energy, agriculture, and other industries. 江苏安德精工轴承科技有限公司为汽车、制造业、能源、农业和其他行业提供高质量精密轴承和相关产品。",
+  title: "Ande Precision Bearing | 安德精工轴承",
+  description: "Precision Bearings for Every Industry. Delivering high-quality bearings and solutions that keep your machinery running smoothly and efficiently.",
   keywords: ["bearings", "ANDE bearings", "precision bearings", "industrial bearings", "轴承", "安德轴承", "精密轴承", "工业轴承", "ball bearings", "roller bearings", "深沟球轴承", "滚子轴承"],
   authors: [{ name: "ANDE Precision Bearing Technology Co., Ltd." }],
   creator: "ANDE Precision Bearing Technology Co., Ltd.",
   publisher: "ANDE Precision Bearing Technology Co., Ltd.",
   icons: {
     icon: [
-      { url: '/favicon.png', type: 'image/png' }
+      { url: '/images/company_log.png', type: 'image/png' }
     ]
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     alternateLocale: "zh_CN",
-    title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
-    description: "High-quality precision bearings for every industry | 为各行业提供高质量精密轴承",
-    siteName: "ANDE Precision Bearing Technology Co., Ltd.",
+    title: "Ande Precision Bearing | 安德精工轴承",
+    description: "Precision Bearings for Every Industry | 为各行业提供高质量精密轴承",
+    siteName: "Ande Precision Bearing",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANDE Precision Bearing Technology Co., Ltd. | 江苏安德精工轴承科技有限公司",
-    description: "High-quality precision bearings for every industry | 为各行业提供高质量精密轴承",
+    title: "Ande Precision Bearing | 安德精工轴承",
+    description: "Precision Bearings for Every Industry | 为各行业提供高质量精密轴承",
     images: ["/images/twitter-image.jpg"],
   },
   robots: {

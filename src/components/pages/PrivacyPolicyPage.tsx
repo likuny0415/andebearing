@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
             <p className="mb-4">Last Updated: June 20, 2024</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Introduction</h2>
-            <p className="mb-4">Jiangsu Ander Precision Bearing Technology Co., Ltd. ("we," "our," or "the Company") respects your privacy and is committed to protecting your personal information. This Privacy Policy will inform you about how we collect, use, disclose, transfer, and store your personal data.</p>
+            <p className="mb-4">Jiangsu Ande Precision Bearing Technology Co., Ltd. ("we," "our," or "the Company") respects your privacy and is committed to protecting your personal information. This Privacy Policy will inform you about how we collect, use, disclose, transfer, and store your personal data.</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
             <p className="mb-4">When you visit our website, contact us, or use our services, we may collect the following types of information:</p>

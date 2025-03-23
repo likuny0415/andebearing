@@ -21,7 +21,7 @@ export default function Icon() {
           justifyContent: 'center',
         }}
       >
-        <img src="/favicon.png" width="160" height="160" alt="ADB Logo" />
+        <img src="/images/company_log.png" width="160" height="160" alt="Ande Logo" />
       </div>
     ),
     {

@@ -3,7 +3,7 @@
   "short_name": "Ande Bearing",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/images/company_log.png",
       "sizes": "192x192",
       "type": "image/png"
     },

@@ -2,32 +2,41 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const { t, language } = useLanguage();
   const pathname = usePathname();
   const router = useRouter();
 
   // Function to create language-aware links
   const createLink = (path: string) => {
-    // Don't use window checks or server/client branching
-    // Use pathname directly to determine the language prefix
-    if (pathname.startsWith('/zh')) {
-      return `/zh${path}`;
+    // Handle language prefix correctly
+    const langPrefix = pathname.startsWith('/zh') ? '/zh' : '/en';
+    
+    // Handle paths properly (avoid double slashes)
+    if (path === '/') {
+      return langPrefix;
     }
-    return `/en${path}`;
+    
+    // Remove leading slash from path to avoid double slashes
+    const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+    return `${langPrefix}/${cleanPath}`;
   };
 
   // Function to check if a link is active
   const isActive = (path: string) => {
-    if (path === '/' && (pathname === '/en' || pathname === '/zh')) {
-      return true;
+    // Check if this is the homepage
+    if (path === '/') {
+      return pathname === '/en' || pathname === '/zh' || pathname === '/';
     }
-    return pathname.endsWith(path);
+    
+    // Check if path matches the end of pathname
+    return pathname.endsWith(path) || pathname.endsWith(`${path}/`);
   };
 
   // Function to get the appropriate class for a navigation link
@@ -41,6 +50,8 @@ export default function Header() {
 
   // Function to switch language
   const switchLanguage = (lang: string) => {
+    if (lang === language) return;
+    
     let newPath = pathname;
     
     // Remove language prefix if it exists
@@ -53,12 +64,15 @@ export default function Header() {
     // Add new language prefix
     newPath = `/${lang}${newPath === '/' ? '' : newPath}`;
     
-    // Ensure we have a valid path
-    if (newPath === `/${lang}`) {
-      router.push(`/${lang}`);
-    } else {
-      router.push(newPath);
-    }
+    // Use startTransition to indicate loading state
+    startTransition(() => {
+      // Ensure we have a valid path
+      if (newPath === `/${lang}`) {
+        router.push(`/${lang}`);
+      } else {
+        router.push(newPath);
+      }
+    });
   };
 
   return (
@@ -67,19 +81,26 @@ export default function Header() {
         {/* Two-column layout */}
         <div className="flex justify-between items-center">
           {/* Column 1: Language options */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 relative">
             <button 
               onClick={() => switchLanguage('zh')}
-              className={`text-sm ${language === 'zh' ? 'font-semibold text-blue-800' : 'text-gray-700 hover:text-blue-800'}`}
+              disabled={isPending}
+              className={`text-sm ${language === 'zh' ? 'font-semibold text-blue-800' : 'text-gray-700 hover:text-blue-800'} ${isPending ? 'opacity-70' : ''}`}
             >
               中文
             </button>
             <button 
               onClick={() => switchLanguage('en')}
-              className={`text-sm ${language === 'en' ? 'font-semibold text-blue-800' : 'text-gray-700 hover:text-blue-800'}`}
+              disabled={isPending}
+              className={`text-sm ${language === 'en' ? 'font-semibold text-blue-800' : 'text-gray-700 hover:text-blue-800'} ${isPending ? 'opacity-70' : ''}`}
             >
               English
             </button>
+            {isPending && (
+              <div className="absolute -right-5 top-1/2 transform -translate-y-1/2">
+                <div className="w-3 h-3 rounded-full border-2 border-blue-800 border-t-transparent animate-spin"></div>
+              </div>
+            )}
           </div>
 
           {/* Column 2: Company name and logo */}

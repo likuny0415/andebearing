@@ -83,7 +83,7 @@ export default function TermsOfServicePage() {
             <p className="mb-4">Last Updated: June 20, 2024</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Acceptance of Terms</h2>
-            <p className="mb-4">By accessing or using the website, products, or services of Jiangsu Ander Precision Bearing Technology Co., Ltd. ("Ander," "we," "our," or "the Company"), you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, please do not use our website, products, or services.</p>
+            <p className="mb-4">By accessing or using the website, products, or services of Jiangsu Ande Precision Bearing Technology Co., Ltd. ("Ande," "we," "our," or "the Company"), you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, please do not use our website, products, or services.</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Use of Our Services</h2>
             <p className="mb-4">You agree to use our website, products, and services only for lawful purposes and in accordance with all applicable laws and regulations and these terms. You must not use our services in any way that may damage, disable, overburden, or impair our services or interfere with any other party's use and enjoyment of the services.</p>
@@ -104,7 +104,7 @@ export default function TermsOfServicePage() {
             <p className="mb-4">To the maximum extent permitted by law, in no event shall we or our suppliers be liable to you or any third party for any indirect, incidental, special, punitive, or consequential damages arising out of or in connection with your use of or inability to use our website, products, or services, whether under contract, tort, negligence, or any other legal theory.</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Indemnification</h2>
-            <p className="mb-4">You agree to indemnify, defend, and hold harmless Ander and its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses, including without limitation reasonable legal and accounting fees, arising out of or in any way connected with your breach of these terms, your violation of any obligations you may have to third parties, or your violation of any law or infringement of any third-party rights.</p>
+            <p className="mb-4">You agree to indemnify, defend, and hold harmless Ande and its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses, including without limitation reasonable legal and accounting fees, arising out of or in any way connected with your breach of these terms, your violation of any obligations you may have to third parties, or your violation of any law or infringement of any third-party rights.</p>
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Termination</h2>
             <p className="mb-4">We may terminate or suspend your access to our services at any time, for any reason or for no reason, including if you violate these terms. Upon termination, your right to use our services will immediately cease.</p>

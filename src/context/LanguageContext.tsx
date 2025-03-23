@@ -8,6 +8,7 @@ type LanguageContextType = {
   language: Language;
   t: (key: string) => string;
   isZh: boolean;
+  isEn: boolean;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -34,16 +35,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k as keyof typeof value];
       } else {
-        // Fallback to English if key not found in current language
-        let fallback: any = translations.en;
-        for (const fk of keys) {
-          if (fallback && typeof fallback === 'object' && fk in fallback) {
-            fallback = fallback[fk as keyof typeof fallback];
-          } else {
-            return key; // Return the key if not found in any language
+        // If key not found in current language, try English fallback
+        if (language !== 'en') {
+          let fallback: any = translations.en;
+          for (const fk of keys) {
+            if (fallback && typeof fallback === 'object' && fk in fallback) {
+              fallback = fallback[fk as keyof typeof fallback];
+            } else {
+              return key; // Return the key if not found in fallback
+            }
           }
+          return typeof fallback === 'string' ? fallback : key;
         }
-        return typeof fallback === 'string' ? fallback : key;
+        return key; // Return the key if not found in any language
       }
     }
     
@@ -51,7 +55,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, t, isZh: language === 'zh' }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      t, 
+      isZh: language === 'zh',
+      isEn: language === 'en' 
+    }}>
       {children}
     </LanguageContext.Provider>
   );

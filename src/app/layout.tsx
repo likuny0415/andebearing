@@ -22,13 +22,32 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ande Precision Bearing | 安德精工轴承",
   description: "Precision Bearings for Every Industry. Delivering high-quality bearings and solutions that keep your machinery running smoothly and efficiently.",
-  keywords: ["bearings", "ANDE bearings", "precision bearings", "industrial bearings", "轴承", "安德轴承", "精密轴承", "工业轴承", "ball bearings", "roller bearings", "深沟球轴承", "滚子轴承"],
-  authors: [{ name: "ANDE Precision Bearing Technology Co., Ltd." }],
-  creator: "ANDE Precision Bearing Technology Co., Ltd.",
+  keywords: ["bearings", "Ande bearings", "precision bearings", "industrial bearings", "轴承", "安德轴承", "精密轴承", "工业轴承", "ball bearings", "roller bearings", "深沟球轴承", "滚子轴承"],
+  authors: [{ name: "Ande Precision Bearing" }],
+  creator: "Ande Precision Bearing",
   publisher: "ANDE Precision Bearing Technology Co., Ltd.",
   icons: {
     icon: [
-      { url: '/images/company_log.png', type: 'image/png' }
+      { url: '/favicon.png', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: ['/favicon.png'],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/favicon.svg',
+      },
+      {
+        rel: 'manifest',
+        url: '/site.webmanifest',
+      },
+      {
+        rel: 'msapplication-config',
+        url: '/browserconfig.xml',
+      }
     ]
   },
   openGraph: {
@@ -82,6 +101,11 @@ export default function RootLayout({
 }>) {
   return (
     <DynamicHtmlLang>
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning={true}

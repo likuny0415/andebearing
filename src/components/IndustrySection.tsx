@@ -10,8 +10,6 @@ import { useState, useEffect } from 'react';
 const industries = [
   {
     id: 'automotive',
-    name: 'Automotive',
-    description: 'High-performance bearings for vehicles, from passenger cars to heavy-duty trucks.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -21,8 +19,6 @@ const industries = [
   },
   {
     id: 'manufacturing',
-    name: 'Manufacturing',
-    description: 'Reliable bearings for production equipment, conveyor systems, and industrial machinery.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -32,8 +28,6 @@ const industries = [
   },
   {
     id: 'energy',
-    name: 'Energy',
-    description: 'Specialized bearings for wind turbines, generators, and other energy production equipment.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -42,8 +36,6 @@ const industries = [
   },
   {
     id: 'agriculture',
-    name: 'Agriculture',
-    description: 'Durable bearings for tractors, harvesters, and agricultural machinery.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -52,8 +44,6 @@ const industries = [
   },
   {
     id: 'mining',
-    name: 'Mining',
-    description: 'Heavy-duty bearings designed to withstand extreme conditions in mining operations.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -62,8 +52,6 @@ const industries = [
   },
   {
     id: 'aerospace',
-    name: 'Aerospace',
-    description: 'Precision bearings for aircraft engines, control systems, and aerospace applications.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -115,8 +103,12 @@ export default function IndustrySection() {
               <div className="mb-4">
                 {industry.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
-              <p className="text-gray-600 mb-4">{industry.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {t(`home.industries.items.${industry.id}.name`)}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {t(`home.industries.items.${industry.id}.description`)}
+              </p>
               <span className="text-blue-600 font-medium inline-flex items-center">
                 {t('common.learnMore')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

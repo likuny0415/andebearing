@@ -1,9 +1,13 @@
 "use client";
 
 import { useLanguage } from '../../context/LanguageContext';
+import Link from 'next/link';
 
 export default function ServicesPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Contact page URL with language prefix
+  const contactUrl = `/${language}/contact`;
   
   // Helper function to safely render items
   const renderItems = (key: string) => {
@@ -42,9 +46,9 @@ export default function ServicesPage() {
             <ul className="list-disc list-inside text-gray-700 mb-4">
               {renderItems('services.technicalConsultation.items')}
             </ul>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={contactUrl} className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
               {t('common.contactUs')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -61,9 +65,9 @@ export default function ServicesPage() {
             <ul className="list-disc list-inside text-gray-700 mb-4">
               {renderItems('services.installationMaintenance.items')}
             </ul>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={contactUrl} className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
               {t('common.contactUs')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -80,9 +84,9 @@ export default function ServicesPage() {
             <ul className="list-disc list-inside text-gray-700 mb-4">
               {renderItems('services.failureAnalysis.items')}
             </ul>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={contactUrl} className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
               {t('common.contactUs')}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

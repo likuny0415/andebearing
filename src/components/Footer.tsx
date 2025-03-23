@@ -72,11 +72,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('common.industries')}</h3>
             <ul className="space-y-2">
-              <li><Link href={createLink('/industries/automotive')} className="text-gray-300 hover:text-white">Automotive</Link></li>
-              <li><Link href={createLink('/industries/manufacturing')} className="text-gray-300 hover:text-white">Manufacturing</Link></li>
-              <li><Link href={createLink('/industries/energy')} className="text-gray-300 hover:text-white">Energy</Link></li>
-              <li><Link href={createLink('/industries/agriculture')} className="text-gray-300 hover:text-white">Agriculture</Link></li>
-              <li><Link href={createLink('/industries/mining')} className="text-gray-300 hover:text-white">Mining</Link></li>
+              <li><Link href={createLink('/industries/automotive')} className="text-gray-300 hover:text-white">{language === 'zh' ? t('home.industries.items.automotive.name') : 'Automotive'}</Link></li>
+              <li><Link href={createLink('/industries/manufacturing')} className="text-gray-300 hover:text-white">{language === 'zh' ? t('home.industries.items.manufacturing.name') : 'Manufacturing'}</Link></li>
+              <li><Link href={createLink('/industries/energy')} className="text-gray-300 hover:text-white">{language === 'zh' ? t('home.industries.items.energy.name') : 'Energy'}</Link></li>
+              <li><Link href={createLink('/industries/agriculture')} className="text-gray-300 hover:text-white">{language === 'zh' ? t('home.industries.items.agriculture.name') : 'Agriculture'}</Link></li>
+              <li><Link href={createLink('/industries/mining')} className="text-gray-300 hover:text-white">{language === 'zh' ? t('home.industries.items.mining.name') : 'Mining'}</Link></li>
             </ul>
           </div>
           
@@ -96,9 +96,9 @@ export default function Footer() {
           <p className="text-gray-400">{t('footer.copyright')}</p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">
-              <li><Link href={createLink('/privacy')} className="text-gray-400 hover:text-white">{t('footer.links.privacy')}</Link></li>
-              <li><Link href={createLink('/terms')} className="text-gray-400 hover:text-white">{t('footer.links.terms')}</Link></li>
-              <li><Link href={createLink('/sitemap')} className="text-gray-400 hover:text-white">{t('footer.links.sitemap')}</Link></li>
+              <li><Link href={createLink('/privacy-policy')} className="text-gray-400 hover:text-white">{language === 'zh' ? '隐私政策' : 'Privacy Policy'}</Link></li>
+              <li><Link href={createLink('/terms-of-service')} className="text-gray-400 hover:text-white">{language === 'zh' ? '服务条款' : 'Terms of Service'}</Link></li>
+              <li><Link href={createLink('/sitemap')} className="text-gray-400 hover:text-white">{language === 'zh' ? '网站地图' : 'Sitemap'}</Link></li>
             </ul>
           </div>
         </div>

@@ -1,9 +1,32 @@
 "use client";
 
 import { useLanguage } from '../../context/LanguageContext';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function IndustriesPage() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+  const [currentPrefix, setCurrentPrefix] = useState('');
+
+  useEffect(() => {
+    // Determine language prefix from pathname
+    if (pathname.startsWith('/zh')) {
+      setCurrentPrefix('/zh');
+    } else {
+      setCurrentPrefix('/en');
+    }
+  }, [pathname]);
+
+  // Function to create language-aware links
+  const createLink = (path: string) => {
+    // During initial render, use the path directly to avoid hydration mismatch
+    if (!currentPrefix) {
+      return path;
+    }
+    return `${currentPrefix}${path}`;
+  };
   
   return (
     <div className="container mx-auto px-4 py-12">
@@ -17,13 +40,13 @@ export default function IndustriesPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="h-48 bg-gray-200"></div>
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Automotive</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.automotive.name')}</h2>
             <p className="text-gray-600 mb-4">
-              High-performance bearings for engines, transmissions, wheels, and other automotive applications.
+              {t('home.industries.items.automotive.description')}
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={createLink('/industries/automotive')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
               {t('common.learnMore')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -31,13 +54,13 @@ export default function IndustriesPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="h-48 bg-gray-200"></div>
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Manufacturing</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.manufacturing.name')}</h2>
             <p className="text-gray-600 mb-4">
-              Reliable bearings for production equipment, conveyor systems, and industrial machinery.
+              {t('home.industries.items.manufacturing.description')}
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={createLink('/industries/manufacturing')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
               {t('common.learnMore')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -45,13 +68,13 @@ export default function IndustriesPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="h-48 bg-gray-200"></div>
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Energy</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.energy.name')}</h2>
             <p className="text-gray-600 mb-4">
-              Specialized bearings for wind turbines, generators, and other energy production equipment.
+              {t('home.industries.items.energy.description')}
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={createLink('/industries/energy')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
               {t('common.learnMore')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -59,27 +82,13 @@ export default function IndustriesPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="h-48 bg-gray-200"></div>
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Agriculture</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.agriculture.name')}</h2>
             <p className="text-gray-600 mb-4">
-              Durable bearings for tractors, harvesters, and other agricultural machinery.
+              {t('home.industries.items.agriculture.description')}
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={createLink('/industries/agriculture')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
               {t('common.learnMore')}
-            </button>
-          </div>
-        </div>
-        
-        {/* Construction */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="h-48 bg-gray-200"></div>
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Construction</h2>
-            <p className="text-gray-600 mb-4">
-              Heavy-duty bearings for excavators, cranes, and other construction equipment.
-            </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-              {t('common.learnMore')}
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -87,13 +96,27 @@ export default function IndustriesPage() {
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="h-48 bg-gray-200"></div>
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-2">Mining</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.mining.name')}</h2>
             <p className="text-gray-600 mb-4">
-              Robust bearings designed to withstand the harsh conditions of mining operations.
+              {t('home.industries.items.mining.description')}
             </p>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <Link href={createLink('/industries/mining')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
               {t('common.learnMore')}
-            </button>
+            </Link>
+          </div>
+        </div>
+        
+        {/* Aerospace */}
+        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="h-48 bg-gray-200"></div>
+          <div className="p-6">
+            <h2 className="text-xl font-semibold mb-2">{t('home.industries.items.aerospace.name')}</h2>
+            <p className="text-gray-600 mb-4">
+              {t('home.industries.items.aerospace.description')}
+            </p>
+            <Link href={createLink('/industries/aerospace')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block">
+              {t('common.learnMore')}
+            </Link>
           </div>
         </div>
       </div>

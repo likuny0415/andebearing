@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const supportedLanguages = ['en', 'zh'];
 
 // Define paths that don't need language prefix
-const publicPaths = ['/favicon.ico', '/api', '/_next', '/images'];
+const publicPaths = ['/favicon.ico', '/api', '/_next', '/images', '/site.webmanifest', '/browserconfig.xml'];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -68,5 +68,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|site.webmanifest|browserconfig.xml).*)'],
 }; 

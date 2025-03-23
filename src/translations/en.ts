@@ -13,10 +13,19 @@ const en = {
     sendMessage: 'Send Message',
     sending: 'Sending...',
     thankYou: 'Thank you for your message! We will get back to you shortly.',
+    viewCategory: 'View All Products',
+    backToProducts: 'Back to Products',
+    readMore: 'Read More',
+    submitRequest: 'Submit Request',
+    submitInquiry: 'Submit Inquiry',
+    getQuote: 'Get a Quote',
+    viewAll: 'View All',
+    apply: 'Apply',
+    reset: 'Reset',
   },
   metadata: {
-    title: 'Jiangsu Ander Precision Bearing Technology Co., Ltd. - High-Quality Bearings for Various Industries',
-    description: 'Jiangsu Ander Precision Bearing Technology Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture and other industries.',
+    title: 'Jiangsu Ande Precision Bearing Technology Co., Ltd. - High-Quality Bearings for Various Industries',
+    description: 'Jiangsu Ande Precision Bearing Technology Co., Ltd. provides precision bearings and related products for automotive, manufacturing, energy, agriculture and other industries.',
   },
   home: {
     hero: {
@@ -70,10 +79,11 @@ const en = {
     categories: {
       ballBearings: 'Ball Bearings',
       rollerBearings: 'Roller Bearings',
-      linearMotion: 'Linear Motion',
+      linearMotion: 'Linear Motion Systems',
       mountedUnits: 'Mounted Units',
       accessories: 'Accessories',
     },
+    noProductsFound: 'No products found in this category.',
     items: {
       deepGrooveBallBearing: {
         name: 'Deep Groove Ball Bearing',
@@ -91,16 +101,28 @@ const en = {
         name: 'Linear Guide System',
         description: 'Precision-engineered linear motion systems for smooth, accurate movement in industrial machinery and automation.',
       },
+      bearingLubricant: {
+        name: 'Bearing Lubricant',
+        description: 'High-performance lubricants specifically formulated to reduce friction and extend bearing life in various operating conditions.',
+      },
+      bearingHousing: {
+        name: 'Bearing Housing',
+        description: 'Protective enclosures for bearings, designed to provide secure mounting and protection from environmental factors.',
+      },
+      mountedBearingUnit: {
+        name: 'Mounted Bearing Unit',
+        description: 'Pre-assembled units consisting of a bearing, housing, seal, and locking device, ready for easy installation and maintenance.',
+      },
       // Add more product translations as needed
     },
     details: {
       overview: 'Overview',
-      features: 'Key Features',
-      applications: 'Common Applications',
+      features: 'Features',
+      applications: 'Applications',
       specifications: 'Technical Specifications',
       relatedProducts: 'Related Products',
       relatedProductPlaceholder: 'Related Bearing Product',
-      relatedProductDescription: 'Another high-quality bearing solution from our comprehensive product range.',
+      relatedProductDescription: 'Another product from our catalog that might interest you.',
       specificationsTable: {
         property: 'Property',
         value: 'Value',
@@ -114,19 +136,19 @@ const en = {
         sealType: 'Seal Type'
       },
       'deep-groove-ball-bearing': {
-        overview: 'Deep groove ball bearings are the most widely used bearing type in the industry due to their versatility and excellent performance characteristics. These bearings consist of an inner and outer ring with a cage containing a set of balls. The deep, uninterrupted raceway grooves have a close osculation with the balls, enabling the bearing to handle radial loads and axial loads in both directions, even at high speeds.',
+        overview: 'Our Deep Groove Ball Bearings are designed for high speed and precision applications requiring excellent axial and radial load capacity. They feature low friction and high rotational accuracy, making them ideal for motors, pumps, and various industrial machinery.',
         features: {
-          '1': 'Low friction design for reduced heat generation and improved efficiency',
-          '2': 'High-precision manufacturing for smooth operation and reduced noise',
-          '3': 'Available with various seal and shield configurations for different environmental conditions',
-          '4': 'Capable of accommodating misalignment up to 0.5 degrees',
-          '5': 'Operating temperature range from -30°C to +120°C with standard grease'
+          '1': 'Low friction design for efficient operation',
+          '2': 'High speed capability',
+          '3': 'Excellent noise and vibration characteristics',
+          '4': 'Available with various sealing and lubrication options',
+          '5': 'Suitable for high precision applications'
         },
         applications: {
-          '1': 'Electric motors and generators for optimal power transmission',
-          '2': 'Automotive components including transmissions, alternators, and wheel hubs',
-          '3': 'Pumps and compressors for fluid handling systems',
-          '4': 'Agricultural and construction machinery requiring reliable performance in demanding conditions'
+          '1': 'Electric motors and generators',
+          '2': 'Pumps and compressors',
+          '3': 'Automotive components',
+          '4': 'Home appliances and power tools'
         },
         specifications: {
           type: 'Single Row Deep Groove Ball Bearing',
@@ -216,6 +238,84 @@ const en = {
           loadRating: 'Dynamic: 4.6kN - 224.7kN per block depending on size',
           sealType: 'Multiple sealing options including standard seals, high-temp seals, and dust-resistant designs'
         }
+      },
+      'bearing-lubricant': {
+        overview: 'Our high-performance bearing lubricants are specially formulated to reduce friction, prevent wear, and extend the life of all types of bearings. These lubricants create a protective film between bearing surfaces, preventing metal-to-metal contact while providing effective protection against contaminants. Available in various viscosities and formulations, our lubricants are designed to meet the specific requirements of different bearing types and operating conditions, from high-speed applications to extreme temperatures and harsh environments.',
+        features: {
+          '1': 'Superior load-carrying capacity for protection under heavy loads',
+          '2': 'Excellent thermal stability to maintain performance at high temperatures',
+          '3': 'Outstanding water resistance and corrosion protection',
+          '4': 'Extended service life compared to conventional lubricants',
+          '5': 'Compatible with most bearing materials and seal types'
+        },
+        applications: {
+          '1': 'High-speed bearings in electric motors and turbines',
+          '2': 'Heavy-duty bearings in industrial machinery',
+          '3': 'Bearings operating in wet or corrosive environments',
+          '4': 'High-temperature applications in steel mills and glass production'
+        },
+        specifications: {
+          type: 'Synthetic Bearing Grease',
+          innerDiameter: 'N/A',
+          outerDiameter: 'N/A',
+          width: 'N/A',
+          material: 'Lithium complex thickener with synthetic base oil',
+          speedRating: 'Suitable for bearings operating up to 15,000 RPM',
+          loadRating: 'Weld load: 315 kg (ASTM D2596)',
+          sealType: 'N/A'
+        }
+      },
+      'bearing-housing': {
+        overview: 'Our bearing housings are robust enclosures designed to securely mount and protect bearings in various industrial applications. Made from high-quality materials such as cast iron, steel, or aluminum, these housings provide reliable support for bearings while shielding them from contaminants, moisture, and physical damage. Available in multiple configurations including pillow blocks, flange units, and take-up units, our bearing housings offer versatile mounting options to accommodate different installation requirements and space constraints.',
+        features: {
+          '1': 'Robust construction for stability and load distribution',
+          '2': 'Precision-machined surfaces for accurate bearing alignment',
+          '3': 'Effective sealing systems to prevent contaminant ingress',
+          '4': 'Multiple mounting configurations for installation flexibility',
+          '5': 'Optional features including relubrication points and temperature monitoring ports'
+        },
+        applications: {
+          '1': 'Conveyors and material handling systems',
+          '2': 'Agricultural and forestry equipment',
+          '3': 'HVAC systems and fans',
+          '4': 'Mining and construction machinery'
+        },
+        specifications: {
+          type: 'Pillow Block Housing',
+          innerDiameter: 'Available for shaft diameters from 20mm to 160mm',
+          outerDiameter: 'N/A',
+          width: 'Housing width varies by model',
+          material: 'Cast Iron GG25 / Ductile Iron GGG40',
+          speedRating: 'Dependent on installed bearing type',
+          loadRating: 'Up to 450kN depending on size and configuration',
+          sealType: 'Double-lip seals with additional dust covers available'
+        }
+      },
+      'mounted-bearing-unit': {
+        overview: 'Mounted bearing units are pre-assembled components that combine a bearing, housing, sealing system, and locking device in a ready-to-install package. These integrated units simplify installation, reduce assembly time, and minimize the risk of improper mounting. Our mounted bearing units are designed for reliable performance across a wide range of industrial applications, offering ease of maintenance and replacement when needed. Available in various configurations including pillow blocks, flange units, and take-up units, they provide versatile mounting solutions for different machinery and equipment.',
+        features: {
+          '1': 'Pre-assembled design for quick and easy installation',
+          '2': 'Self-aligning capability to accommodate shaft misalignment',
+          '3': 'Effective sealing systems for protection in contaminated environments',
+          '4': 'Simplified maintenance with relubrication points',
+          '5': 'Various locking methods including set screws, eccentric locking collars, and adapter sleeves'
+        },
+        applications: {
+          '1': 'Conveyor systems in manufacturing and logistics',
+          '2': 'Food processing equipment with washdown requirements',
+          '3': 'Agricultural machinery operating in harsh conditions',
+          '4': 'HVAC systems and cooling towers'
+        },
+        specifications: {
+          type: 'Pillow Block Mounted Bearing Unit',
+          innerDiameter: 'Available for shaft diameters from 12mm to 140mm',
+          outerDiameter: 'N/A',
+          width: 'Unit width varies by model',
+          material: 'Housing: Cast Iron / Bearing: Chrome Steel',
+          speedRating: 'Up to 5,000 RPM depending on size and configuration',
+          loadRating: 'Dynamic: 4.5kN - 370kN depending on size',
+          sealType: 'Triple-lip seals with optional end caps for extreme environments'
+        }
       }
     }
   },
@@ -289,7 +389,7 @@ const en = {
   },
   footer: {
     description: 'Providing high-quality precision bearings for automotive, manufacturing, energy, agriculture, and other industries.',
-    copyright: '© 2023 Jiangsu Ander Precision Bearing Technology Co., Ltd. All rights reserved.',
+    copyright: '© 2023 Jiangsu Ande Precision Bearing Technology Co., Ltd. All rights reserved.',
     links: {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',

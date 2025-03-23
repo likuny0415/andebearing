@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -11,42 +11,20 @@ export default function Header() {
   const { t, language } = useLanguage();
   const pathname = usePathname();
   const router = useRouter();
-  const [currentPrefix, setCurrentPrefix] = useState('');
-
-  useEffect(() => {
-    // Determine language prefix from pathname
-    if (pathname.startsWith('/zh')) {
-      setCurrentPrefix('/zh');
-    } else {
-      setCurrentPrefix('/en');
-    }
-  }, [pathname]);
 
   // Function to create language-aware links
   const createLink = (path: string) => {
-    // For server-side rendering, we need to derive the prefix directly from the pathname
-    // This ensures consistent links between server and client
-    if (typeof window === 'undefined') {
-      if (pathname.startsWith('/zh')) {
-        return `/zh${path}`;
-      }
-      return `/en${path}`;
+    // Don't use window checks or server/client branching
+    // Use pathname directly to determine the language prefix
+    if (pathname.startsWith('/zh')) {
+      return `/zh${path}`;
     }
-    
-    // For client-side rendering, we use the state value which will be available after hydration
-    if (!currentPrefix) {
-      // Use pathname to determine prefix if currentPrefix is not set yet
-      if (pathname.startsWith('/zh')) {
-        return `/zh${path}`;
-      }
-      return `/en${path}`;
-    }
-    return `${currentPrefix}${path}`;
+    return `/en${path}`;
   };
 
   // Function to check if a link is active
   const isActive = (path: string) => {
-    if (path === '/' && pathname === currentPrefix) {
+    if (path === '/' && (pathname === '/en' || pathname === '/zh')) {
       return true;
     }
     return pathname.endsWith(path);

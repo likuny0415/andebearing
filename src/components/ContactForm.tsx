@@ -81,13 +81,13 @@ export default function ContactForm() {
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
           </div>
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">{t('company')} *</label>
-            <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} required
+            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">{t('company')}</label>
+            <input type="text" id="company" name="company" value={formData.company} onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
           </div>
           <div>
-            <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">{t('country')} *</label>
-            <input type="text" id="country" name="country" value={formData.country} onChange={handleChange} required
+            <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">{t('country')}</label>
+            <input type="text" id="country" name="country" value={formData.country} onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
           </div>
           <div>

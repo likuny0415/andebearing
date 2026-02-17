@@ -51,31 +51,28 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const name = t(`items.${slug}.name`);
   const overview = t(`items.${slug}.overview`);
-  const features: string[] = [];
-  const applications: string[] = [];
 
-  for (let i = 0; i < 10; i++) {
-    try {
-      const f = t(`items.${slug}.features.${i}`);
-      if (f && !f.includes(`items.${slug}.features.${i}`)) features.push(f);
-    } catch { break; }
-  }
-  for (let i = 0; i < 10; i++) {
-    try {
-      const a = t(`items.${slug}.applications.${i}`);
-      if (a && !a.includes(`items.${slug}.applications.${i}`)) applications.push(a);
-    } catch { break; }
-  }
+  // Use t.raw() to get arrays directly instead of iterating with index
+  let features: string[] = [];
+  let applications: string[] = [];
+  try {
+    const rawFeatures = t.raw(`items.${slug}.features`);
+    if (Array.isArray(rawFeatures)) features = rawFeatures;
+  } catch { /* no features */ }
+  try {
+    const rawApps = t.raw(`items.${slug}.applications`);
+    if (Array.isArray(rawApps)) applications = rawApps;
+  } catch { /* no applications */ }
 
   // Build specs
   const specs: { label: string; value: string }[] = [];
   for (const key of SPEC_KEYS) {
     try {
       const val = t(`items.${slug}.specifications.${key}`);
-      if (val && val !== 'N/A' && !val.includes(`items.${slug}.specifications.${key}`)) {
+      if (val && val !== 'N/A' && !val.startsWith('products.items.')) {
         specs.push({ label: t(`specLabels.${key}`), value: val });
       }
-    } catch { /* skip */ }
+    } catch { /* skip missing spec */ }
   }
 
   // Product JSON-LD

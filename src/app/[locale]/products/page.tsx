@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('products.description'),
     alternates: {
       canonical: `${SITE_URL}/${locale}/products`,
-      languages: { en: `${SITE_URL}/en/products`, zh: `${SITE_URL}/zh/products` },
+      languages: { en: `${SITE_URL}/en/products`, zh: `${SITE_URL}/zh/products`, 'x-default': `${SITE_URL}/en/products` },
     },
   };
 }

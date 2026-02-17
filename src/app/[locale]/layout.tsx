@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
@@ -14,7 +14,16 @@ import '../globals.css';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#1e3a8a',
+};
 
 type Props = {
   children: ReactNode;
@@ -83,6 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: `${SITE_URL}/en`,
         zh: `${SITE_URL}/zh`,
+        'x-default': `${SITE_URL}/en`,
       },
     },
     // verification: {
@@ -169,6 +179,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="icon" href="/images/company_log.png" type="image/png" />
         <link rel="icon" href="/images/company_log.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <StructuredData locale={locale} />
       </head>
       <body

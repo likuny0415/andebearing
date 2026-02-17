@@ -27,9 +27,9 @@ export default function HomePage() {
         </div>
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
           <div className="max-w-3xl">
-            <div className="flex gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
               {(['badge1', 'badge2', 'badge3'] as const).map((badge) => (
-                <span key={badge} className="bg-white/15 backdrop-blur-sm text-xs px-3 py-1 rounded-full border border-white/20">
+                <span key={badge} className="bg-white/15 backdrop-blur-sm text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
                   {t(`hero.${badge}`)}
                 </span>
               ))}
@@ -59,13 +59,13 @@ export default function HomePage() {
       </section>
 
       {/* Factory Stats Bar */}
-      <section className="bg-gray-900 text-white py-6">
+      <section className="bg-gray-900 text-white py-4 sm:py-6">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 text-center">
             {(['stat1', 'stat2', 'stat3'] as const).map((stat) => (
               <div key={stat}>
-                <div className="text-2xl md:text-3xl font-bold text-blue-400">{t(`hero.${stat}Value`)}</div>
-                <div className="text-xs md:text-sm text-gray-400 mt-1">{t(`hero.${stat}Label`)}</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">{t(`hero.${stat}Value`)}</div>
+                <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 mt-1">{t(`hero.${stat}Label`)}</div>
               </div>
             ))}
           </div>
@@ -105,29 +105,29 @@ export default function HomePage() {
       </section>
 
       {/* Product Categories */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">{t('featuredProducts.title')}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{t('featuredProducts.subtitle')}</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{t('featuredProducts.title')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">{t('featuredProducts.subtitle')}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {categories.map((cat) => (
               <Link
                 key={cat}
                 href={`/products/${t(`products.categories.${cat}.slug`)}`}
-                className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all"
+                className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all"
               >
-                <div className="h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="h-32 sm:h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                <div className="p-4 sm:p-5">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
                     {t(`products.categories.${cat}.name`)}
                   </h3>
                   <p className="text-sm text-gray-600">{t(`products.categories.${cat}.description`)}</p>
@@ -139,13 +139,13 @@ export default function HomePage() {
       </section>
 
       {/* Industries */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">{t('industries.title')}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{t('industries.subtitle')}</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{t('industries.title')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">{t('industries.subtitle')}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {industries.map((ind) => (
               <div key={ind} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-200 hover:shadow-sm transition-all">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(`industries.items.${ind}.name`)}</h3>
@@ -162,17 +162,17 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-10 sm:py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">{t('products.detail.ctaTitle')}</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">{t('products.detail.ctaDescription')}</p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t('products.detail.ctaTitle')}</h2>
+          <p className="text-blue-100 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base">{t('products.detail.ctaDescription')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded font-semibold hover:bg-blue-50 transition-colors">
-              {t('common.requestQuote')}
-            </Link>
-            <Link href="/products" className="border-2 border-white px-8 py-3 rounded font-semibold hover:bg-white/10 transition-colors">
-              {t('common.viewProducts')}
-            </Link>
+              <Link href="/contact" className="bg-white text-blue-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-blue-50 active:bg-blue-100 transition-colors">
+                {t('common.requestQuote')}
+              </Link>
+              <Link href="/products" className="border-2 border-white px-6 sm:px-8 py-3 rounded font-semibold hover:bg-white/10 active:bg-white/20 transition-colors">
+                {t('common.viewProducts')}
+              </Link>
           </div>
         </div>
       </section>

@@ -1,0 +1,191 @@
+import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { routing, type Locale } from '@/i18n/routing';
+import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/lib/constants';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import '../globals.css';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const isZh = locale === 'zh';
+
+  return {
+    title: {
+      default: t('home.title'),
+      template: `%s | ${isZh ? '安德精工轴承' : 'ANDE Bearing'}`,
+    },
+    description: t('home.description'),
+    keywords: isZh
+      ? ['轴承', '安德轴承', '精密轴承', '工业轴承', '深沟球轴承', '滚子轴承', '直线导轨', '轴承制造商', '轴承出口']
+      : ['bearings', 'precision bearings', 'industrial bearings', 'ball bearings', 'roller bearings', 'bearing manufacturer', 'China bearing exporter', 'ANDE bearing'],
+    authors: [{ name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN }],
+    creator: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
+    publisher: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
+    icons: {
+      icon: [
+        { url: '/images/company_log.svg', type: 'image/svg+xml' },
+        { url: '/images/company_log.png', type: 'image/png' },
+      ],
+      apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
+    openGraph: {
+      type: 'website',
+      locale: isZh ? 'zh_CN' : 'en_US',
+      alternateLocale: isZh ? 'en_US' : 'zh_CN',
+      title: t('home.title'),
+      description: t('home.description'),
+      siteName: isZh ? '安德精工轴承' : 'ANDE Precision Bearing',
+      url: `${SITE_URL}/${locale}`,
+      images: [
+        {
+          url: `${SITE_URL}/images/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: isZh ? '安德精工轴承科技有限公司' : 'ANDE Precision Bearing Technology Co., Ltd.',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('home.title'),
+      description: t('home.description'),
+      images: [`${SITE_URL}/images/og-image.jpg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: {
+        en: `${SITE_URL}/en`,
+        zh: `${SITE_URL}/zh`,
+      },
+    },
+    verification: {
+      google: 'google-site-verification-code', // TODO: Replace with actual verification code
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+// Organization + WebSite JSON-LD structured data
+function StructuredData({ locale }: { locale: string }) {
+  const isZh = locale === 'zh';
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
+    alternateName: isZh ? COMPANY_NAME_EN : COMPANY_NAME_ZH,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/company_log.png`,
+    description: isZh
+      ? 'ISO认证精密轴承制造商，产品涵盖球轴承、滚子轴承、直线导轨，服务全球50+国家。'
+      : 'ISO-certified precision bearing manufacturer. Ball bearings, roller bearings, linear motion systems for 50+ countries.',
+    foundingDate: '1985',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'No. 23 Lianxin Road, Huashi Industrial Park',
+      addressLocality: 'Jiangyin',
+      addressRegion: 'Jiangsu',
+      addressCountry: 'CN',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: CONTACT_PHONE,
+      email: CONTACT_EMAIL,
+      contactType: 'sales',
+      availableLanguage: ['English', 'Chinese'],
+    },
+    sameAs: ['https://www.linkedin.com/company/andeprecisionbearing'],
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: isZh ? '安德精工轴承' : 'ANDE Precision Bearing',
+    url: SITE_URL,
+    inLanguage: isZh ? 'zh-CN' : 'en',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/${locale}/products?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
+  );
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  // Validate locale
+  if (!routing.locales.includes(locale as Locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale === 'zh' ? 'zh-CN' : 'en'} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/images/company_log.png" type="image/png" />
+        <link rel="icon" href="/images/company_log.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <StructuredData locale={locale} />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white text-gray-900`}
+      >
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <SpeedInsights />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

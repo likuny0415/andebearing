@@ -1,0 +1,10 @@
+export const SITE_URL = 'https://www.beirenbearing.com';
+export const SITE_NAME_EN = 'ANDE Precision Bearing';
+export const SITE_NAME_ZH = '安德精工轴承';
+export const COMPANY_NAME_EN = 'Jiangsu ANDE Precision Bearing Technology Co., Ltd.';
+export const COMPANY_NAME_ZH = '江苏安德精工轴承科技有限公司';
+export const CONTACT_EMAIL = 'andeprecisionbearing@gmail.com';
+export const CONTACT_PHONE = '(+86) 13906240166';
+export const COMPANY_ADDRESS_EN = 'No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China';
+export const COMPANY_ADDRESS_ZH = '中国江苏省江阴市华士工业园联新路23号';
+export const FOUNDED_YEAR = '1985';

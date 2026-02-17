@@ -1,0 +1,512 @@
+{
+  "metadata": {
+    "home": {
+      "title": "ANDE Precision Bearing | Industrial Bearings Manufacturer & Exporter",
+      "description": "Jiangsu ANDE Precision Bearing Technology Co., Ltd. — ISO-certified manufacturer of ball bearings, roller bearings, and linear motion systems for steel mills, mining, energy, and OEM applications worldwide."
+    },
+    "products": {
+      "title": "Bearing Products | Ball, Roller, Linear Motion & Mounted Units — ANDE",
+      "description": "Browse our full range of precision bearings: deep groove ball bearings, tapered and spherical roller bearings, linear guides, mounted units, and accessories."
+    },
+    "about": {
+      "title": "About ANDE Precision Bearing — Factory Capabilities & Quality Assurance",
+      "description": "Founded in 1985, Jiangsu ANDE Precision Bearing Technology Co., Ltd. manufactures high-quality bearings with ISO 9001 certification. 30+ years of export experience."
+    },
+    "contact": {
+      "title": "Request a Quote | Contact ANDE Precision Bearing",
+      "description": "Contact our engineering team for bearing selection, RFQ, or technical support. Response within 24 hours. Export to 50+ countries."
+    },
+    "industries": {
+      "title": "Industries Served | Steel, Mining, Energy, OEM — ANDE Bearing",
+      "description": "ANDE bearings serve demanding industries: steel mills, mining operations, wind energy, automotive OEM, manufacturing, and agriculture."
+    },
+    "services": {
+      "title": "Technical Services | Bearing Selection & Failure Analysis — ANDE",
+      "description": "Expert bearing services: technical consultation, bearing selection, installation support, failure analysis, and preventive maintenance programs."
+    },
+    "faq": {
+      "title": "FAQ | Bearing Specifications, Ordering & Technical Questions — ANDE",
+      "description": "Frequently asked questions about bearing specifications, MOQ, lead times, OEM customization, certifications, and export packaging."
+    },
+    "quality": {
+      "title": "Quality Assurance & Certifications — ANDE Precision Bearing",
+      "description": "ISO 9001:2015 certified bearing manufacturer. Rigorous QC process: incoming material inspection, hardness testing, dimensional verification, and final audit."
+    }
+  },
+  "common": {
+    "home": "Home",
+    "products": "Products",
+    "industries": "Industries",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "quality": "Quality",
+    "faq": "FAQ",
+    "requestQuote": "Request a Quote",
+    "talkToEngineering": "Talk to Engineering",
+    "downloadDatasheet": "Download Datasheet",
+    "downloadCatalog": "Download Catalog",
+    "viewProducts": "View Products",
+    "viewDetails": "View Details",
+    "viewAll": "View All",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "backToProducts": "Back to Products",
+    "backToIndustries": "Back to Industries",
+    "sendInquiry": "Send Inquiry",
+    "sending": "Sending...",
+    "submitRFQ": "Submit RFQ",
+    "getInTouch": "Get in Touch",
+    "responseTime": "Response within 24 hours",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "businessHours": "Business Hours"
+  },
+  "nav": {
+    "products": "Products",
+    "industries": "Industries",
+    "about": "About Us",
+    "quality": "Quality",
+    "services": "Services",
+    "contact": "Contact / RFQ",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Rolling Mill & Heavy-Duty Bearing Solutions",
+    "subtitle": "ISO-certified manufacturer specializing in spherical roller bearings, tapered roller bearings, and precision ball bearings for steel mills, mining, energy, and OEM applications. Direct factory supply to distributors in 50+ countries.",
+    "cta1": "View Products",
+    "cta2": "Request a Quote",
+    "badge1": "ISO 9001:2015",
+    "badge2": "30+ Years Export",
+    "badge3": "50+ Countries",
+    "statsTitle": "Factory at a Glance",
+    "stat1Label": "Annual Capacity",
+    "stat1Value": "5M+ Units",
+    "stat2Label": "Export Markets",
+    "stat2Value": "50+ Countries",
+    "stat3Label": "Precision Classes",
+    "stat3Value": "P0 / P6 / P5"
+  },
+  "trust": {
+    "title": "Why Global Buyers Choose ANDE",
+    "factoryCapability": {
+      "title": "Factory Capabilities",
+      "description": "Modern manufacturing facility with CNC grinding, superfinishing, and automated assembly lines. Annual capacity: 5 million+ bearing units.",
+      "items": ["CNC precision grinding & superfinishing", "Automated assembly & inspection lines", "Annual capacity: 5,000,000+ units", "Tolerance class: P0 / P6 / P5 available"]
+    },
+    "qualityControl": {
+      "title": "Quality Control Process",
+      "description": "Every bearing undergoes multi-stage inspection from raw material to finished product, ensuring compliance with ISO, JIS, and ABEC standards.",
+      "items": ["Incoming material verification (hardness, chemistry)", "In-process dimensional inspection", "Roundness & surface roughness measurement", "Final audit: noise, vibration, clearance testing"]
+    },
+    "exportExperience": {
+      "title": "Export Experience",
+      "description": "30+ years serving international markets with FOB/CIF terms, industrial packaging, and documentation for customs clearance.",
+      "items": ["Export to 50+ countries worldwide", "FOB / CIF / DDP terms available", "Industrial-grade export packaging", "Full documentation & certificates of conformity"]
+    },
+    "responseSLA": {
+      "title": "Responsive Service",
+      "description": "Dedicated export team with technical engineering support. We understand procurement timelines.",
+      "items": ["RFQ response within 24 hours", "Technical drawing review in 48 hours", "Sample delivery: 5-7 business days", "Dedicated account manager for key accounts"]
+    }
+  },
+  "featuredProducts": {
+    "title": "Product Categories",
+    "subtitle": "Precision-engineered bearing solutions for demanding industrial applications. All products manufactured to ISO standards with full traceability."
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Engineered bearing solutions for the most demanding operating environments across global heavy industry.",
+    "items": {
+      "steel": {
+        "name": "Steel & Rolling Mills",
+        "description": "Heavy-duty spherical roller bearings and tapered roller bearings for continuous casters, rolling mills, and material handling in steel production.",
+        "slug": "steel-mills"
+      },
+      "mining": {
+        "name": "Mining & Minerals",
+        "description": "Robust bearings for crushers, conveyors, vibrating screens, and processing equipment in harsh mining environments.",
+        "slug": "mining"
+      },
+      "energy": {
+        "name": "Energy & Power Generation",
+        "description": "Specialized bearings for wind turbines, generators, pumps, and compressors in conventional and renewable energy applications.",
+        "slug": "energy"
+      },
+      "automotive": {
+        "name": "Automotive & Transport",
+        "description": "High-performance bearings for wheel hubs, transmissions, engines, and drivetrain components for automotive OEMs and aftermarket.",
+        "slug": "automotive"
+      },
+      "manufacturing": {
+        "name": "General Manufacturing",
+        "description": "Reliable bearings for machine tools, conveyor systems, packaging equipment, and general industrial machinery.",
+        "slug": "manufacturing"
+      },
+      "agriculture": {
+        "name": "Agriculture & Forestry",
+        "description": "Durable bearings for tractors, harvesters, tillers, and agricultural processing equipment operating in dusty, wet conditions.",
+        "slug": "agriculture"
+      }
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Comprehensive range of precision bearings and motion components, manufactured to international standards with full dimensional and material traceability.",
+    "categories": {
+      "ballBearings": {
+        "name": "Ball Bearings",
+        "slug": "ball-bearings",
+        "description": "Deep groove, angular contact, and self-aligning ball bearings for high-speed and precision applications."
+      },
+      "rollerBearings": {
+        "name": "Roller Bearings",
+        "slug": "roller-bearings",
+        "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications."
+      },
+      "linearMotion": {
+        "name": "Linear Motion",
+        "slug": "linear-motion",
+        "description": "Linear guides, ball screws, and slide units for precision automated machinery and CNC equipment."
+      },
+      "mountedUnits": {
+        "name": "Mounted Units",
+        "slug": "mounted-units",
+        "description": "Pillow block, flange, and take-up mounted bearing units for quick installation and easy maintenance."
+      },
+      "accessories": {
+        "name": "Accessories",
+        "slug": "accessories",
+        "description": "Bearing housings, lubricants, seals, adapters, and maintenance tools to support bearing performance."
+      }
+    },
+    "items": {
+      "deep-groove-ball-bearing": {
+        "name": "Deep Groove Ball Bearing",
+        "description": "Versatile bearing type suitable for high-speed applications with radial and axial loads in both directions.",
+        "overview": "Our Deep Groove Ball Bearings are designed for high speed and precision applications requiring excellent axial and radial load capacity. They feature low friction and high rotational accuracy, making them ideal for electric motors, pumps, and various industrial machinery.",
+        "features": ["Low friction design for efficient operation", "High speed capability up to 17,000 RPM", "Excellent noise and vibration characteristics", "Available with various sealing and lubrication options", "Conformance to ISO 15:2017 dimensional standards"],
+        "applications": ["Electric motors and generators", "Pumps and compressors", "Automotive auxiliary components", "Conveyor idlers and material handling"],
+        "specifications": {
+          "type": "Single Row Deep Groove Ball Bearing",
+          "boreDiameter": "10 mm - 200 mm (standard range)",
+          "outerDiameter": "30 mm - 340 mm (standard range)",
+          "width": "9 mm - 58 mm (standard range)",
+          "material": "Chrome Steel AISI 52100 / Stainless AISI 440C",
+          "cageType": "Pressed steel / Polyamide (PA66)",
+          "precisionClass": "P0 (ABEC 1) standard, P6/P5 on request",
+          "speedRating": "Up to 17,000 RPM (size dependent)",
+          "dynamicLoad": "1.5 kN - 380 kN",
+          "staticLoad": "0.95 kN - 335 kN",
+          "sealOptions": "Open / Shielded (ZZ) / Sealed (2RS)",
+          "standards": "ISO 15:2017, ISO 492"
+        },
+        "category": "ball-bearings"
+      },
+      "tapered-roller-bearing": {
+        "name": "Tapered Roller Bearing",
+        "description": "Designed to handle combined radial and axial loads with tapered raceways for heavy-duty applications.",
+        "overview": "Tapered Roller Bearings handle combined radial and axial loads simultaneously. The tapered design creates line contact between rollers and raceways, providing high load capacity and excellent resistance to axial forces.",
+        "features": ["High combined load capacity (radial + axial)", "Excellent shock load resistance", "Adjustable clearance for precision applications", "Available in single, double, and four-row configurations", "Operating temperature: -40C to +150C"],
+        "applications": ["Automotive wheel hubs and axle assemblies", "Gearboxes and power transmissions", "Rolling mill work rolls and backup rolls", "Machine tool spindles"],
+        "specifications": {
+          "type": "Single Row Tapered Roller Bearing",
+          "boreDiameter": "15 mm - 300 mm",
+          "outerDiameter": "35 mm - 540 mm",
+          "width": "12 mm - 140 mm",
+          "material": "Case-hardened bearing steel / Through-hardened steel",
+          "cageType": "Pressed steel / Machined brass",
+          "precisionClass": "P0 standard, P5/P4 available",
+          "speedRating": "Up to 5,000 RPM (size dependent)",
+          "dynamicLoad": "14 kN - 1,700 kN",
+          "staticLoad": "10.6 kN - 3,000 kN",
+          "sealOptions": "Open / Sealed configurations available",
+          "standards": "ISO 355, ISO 492"
+        },
+        "category": "roller-bearings"
+      },
+      "spherical-roller-bearing": {
+        "name": "Spherical Roller Bearing",
+        "description": "Self-aligning bearings with high load capacity for applications with misalignment or shaft deflection.",
+        "overview": "Spherical Roller Bearings are self-aligning bearings designed for heavy loads while accommodating misalignment up to 2 degrees, shaft deflection, and thermal expansion.",
+        "features": ["Self-aligning capability: up to 2 degrees misalignment", "Very high radial load capacity", "Excellent shock and vibration resistance", "Compact design with high load-to-size ratio", "Extended service life with proper lubrication"],
+        "applications": ["Steel mill rolling equipment and continuous casters", "Mining crushers, conveyors, and vibrating screens", "Paper and pulp mill machinery", "Wind turbine main shaft and gearbox"],
+        "specifications": {
+          "type": "Spherical Roller Bearing",
+          "boreDiameter": "20 mm - 400 mm",
+          "outerDiameter": "47 mm - 650 mm",
+          "width": "14 mm - 157 mm",
+          "material": "High-carbon chrome steel / Surface-hardened steel",
+          "cageType": "Pressed steel / Machined brass / Polyamide",
+          "precisionClass": "Normal / P6 available",
+          "speedRating": "Up to 3,800 RPM (size dependent)",
+          "dynamicLoad": "25 kN - 2,500 kN",
+          "staticLoad": "31 kN - 3,800 kN",
+          "sealOptions": "Open / Sealed (various options)",
+          "standards": "ISO 15:2017, ISO 492"
+        },
+        "category": "roller-bearings"
+      },
+      "linear-guide": {
+        "name": "Linear Guide System",
+        "description": "Precision-engineered linear motion systems for smooth, accurate movement in CNC machines and automation.",
+        "overview": "Linear Guide Systems enable smooth, accurate linear motion in industrial machinery and automation. Consisting of hardened steel rails and recirculating ball carriages, they deliver minimal friction, high rigidity, and excellent load capacity.",
+        "features": ["High positioning accuracy", "Low friction coefficient for smooth operation", "High load capacity in all directions", "Long service life: millions of cycles", "Available in multiple accuracy and preload grades"],
+        "applications": ["CNC machine tools and machining centers", "Semiconductor and electronics manufacturing", "Automated assembly and robotic systems", "Medical and precision instrumentation"],
+        "specifications": {
+          "type": "Ball Type Linear Guide System",
+          "boreDiameter": "N/A",
+          "outerDiameter": "N/A",
+          "width": "Rail widths: 15 mm - 65 mm",
+          "material": "Hardened steel with anti-corrosion treatment",
+          "cageType": "Recirculating ball retainer",
+          "precisionClass": "Normal / High / Precision / Super-Precision",
+          "speedRating": "Up to 5 m/s",
+          "dynamicLoad": "4.6 kN - 224.7 kN per block",
+          "staticLoad": "7.2 kN - 412 kN per block",
+          "sealOptions": "Standard seals / High-temperature / Dust-resistant",
+          "standards": "Interchangeable with major linear guide standards"
+        },
+        "category": "linear-motion"
+      },
+      "bearing-housing": {
+        "name": "Bearing Housing",
+        "description": "Protective enclosures for bearings providing secure mounting and contamination protection.",
+        "overview": "Our bearing housings are precision-machined enclosures designed to securely mount and protect bearings in industrial applications. Made from high-quality cast iron (GG25/GGG40).",
+        "features": ["Robust cast iron construction", "Precision-machined bore for accurate alignment", "Effective sealing to prevent contamination", "Multiple mounting configurations", "Relubrication ports for easy maintenance"],
+        "applications": ["Conveyors and material handling", "Agricultural and forestry equipment", "HVAC systems and industrial fans", "Mining and construction machinery"],
+        "specifications": {
+          "type": "Pillow Block / Flange Housing",
+          "boreDiameter": "Shaft: 20 mm - 160 mm",
+          "outerDiameter": "N/A",
+          "width": "Varies by model",
+          "material": "Cast Iron GG25 / Ductile Iron GGG40",
+          "cageType": "N/A",
+          "precisionClass": "Standard industrial tolerance",
+          "speedRating": "Dependent on installed bearing",
+          "dynamicLoad": "Up to 450 kN (size dependent)",
+          "staticLoad": "Per installed bearing specification",
+          "sealOptions": "Double-lip seals with optional dust covers",
+          "standards": "ISO 113, interchangeable dimensions"
+        },
+        "category": "accessories"
+      },
+      "bearing-lubricant": {
+        "name": "Bearing Lubricant",
+        "description": "High-performance lubricants formulated to reduce friction and extend bearing life.",
+        "overview": "Specially formulated bearing lubricants that create a protective film between bearing surfaces, preventing metal-to-metal contact while providing effective protection against contaminants.",
+        "features": ["Superior load-carrying capacity", "Excellent thermal stability up to 180C", "Outstanding water resistance and corrosion protection", "Extended relubrication intervals", "Compatible with common bearing materials and seals"],
+        "applications": ["High-speed electric motor bearings", "Heavy-duty industrial machinery", "Wet and corrosive environments", "High-temperature steel mill applications"],
+        "specifications": {
+          "type": "Synthetic Bearing Grease",
+          "boreDiameter": "N/A",
+          "outerDiameter": "N/A",
+          "width": "N/A",
+          "material": "Lithium complex thickener / Synthetic base oil",
+          "cageType": "N/A",
+          "precisionClass": "N/A",
+          "speedRating": "Suitable for up to 15,000 RPM",
+          "dynamicLoad": "Weld load: 315 kg (ASTM D2596)",
+          "staticLoad": "N/A",
+          "sealOptions": "N/A",
+          "standards": "DIN 51825, NLGI Grade 2"
+        },
+        "category": "accessories"
+      },
+      "mounted-bearing-unit": {
+        "name": "Mounted Bearing Unit",
+        "description": "Pre-assembled units combining bearing, housing, seal, and locking device for quick installation.",
+        "overview": "Mounted Bearing Units are pre-assembled components that combine a bearing, housing, sealing system, and locking device in a ready-to-install package.",
+        "features": ["Pre-assembled for quick installation", "Self-aligning to accommodate shaft misalignment", "Effective triple-lip sealing system", "Relubrication capability", "Multiple locking methods: set screw, eccentric collar, adapter"],
+        "applications": ["Conveyor systems in manufacturing and logistics", "Food processing and packaging lines", "Agricultural machinery and grain handling", "HVAC systems, fans, and cooling towers"],
+        "specifications": {
+          "type": "Pillow Block / Flange Mounted Unit",
+          "boreDiameter": "Shaft: 12 mm - 140 mm",
+          "outerDiameter": "N/A",
+          "width": "Varies by model",
+          "material": "Housing: Cast Iron / Bearing: Chrome Steel",
+          "cageType": "Pressed steel",
+          "precisionClass": "Standard industrial tolerance",
+          "speedRating": "Up to 5,000 RPM",
+          "dynamicLoad": "4.5 kN - 370 kN",
+          "staticLoad": "3.2 kN - 305 kN",
+          "sealOptions": "Triple-lip seals with optional end caps",
+          "standards": "ISO 3228, interchangeable dimensions"
+        },
+        "category": "mounted-units"
+      }
+    },
+    "specLabels": {
+      "type": "Type",
+      "boreDiameter": "Bore Diameter",
+      "outerDiameter": "Outer Diameter",
+      "width": "Width",
+      "material": "Material",
+      "cageType": "Cage Type",
+      "precisionClass": "Precision Class",
+      "speedRating": "Speed Rating",
+      "dynamicLoad": "Dynamic Load Rating",
+      "staticLoad": "Static Load Rating",
+      "sealOptions": "Seal Options",
+      "standards": "Standards"
+    },
+    "detail": {
+      "overview": "Technical Overview",
+      "features": "Key Features",
+      "applications": "Applications",
+      "specifications": "Technical Specifications",
+      "relatedProducts": "Related Products",
+      "property": "Property",
+      "value": "Value",
+      "ctaTitle": "Need this bearing for your application?",
+      "ctaDescription": "Our engineering team can help with bearing selection, custom specifications, and volume pricing.",
+      "qualityNote": "All products undergo 100% inspection before shipment. Certificate of Conformity included with every order."
+    }
+  },
+  "about": {
+    "title": "About ANDE Precision Bearing",
+    "subtitle": "Over 30 years of precision bearing manufacturing for global industrial markets.",
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded in 1985, Jiangsu ANDE Precision Bearing Technology Co., Ltd. has grown from a specialized local manufacturer to a global supplier of precision bearings. Located in Jiangyin, Jiangsu Province, we combine decades of metallurgical expertise with modern CNC manufacturing technology.",
+      "p2": "Our facility spans over 15,000 m2 with dedicated production lines for ball bearings, roller bearings, and mounted units. We serve distributors, steel mills, mining operations, and OEM procurement teams in more than 50 countries.",
+      "p3": "Our commitment to quality, technical accuracy, and reliable delivery has earned us long-term partnerships with major industrial buyers across Southeast Asia, the Middle East, Europe, and the Americas."
+    },
+    "mission": {
+      "title": "Our Mission & Values",
+      "quality": {
+        "title": "Quality First",
+        "description": "Every bearing passes multi-stage quality inspection. We maintain ISO 9001:2015 certification and conform to international dimensional and tolerance standards."
+      },
+      "innovation": {
+        "title": "Continuous Improvement",
+        "description": "We invest in advanced grinding, superfinishing, and assembly equipment to improve precision, consistency, and production efficiency."
+      },
+      "service": {
+        "title": "Customer Partnership",
+        "description": "We function as an extension of your procurement team, providing technical support, responsive communication, and reliable supply chain performance."
+      }
+    },
+    "capabilities": {
+      "title": "Factory Capabilities",
+      "items": [
+        {"label": "Facility Size", "value": "15,000+ m2"},
+        {"label": "Annual Capacity", "value": "5,000,000+ units"},
+        {"label": "Product Lines", "value": "Ball, Roller, Linear, Mounted"},
+        {"label": "Precision Classes", "value": "P0, P6, P5, P4"},
+        {"label": "Export Markets", "value": "50+ countries"},
+        {"label": "Established", "value": "1985"}
+      ]
+    }
+  },
+  "quality": {
+    "title": "Quality Assurance & Certifications",
+    "subtitle": "Rigorous quality control at every stage of production ensures our bearings meet the highest international standards.",
+    "certifications": {
+      "title": "Certifications",
+      "items": ["ISO 9001:2015 Quality Management System", "ISO 14001 Environmental Management (in progress)", "Products conform to ISO, JIS, ABEC, DIN standards", "CE marking available for European market requirements"]
+    },
+    "process": {
+      "title": "Quality Control Process",
+      "steps": [
+        {"title": "Incoming Material Inspection", "description": "Chemical composition analysis, hardness testing, and metallurgical structure verification of all raw steel materials."},
+        {"title": "In-Process Dimensional Inspection", "description": "Continuous monitoring of bore, OD, width, and raceway geometry using precision measuring instruments during production."},
+        {"title": "Surface & Roundness Measurement", "description": "Roundness, waviness, and surface roughness measurements on critical raceway and rolling element surfaces."},
+        {"title": "Final Audit & Testing", "description": "100% inspection for noise, vibration, radial clearance, and rotational accuracy before packaging and shipment."}
+      ]
+    },
+    "equipment": {
+      "title": "Inspection Equipment",
+      "items": ["Roundness measuring machines", "Surface roughness testers (Ra, Rz)", "Hardness testers (Rockwell / Vickers)", "Vibration & noise measuring instruments", "Profile projectors and CMM", "Bore gauges, micrometers, height gauges"]
+    }
+  },
+  "services": {
+    "title": "Technical Services",
+    "subtitle": "Comprehensive bearing support from application engineering to failure analysis.",
+    "items": {
+      "consultation": {
+        "title": "Technical Consultation",
+        "description": "Expert guidance on bearing selection based on your application requirements.",
+        "points": ["Application analysis and bearing selection", "Load and speed calculations", "Lubrication and fitting recommendations", "Material selection for specific environments"]
+      },
+      "installation": {
+        "title": "Installation & Maintenance Support",
+        "description": "Professional guidance for bearing installation, alignment, and preventive maintenance.",
+        "points": ["Mounting and dismounting guidance", "Preventive maintenance programs", "Lubrication schedules and procedures", "Condition monitoring recommendations"]
+      },
+      "failureAnalysis": {
+        "title": "Failure Analysis",
+        "description": "Systematic investigation of bearing failures to identify root causes and prevent recurrence.",
+        "points": ["Comprehensive failure investigation", "Root cause identification", "Corrective action recommendations", "System optimization guidance"]
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions from distributors, procurement managers, and engineers.",
+    "items": [
+      {"question": "What is the minimum order quantity (MOQ)?", "answer": "MOQ varies by bearing type and size. For standard catalog items, typical MOQ is 50-100 pieces. For non-standard or customized bearings, please contact our sales team for specific quantities."},
+      {"question": "What are your standard lead times?", "answer": "Standard catalog bearings: 2-4 weeks from order confirmation. Non-standard or large-quantity orders: 4-8 weeks. Express delivery can be arranged for urgent requirements."},
+      {"question": "Do you provide OEM/ODM services?", "answer": "Yes. We offer custom branding, specific packaging, and bearing modifications including non-standard dimensions, special materials, coatings, and clearance configurations."},
+      {"question": "What certifications do your bearings carry?", "answer": "Our manufacturing facility is ISO 9001:2015 certified. Products conform to ISO, JIS, ABEC, and DIN dimensional and tolerance standards. We provide Certificates of Conformity with every shipment."},
+      {"question": "What payment terms do you accept?", "answer": "We accept T/T (wire transfer), L/C (letter of credit), and Western Union. Standard terms: 30% deposit upon order confirmation, 70% balance against copy of B/L."},
+      {"question": "How is the bearing quality compared to known brands?", "answer": "Our bearings are manufactured from the same grade of bearing steel (GCr15/AISI 52100) used by major international brands. We follow the same ISO dimensional and tolerance standards."},
+      {"question": "Can you provide bearing samples?", "answer": "Yes. We provide samples for testing and evaluation. Standard catalog items can typically ship within 5-7 business days. Sample costs are usually applied to the first production order."},
+      {"question": "What export packaging do you use?", "answer": "Bearings are individually wrapped with anti-rust paper and VCI film, then packed in industrial cartons or wooden cases suitable for ocean freight. Custom packaging available."}
+    ]
+  },
+  "contact": {
+    "title": "Contact Us / Request a Quote",
+    "subtitle": "Our engineering team is ready to assist with bearing selection, technical specifications, and volume pricing. Response within 24 hours.",
+    "info": {
+      "title": "Contact Information",
+      "address": "No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China",
+      "email": "andeprecisionbearing@gmail.com",
+      "phone": "(+86) 13906240166",
+      "businessHours": "Monday - Friday: 8:00 AM - 5:00 PM (CST)\nSaturday: 9:00 AM - 1:00 PM\nSunday: Closed",
+      "responseNote": "We respond to all inquiries within 24 hours during business days."
+    },
+    "form": {
+      "title": "Send an Inquiry / RFQ",
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "country": "Country / Region",
+      "phone": "Phone (optional)",
+      "productInterest": "Product Type / Category",
+      "bearingModel": "Bearing Model / Series (e.g. 6205, 22316)",
+      "bearingSize": "Size (ID x OD x Width mm)",
+      "quantity": "Quantity & Target Delivery",
+      "application": "Application (e.g. rolling mill, gearbox, motor)",
+      "incoterms": "Preferred Incoterms / Delivery Port",
+      "message": "Additional Specifications / Requirements",
+      "attachment": "Attach Drawing / Specification (optional)",
+      "privacyNote": "Your information is confidential and will only be used to respond to your inquiry.",
+      "success": "Thank you for your inquiry. Our team will respond within 24 hours.",
+      "error": "There was an error submitting your inquiry. Please try again or email us directly.",
+      "submit": "Submit Inquiry",
+      "submitting": "Submitting...",
+      "selectProduct": "Select product type",
+      "selectIncoterms": "Select terms",
+      "incotermsOptions": {
+        "fob": "FOB (Free on Board)",
+        "cif": "CIF (Cost, Insurance, Freight)",
+        "cfr": "CFR (Cost & Freight)",
+        "ddp": "DDP (Delivered Duty Paid)",
+        "exw": "EXW (Ex Works)",
+        "other": "Other / To discuss"
+      }
+    }
+  },
+  "footer": {
+    "companyName": "Jiangsu ANDE Precision Bearing Technology Co., Ltd.",
+    "description": "ISO-certified manufacturer of precision bearings for global industrial applications. Ball bearings, roller bearings, linear motion systems, and mounted units.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "copyright": "2024 Jiangsu ANDE Precision Bearing Technology Co., Ltd. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap"
+  }
+}

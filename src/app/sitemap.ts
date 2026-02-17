@@ -1,40 +1,56 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/constants';
+
+const PRODUCT_SLUGS = [
+  'deep-groove-ball-bearing',
+  'tapered-roller-bearing',
+  'spherical-roller-bearing',
+  'linear-guide',
+  'mounted-bearing-unit',
+  'bearing-housing',
+  'bearing-lubricant',
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.beirenbearing.online/'; // Replace with your actual domain
+  const locales = ['en', 'zh'];
+  const routes = ['', '/products', '/about', '/contact', '/industries', '/services', '/quality', '/faq'];
+  const now = new Date();
 
-  // Define your routes
-  const routes = [
-    '',
-    '/products',
-    '/industries',
-    '/services',
-    '/about',
-    '/contact',
-  ];
+  const entries: MetadataRoute.Sitemap = [];
 
-  // Create sitemap entries for both English and Chinese versions
-  const sitemap: MetadataRoute.Sitemap = [];
+  // Static pages for each locale
+  for (const locale of locales) {
+    for (const route of routes) {
+      entries.push({
+        url: `${SITE_URL}/${locale}${route}`,
+        lastModified: now,
+        changeFrequency: route === '' ? 'weekly' : 'monthly',
+        priority: route === '' ? 1.0 : 0.8,
+        alternates: {
+          languages: {
+            en: `${SITE_URL}/en${route}`,
+            zh: `${SITE_URL}/zh${route}`,
+          },
+        },
+      });
+    }
 
-  // Add English routes
-  routes.forEach(route => {
-    sitemap.push({
-      url: `${baseUrl}/en${route}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: route === '' ? 1.0 : 0.8,
-    });
-  });
+    // Product detail pages
+    for (const slug of PRODUCT_SLUGS) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/products/${slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${SITE_URL}/en/products/${slug}`,
+            zh: `${SITE_URL}/zh/products/${slug}`,
+          },
+        },
+      });
+    }
+  }
 
-  // Add Chinese routes
-  routes.forEach(route => {
-    sitemap.push({
-      url: `${baseUrl}/zh${route}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: route === '' ? 1.0 : 0.8,
-    });
-  });
-
-  return sitemap;
-} 
+  return entries;
+}

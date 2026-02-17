@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('industries.title'),
     description: t('industries.description'),
-    alternates: { canonical: `${SITE_URL}/${locale}/industries`, languages: { en: `${SITE_URL}/en/industries`, zh: `${SITE_URL}/zh/industries` } },
+    alternates: { canonical: `${SITE_URL}/${locale}/industries`, languages: { en: `${SITE_URL}/en/industries`, zh: `${SITE_URL}/zh/industries`, 'x-default': `${SITE_URL}/en/industries` } },
   };
 }
 

@@ -1,7 +1,15 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { SITE_URL } from '@/lib/constants';
-import { PRODUCT_SLUGS } from '@/lib/products';
+import {
+  PRODUCT_SLUGS,
+  CATEGORY_SLUGS,
+  ALL_PRODUCT_PAGE_SLUGS,
+  CATEGORY_SLUG_TO_KEY,
+  CATEGORY_PRODUCTS,
+  isCategorySlug,
+  isProductSlug,
+} from '@/lib/products';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
@@ -12,38 +20,186 @@ const SPEC_KEYS = [
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+// Generate static params for BOTH categories and products
 export function generateStaticParams() {
-  return PRODUCT_SLUGS.map((slug) => ({ slug }));
+  return ALL_PRODUCT_PAGE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  if (!PRODUCT_SLUGS.includes(slug as any)) return {};
-  const t = await getTranslations({ locale, namespace: 'products' });
-  return {
-    title: t(`items.${slug}.name`),
-    description: t(`items.${slug}.description`),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/products/${slug}`,
-      languages: { en: `${SITE_URL}/en/products/${slug}`, zh: `${SITE_URL}/zh/products/${slug}` },
-    },
-  };
-}
 
-export default async function ProductDetailPage({ params }: Props) {
-  const { locale, slug } = await params;
-
-  if (!PRODUCT_SLUGS.includes(slug as any)) {
-    notFound();
+  if (isCategorySlug(slug)) {
+    const catKey = CATEGORY_SLUG_TO_KEY[slug];
+    const t = await getTranslations({ locale, namespace: 'products' });
+    return {
+      title: t(`categories.${catKey}.name`),
+      description: t(`categories.${catKey}.description`),
+      alternates: {
+        canonical: `${SITE_URL}/${locale}/products/${slug}`,
+        languages: {
+          en: `${SITE_URL}/en/products/${slug}`,
+          zh: `${SITE_URL}/zh/products/${slug}`,
+          'x-default': `${SITE_URL}/en/products/${slug}`,
+        },
+      },
+    };
   }
 
+  if (isProductSlug(slug)) {
+    const t = await getTranslations({ locale, namespace: 'products' });
+    return {
+      title: t(`items.${slug}.name`),
+      description: t(`items.${slug}.description`),
+      alternates: {
+        canonical: `${SITE_URL}/${locale}/products/${slug}`,
+        languages: {
+          en: `${SITE_URL}/en/products/${slug}`,
+          zh: `${SITE_URL}/zh/products/${slug}`,
+          'x-default': `${SITE_URL}/en/products/${slug}`,
+        },
+      },
+    };
+  }
+
+  return {};
+}
+
+// ─── Category Page (SSR/SSG) ────────────────────────────────────────────
+async function CategoryPage({ locale, slug }: { locale: string; slug: string }) {
+  const catKey = CATEGORY_SLUG_TO_KEY[slug as keyof typeof CATEGORY_SLUG_TO_KEY];
+  const productSlugs = CATEGORY_PRODUCTS[slug as keyof typeof CATEGORY_PRODUCTS];
+
+  const t = await getTranslations({ locale, namespace: 'products' });
+  const tc = await getTranslations({ locale, namespace: 'common' });
+
+  const categoryName = t(`categories.${catKey}.name`);
+  const categoryDescription = t(`categories.${catKey}.description`);
+
+  // Breadcrumb JSON-LD
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: tc('home'), item: `${SITE_URL}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: tc('products'), item: `${SITE_URL}/${locale}/products` },
+      { '@type': 'ListItem', position: 3, name: categoryName },
+    ],
+  };
+
+  // ItemList JSON-LD for products in this category
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: categoryName,
+    description: categoryDescription,
+    numberOfItems: productSlugs.length,
+    itemListElement: productSlugs.map((pSlug, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: t(`items.${pSlug}.name`),
+      url: `${SITE_URL}/${locale}/products/${pSlug}`,
+    })),
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li><Link href="/" className="hover:text-blue-800">{tc('home')}</Link></li>
+            <li>/</li>
+            <li><Link href="/products" className="hover:text-blue-800">{tc('products')}</Link></li>
+            <li>/</li>
+            <li className="text-gray-900 font-medium">{categoryName}</li>
+          </ol>
+        </nav>
+
+        {/* Category Header */}
+        <div className="max-w-3xl mb-10">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{categoryName}</h1>
+          <p className="text-gray-600 text-lg leading-relaxed">{categoryDescription}</p>
+        </div>
+
+        {/* Products in this category */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
+          {productSlugs.map((pSlug) => {
+            const productName = t(`items.${pSlug}.name`);
+            const productDesc = t(`items.${pSlug}.description`);
+
+            return (
+              <Link
+                key={pSlug}
+                href={`/products/${pSlug}`}
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
+              >
+                <div className="h-32 sm:h-40 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                    {productName}
+                  </h2>
+                  <p className="text-sm text-gray-600 line-clamp-2">{productDesc}</p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Other categories */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">{tc('otherCategories', { fallback: 'Other Categories' })}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {CATEGORY_SLUGS.filter((s) => s !== slug).map((otherSlug) => {
+              const otherKey = CATEGORY_SLUG_TO_KEY[otherSlug];
+              return (
+                <Link
+                  key={otherSlug}
+                  href={`/products/${otherSlug}`}
+                  className="bg-blue-50 border border-blue-100 rounded-lg p-3 sm:p-4 text-center hover:bg-blue-100 transition-colors"
+                >
+                  <span className="text-sm font-medium text-blue-900">{t(`categories.${otherKey}.name`)}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mt-12 bg-blue-900 text-white rounded-lg p-6 sm:p-8 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3">{t('detail.ctaTitle')}</h2>
+          <p className="text-blue-100 mb-6 max-w-lg mx-auto text-sm sm:text-base">{t('detail.ctaDescription')}</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/contact" className="bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
+              {tc('requestQuote')}
+            </Link>
+            <Link href="/products" className="border border-white/30 px-6 py-2.5 rounded font-medium text-sm hover:bg-white/10 transition-colors">
+              {tc('viewProducts')}
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+// ─── Product Detail Page (SSR/SSG) ──────────────────────────────────────
+async function ProductDetailPage({ locale, slug }: { locale: string; slug: string }) {
   const t = await getTranslations({ locale, namespace: 'products' });
   const tc = await getTranslations({ locale, namespace: 'common' });
 
   const name = t(`items.${slug}.name`);
   const overview = t(`items.${slug}.overview`);
 
-  // Use t.raw() to get arrays directly instead of iterating with index
   let features: string[] = [];
   let applications: string[] = [];
   try {
@@ -55,7 +211,6 @@ export default async function ProductDetailPage({ params }: Props) {
     if (Array.isArray(rawApps)) applications = rawApps;
   } catch { /* no applications */ }
 
-  // Build specs
   const specs: { label: string; value: string }[] = [];
   for (const key of SPEC_KEYS) {
     try {
@@ -66,7 +221,6 @@ export default async function ProductDetailPage({ params }: Props) {
     } catch { /* skip missing spec */ }
   }
 
-  // Product JSON-LD
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -81,7 +235,6 @@ export default async function ProductDetailPage({ params }: Props) {
     url: `${SITE_URL}/${locale}/products/${slug}`,
   };
 
-  // Breadcrumb JSON-LD
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -100,7 +253,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2">
+          <ol className="flex items-center gap-2 flex-wrap">
             <li><Link href="/" className="hover:text-blue-800">{tc('home')}</Link></li>
             <li>/</li>
             <li><Link href="/products" className="hover:text-blue-800">{tc('products')}</Link></li>
@@ -115,7 +268,7 @@ export default async function ProductDetailPage({ params }: Props) {
           <p className="text-gray-600 text-lg max-w-3xl">{t(`items.${slug}.description`)}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-10">
             {/* Overview */}
@@ -145,8 +298,8 @@ export default async function ProductDetailPage({ params }: Props) {
             {specs.length > 0 && (
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.specifications')}</h2>
-                <div className="overflow-hidden border border-gray-200 rounded-lg">
-                  <table className="w-full text-sm">
+                <div className="overflow-x-auto -mx-4 sm:mx-0 border border-gray-200 rounded-lg">
+                  <table className="w-full text-sm min-w-[400px]">
                     <thead>
                       <tr className="bg-gray-50">
                         <th className="text-left px-4 py-3 font-semibold text-gray-900 w-1/3">{t('detail.property')}</th>
@@ -187,7 +340,7 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
 
           {/* Sidebar */}
-          <aside className="space-y-6">
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
             {/* CTA Card */}
             <div className="bg-blue-900 text-white rounded-lg p-6">
               <h3 className="text-lg font-bold mb-2">{t('detail.ctaTitle')}</h3>
@@ -225,4 +378,19 @@ export default async function ProductDetailPage({ params }: Props) {
       </div>
     </>
   );
+}
+
+// ─── Main Page Component ────────────────────────────────────────────────
+export default async function ProductSlugPage({ params }: Props) {
+  const { locale, slug } = await params;
+
+  if (isCategorySlug(slug)) {
+    return <CategoryPage locale={locale} slug={slug} />;
+  }
+
+  if (isProductSlug(slug)) {
+    return <ProductDetailPage locale={locale} slug={slug} />;
+  }
+
+  notFound();
 }

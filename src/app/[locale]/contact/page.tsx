@@ -1,7 +1,27 @@
+import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { SITE_URL } from '@/lib/constants';
 import type { Metadata } from 'next';
-import ContactForm from '@/components/ContactForm';
+
+const ContactForm = dynamic(() => import('@/components/ContactForm'), {
+  loading: () => (
+    <div className="bg-white border border-gray-200 rounded-lg p-6 animate-pulse">
+      <div className="h-6 bg-gray-200 rounded w-1/3 mb-6" />
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="h-10 bg-gray-200 rounded" />
+          <div className="h-10 bg-gray-200 rounded" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="h-10 bg-gray-200 rounded" />
+          <div className="h-10 bg-gray-200 rounded" />
+        </div>
+        <div className="h-24 bg-gray-200 rounded" />
+        <div className="h-12 bg-gray-200 rounded" />
+      </div>
+    </div>
+  ),
+});
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -13,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('contact.description'),
     alternates: {
       canonical: `${SITE_URL}/${locale}/contact`,
-      languages: { en: `${SITE_URL}/en/contact`, zh: `${SITE_URL}/zh/contact` },
+      languages: { en: `${SITE_URL}/en/contact`, zh: `${SITE_URL}/zh/contact`, 'x-default': `${SITE_URL}/en/contact` },
     },
   };
 }

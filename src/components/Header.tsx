@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
@@ -31,12 +31,14 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
-  const switchLocale = (newLocale: 'en' | 'zh') => {
+  const switchLocale = useCallback((newLocale: 'en' | 'zh') => {
     router.replace(pathname, { locale: newLocale });
-  };
+  }, [router, pathname]);
+
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 will-change-transform">
       {/* Top bar: contact info + language */}
       <div className="bg-gray-900 text-gray-300 text-sm hidden md:block">
         <div className="container mx-auto px-4 py-1.5 flex justify-between items-center">
@@ -55,14 +57,14 @@ export default function Header() {
             <span className="text-gray-600">|</span>
             <button
               onClick={() => switchLocale('en')}
-              className={`text-xs px-1 ${locale === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
+              className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
             >
               EN
             </button>
             <span className="text-gray-600">/</span>
             <button
               onClick={() => switchLocale('zh')}
-              className={`text-xs px-1 ${locale === 'zh' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
+              className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'zh' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
             >
               中文
             </button>
@@ -117,16 +119,16 @@ export default function Header() {
           </nav>
 
           {/* Mobile: language + hamburger */}
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => switchLocale(isZh ? 'en' : 'zh')}
-              className="text-xs px-2 py-1 border border-gray-300 rounded text-gray-600 hover:bg-gray-50"
+              className="text-xs px-3 py-2 min-h-[44px] min-w-[44px] flex items-center justify-center border border-gray-300 rounded text-gray-600 hover:bg-gray-50 active:bg-gray-100 transition-colors"
             >
               {isZh ? 'EN' : '中文'}
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-700"
+              className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-700 active:bg-gray-100 rounded transition-colors"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
@@ -136,36 +138,41 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile nav */}
-      {isMenuOpen && (
-        <nav className="lg:hidden border-t border-gray-200 bg-white" role="navigation" aria-label="Mobile navigation">
-          <div className="container mx-auto px-4 py-2">
-            {navItems.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-3 rounded text-sm font-medium ${
-                  isActive(href)
-                    ? 'text-blue-800 bg-blue-50'
-                    : 'text-gray-700 hover:bg-gray-50'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
-            <div className="px-3 py-3">
-              <Link
-                href="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-center bg-blue-800 text-white px-4 py-2.5 rounded text-sm font-medium hover:bg-blue-900"
-              >
-                {tc('requestQuote')}
-              </Link>
-            </div>
+      {/* Mobile nav - animated slide */}
+      <nav
+        className={`lg:hidden border-t border-gray-200 bg-white overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+        role="navigation"
+        aria-label="Mobile navigation"
+        aria-hidden={!isMenuOpen}
+      >
+        <div className="container mx-auto px-4 py-2">
+          {navItems.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={closeMenu}
+              className={`block px-3 py-3.5 rounded text-sm font-medium min-h-[44px] ${
+                isActive(href)
+                  ? 'text-blue-800 bg-blue-50'
+                  : 'text-gray-700 hover:bg-gray-50 active:bg-gray-100'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+          <div className="px-3 py-3">
+            <Link
+              href="/contact"
+              onClick={closeMenu}
+              className="block w-full text-center bg-blue-800 text-white px-4 py-3 min-h-[44px] rounded text-sm font-medium hover:bg-blue-900 active:bg-blue-950 transition-colors"
+            >
+              {tc('requestQuote')}
+            </Link>
           </div>
-        </nav>
-      )}
+        </div>
+      </nav>
     </header>
   );
 }

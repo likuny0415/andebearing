@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Privacy Policy for Jiangsu ANDE Precision Bearing Technology Co., Ltd. Learn how we collect, use, and protect your information.',
     alternates: {
       canonical: `${SITE_URL}/${locale}/privacy-policy`,
-      languages: { en: `${SITE_URL}/en/privacy-policy`, zh: `${SITE_URL}/zh/privacy-policy` },
+      languages: { en: `${SITE_URL}/en/privacy-policy`, zh: `${SITE_URL}/zh/privacy-policy`, 'x-default': `${SITE_URL}/en/privacy-policy` },
     },
   };
 }

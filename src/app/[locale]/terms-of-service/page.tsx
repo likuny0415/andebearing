@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Terms of Service for Jiangsu ANDE Precision Bearing Technology Co., Ltd.',
     alternates: {
       canonical: `${SITE_URL}/${locale}/terms-of-service`,
-      languages: { en: `${SITE_URL}/en/terms-of-service`, zh: `${SITE_URL}/zh/terms-of-service` },
+      languages: { en: `${SITE_URL}/en/terms-of-service`, zh: `${SITE_URL}/zh/terms-of-service`, 'x-default': `${SITE_URL}/en/terms-of-service` },
     },
   };
 }

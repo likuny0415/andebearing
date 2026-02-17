@@ -4,10 +4,13 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
+import { MenuIcon } from '@/components/Icons';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations('nav');
+  const tc = useTranslations('common');
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -15,7 +18,7 @@ export default function Header() {
   const isZh = locale === 'zh';
 
   const navItems = [
-    { href: '/' as const, label: isZh ? '首页' : 'Home' },
+    { href: '/' as const, label: tc('home') },
     { href: '/products' as const, label: t('products') },
     { href: '/industries' as const, label: t('industries') },
     { href: '/about' as const, label: t('about') },
@@ -38,16 +41,16 @@ export default function Header() {
       <div className="bg-gray-900 text-gray-300 text-sm hidden md:block">
         <div className="container mx-auto px-4 py-1.5 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="mailto:andeprecisionbearing@gmail.com" className="hover:text-white transition-colors">
-              andeprecisionbearing@gmail.com
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">
+              {CONTACT_EMAIL}
             </a>
-            <a href="tel:+8613906240166" className="hover:text-white transition-colors">
-              (+86) 139-0624-0166
+            <a href={`tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`} className="hover:text-white transition-colors">
+              {CONTACT_PHONE}
             </a>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-gray-500 text-xs">
-              {isZh ? '24小时内回复' : 'Response within 24h'}
+              {tc('responseTime')}
             </span>
             <span className="text-gray-600">|</span>
             <button
@@ -109,7 +112,7 @@ export default function Header() {
               href="/contact"
               className="ml-3 bg-blue-800 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-900 transition-colors"
             >
-              {isZh ? '获取报价' : 'Get a Quote'}
+              {tc('requestQuote')}
             </Link>
           </nav>
 
@@ -127,14 +130,7 @@ export default function Header() {
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-                />
-              </svg>
+              <MenuIcon isOpen={isMenuOpen} />
             </button>
           </div>
         </div>
@@ -164,7 +160,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-center bg-blue-800 text-white px-4 py-2.5 rounded text-sm font-medium hover:bg-blue-900"
               >
-                {isZh ? '获取报价' : 'Get a Quote'}
+                {tc('requestQuote')}
               </Link>
             </div>
           </div>

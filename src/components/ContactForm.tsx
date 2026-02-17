@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CheckCircleIcon } from '@/components/Icons';
 
 export default function ContactForm() {
   const t = useTranslations('contact.form');
@@ -48,9 +49,7 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-        <svg className="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        <CheckCircleIcon className="w-12 h-12 text-green-500 mx-auto mb-4" />
         <p className="text-green-800 font-medium text-lg">{t('success')}</p>
       </div>
     );
@@ -69,7 +68,7 @@ export default function ContactForm() {
 
       {/* Section: Contact Details */}
       <fieldset className="space-y-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Contact Details</legend>
+        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionContact')}</legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('name')} *</label>
@@ -101,7 +100,7 @@ export default function ContactForm() {
 
       {/* Section: Product & Technical Details */}
       <fieldset className="space-y-4 border-t border-gray-100 pt-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Product & Technical Details</legend>
+        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionProduct')}</legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="productInterest" className="block text-sm font-medium text-gray-700 mb-1">{t('productInterest')}</label>
@@ -136,7 +135,7 @@ export default function ContactForm() {
 
       {/* Section: Order Details */}
       <fieldset className="space-y-4 border-t border-gray-100 pt-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Order Details</legend>
+        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionOrder')}</legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">{t('quantity')}</label>

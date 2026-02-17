@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/lib/constants';
 import Header from '@/components/Header';
@@ -13,11 +13,6 @@ import '../globals.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
 });
 
@@ -90,9 +85,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         zh: `${SITE_URL}/zh`,
       },
     },
-    verification: {
-      google: 'google-site-verification-code', // TODO: Replace with actual verification code
-    },
+    // verification: {
+    //   google: process.env.GOOGLE_SITE_VERIFICATION || '',
+    // },
   };
 }
 
@@ -177,7 +172,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <StructuredData locale={locale} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white text-gray-900`}
+        className={`${geistSans.variable} antialiased min-h-screen flex flex-col bg-white text-gray-900`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />

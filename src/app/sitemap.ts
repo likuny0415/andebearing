@@ -1,15 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
-
-const PRODUCT_SLUGS = [
-  'deep-groove-ball-bearing',
-  'tapered-roller-bearing',
-  'spherical-roller-bearing',
-  'linear-guide',
-  'mounted-bearing-unit',
-  'bearing-housing',
-  'bearing-lubricant',
-];
+import { PRODUCT_SLUGS } from '@/lib/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'zh'];

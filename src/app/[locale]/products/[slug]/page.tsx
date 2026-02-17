@@ -1,18 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { SITE_URL } from '@/lib/constants';
+import { PRODUCT_SLUGS } from '@/lib/products';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-
-const PRODUCT_SLUGS = [
-  'deep-groove-ball-bearing',
-  'tapered-roller-bearing',
-  'spherical-roller-bearing',
-  'linear-guide',
-  'mounted-bearing-unit',
-  'bearing-housing',
-  'bearing-lubricant',
-] as const;
 
 const SPEC_KEYS = [
   'type', 'boreDiameter', 'outerDiameter', 'width', 'material', 'cageType',

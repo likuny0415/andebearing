@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { SITE_URL } from '@/lib/constants';
+import { PRODUCT_SLUGS, PRODUCT_CATEGORIES } from '@/lib/products';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -19,16 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const productItems = [
-  'deep-groove-ball-bearing',
-  'tapered-roller-bearing',
-  'spherical-roller-bearing',
-  'linear-guide',
-  'mounted-bearing-unit',
-  'bearing-housing',
-  'bearing-lubricant',
-] as const;
-
 export default function ProductsPage() {
   const t = useTranslations();
 
@@ -41,7 +32,7 @@ export default function ProductsPage() {
 
       {/* Categories */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        {(['ballBearings', 'rollerBearings', 'linearMotion', 'mountedUnits', 'accessories'] as const).map((cat) => (
+        {PRODUCT_CATEGORIES.map((cat) => (
           <Link
             key={cat}
             href={`/products/${t(`products.categories.${cat}.slug`)}`}
@@ -58,7 +49,7 @@ export default function ProductsPage() {
       {/* All products */}
       <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('common.viewAll')}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {productItems.map((slug) => (
+        {PRODUCT_SLUGS.map((slug) => (
           <Link
             key={slug}
             href={`/products/${slug}`}

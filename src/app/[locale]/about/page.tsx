@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { SITE_URL } from '@/lib/constants';
+import { alternatesForPath } from '@/lib/url';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -11,10 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('about.title'),
     description: t('about.description'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/about`,
-      languages: { en: `${SITE_URL}/en/about`, zh: `${SITE_URL}/zh/about`, 'x-default': `${SITE_URL}/en/about` },
-    },
+    alternates: alternatesForPath(locale, '/about'),
   };
 }
 

@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { SITE_URL, WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_URL } from '@/lib/constants';
+import { alternatesForPath } from '@/lib/url';
 import type { Metadata } from 'next';
 
 const ContactForm = dynamic(() => import('@/components/ContactForm'), {
@@ -32,10 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('contact.title'),
     description: t('contact.description'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/contact`,
-      languages: { en: `${SITE_URL}/en/contact`, zh: `${SITE_URL}/zh/contact`, 'x-default': `${SITE_URL}/en/contact` },
-    },
+    alternates: alternatesForPath(locale, '/contact'),
   };
 }
 

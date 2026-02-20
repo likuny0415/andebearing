@@ -1,4 +1,5 @@
-import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/lib/constants';
+import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/lib/constants';
+import { alternatesForPath } from '@/lib/url';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -11,10 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: isZh
       ? '江苏安德精工轴承科技有限公司服务条款。'
       : 'Terms of Service for Jiangsu ANDE Precision Bearing Technology Co., Ltd.',
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/terms-of-service`,
-      languages: { en: `${SITE_URL}/en/terms-of-service`, zh: `${SITE_URL}/zh/terms-of-service`, 'x-default': `${SITE_URL}/en/terms-of-service` },
-    },
+    alternates: alternatesForPath(locale, '/terms-of-service'),
   };
 }
 

@@ -465,7 +465,11 @@
       "address": "No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China",
       "email": "andeprecisionbearing@gmail.com",
       "phone": "(+86) 13906240166",
-      "businessHours": "Monday - Friday: 8:00 AM - 5:00 PM (CST)\nSaturday: 9:00 AM - 1:00 PM\nSunday: Closed",
+      "phone2": "(+86) 18915685369",
+      "whatsapp": "(+1) 857-319-1070",
+      "whatsappLabel": "WhatsApp",
+      "wechatLabel": "WeChat",
+      "wechatScan": "Scan to add on WeChat",
       "responseNote": "We respond to all inquiries within 24 hours during business days."
     },
     "form": {

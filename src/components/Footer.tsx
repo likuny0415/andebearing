@@ -2,7 +2,8 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { LocationIcon, EmailIcon, PhoneIcon, LinkedInIcon } from '@/components/Icons';
+import { LocationIcon, EmailIcon, PhoneIcon, LinkedInIcon, WhatsAppIcon, WeChatIcon } from '@/components/Icons';
+import { WHATSAPP_URL } from '@/lib/constants';
 
 export default function Footer() {
   const t = useTranslations();
@@ -46,6 +47,15 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-green-400 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon />
               </a>
             </div>
           </div>
@@ -102,6 +112,18 @@ export default function Footer() {
                 <PhoneIcon className="w-4 h-4 flex-shrink-0" />
                 <a href={`tel:${t('contact.info.phone')}`} className="hover:text-white transition-colors">
                   {t('contact.info.phone')}
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <PhoneIcon className="w-4 h-4 flex-shrink-0" />
+                <a href={`tel:${t('contact.info.phone2')}`} className="hover:text-white transition-colors">
+                  {t('contact.info.phone2')}
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 flex-shrink-0" />
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  {t('contact.info.whatsappLabel')}: {t('contact.info.whatsapp')}
                 </a>
               </p>
             </address>

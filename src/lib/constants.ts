@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://andebearing.com';
+export const SITE_URL = 'https://www.andebearing.com';
 export const SITE_NAME_EN = 'ANDE Bearing';
 export const SITE_NAME_ZH = '安德精工轴承';
 export const COMPANY_NAME_EN = 'ANDE Precision Bearing Technology Co., Ltd.';

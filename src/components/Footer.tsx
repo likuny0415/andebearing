@@ -109,12 +109,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             &copy; {t('footer.copyright')}
           </p>
-          <div className="flex gap-6 text-xs text-gray-500">
-            <Link href="/privacy-policy" className="hover:text-gray-300">{t('footer.privacy')}</Link>
-            <Link href="/terms-of-service" className="hover:text-gray-300">{t('footer.terms')}</Link>
+          <div className="flex gap-6 text-xs text-gray-400">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">{t('footer.privacy')}</Link>
+            <Link href="/terms-of-service" className="hover:text-white transition-colors">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>

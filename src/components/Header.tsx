@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
@@ -77,13 +76,15 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo + Company name */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/images/company_log.svg"
               alt="ANDE Logo"
               width={40}
               height={40}
-              priority
               className="object-contain"
+              style={{ width: 40, height: 40 }}
+              fetchPriority="high"
             />
             <div className="flex flex-col">
               <span className="text-lg md:text-xl font-bold text-blue-900 leading-tight">

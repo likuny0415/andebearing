@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
 
 export default function HomePage() {
   const t = useTranslations();
@@ -19,17 +18,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23fff\' fill-opacity=\'1\'%3E%3Cpath d=\'M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z\'/%3E%3C/g%3E%3C/svg%3E")',
-          }} />
-        </div>
-        <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+        <div className="container mx-auto px-4 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
               {(['badge1', 'badge2', 'badge3'] as const).map((badge) => (
-                <span key={badge} className="bg-white/15 backdrop-blur-sm text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
+                <span key={badge} className="bg-white/15 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
                   {t(`hero.${badge}`)}
                 </span>
               ))}

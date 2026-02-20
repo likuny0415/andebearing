@@ -206,12 +206,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale === 'zh' ? 'zh-CN' : 'en'} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/images/company_log.png" type="image/png" />
         <link rel="icon" href="/images/company_log.svg" type="image/svg+xml" />
+        <link rel="icon" href="/images/company_log.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <StructuredData locale={locale} />
       </head>
       <body

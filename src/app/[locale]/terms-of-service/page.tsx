@@ -30,7 +30,7 @@ export default async function TermsOfServicePage({ params }: Props) {
           {isZh ? '服务条款' : 'Terms of Service'}
         </h1>
         <p className="text-sm text-gray-500 mb-8">
-          {isZh ? '最后更新：2024年1月' : 'Last updated: January 2024'}
+          {isZh ? '最后更新：2026年1月' : 'Last updated: January 2026'}
         </p>
 
         <section className="space-y-4 mb-8">

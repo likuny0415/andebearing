@@ -51,17 +51,17 @@ export default function Header() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-gray-500 text-xs">
+            <span className="text-gray-400 text-xs">
               {tc('responseTime')}
             </span>
-            <span className="text-gray-600">|</span>
+            <span className="text-gray-400">|</span>
             <button
               onClick={() => switchLocale('en')}
               className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
             >
               EN
             </button>
-            <span className="text-gray-600">/</span>
+            <span className="text-gray-400">/</span>
             <button
               onClick={() => switchLocale('zh')}
               className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'zh' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}

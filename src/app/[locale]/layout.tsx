@@ -49,8 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publisher: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
     icons: {
       icon: [
-        { url: '/images/company_log.svg', type: 'image/svg+xml' },
-        { url: '/images/company_log.png', type: 'image/png' },
+        { url: `/images/company_log_${locale}.svg`, type: 'image/svg+xml' },
+        { url: `/images/company_log_${locale}.png`, type: 'image/png' },
       ],
       apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
     },
@@ -121,7 +121,7 @@ function StructuredData({ locale }: { locale: string }) {
       isZh ? COMPANY_NAME_EN : COMPANY_NAME_ZH,
     ],
     url: SITE_URL,
-    logo: `${SITE_URL}/images/company_log.png`,
+    logo: `${SITE_URL}/images/company_log_${isZh ? 'zh' : 'en'}.png`,
     image: `${SITE_URL}/images/og-image.jpg`,
     description: isZh
       ? '安德轴承（江苏安德精工轴承科技有限公司）— ISO认证精密轴承制造商，产品涵盖球轴承、滚子轴承、直线导轨，服务全球50+国家。'
@@ -208,8 +208,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale === 'zh' ? 'zh-CN' : 'en'} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/images/company_log.svg" type="image/svg+xml" />
-        <link rel="icon" href="/images/company_log.png" type="image/png" />
+        <link rel="icon" href={`/images/company_log_${locale}.svg`} type="image/svg+xml" />
+        <link rel="icon" href={`/images/company_log_${locale}.png`} type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <StructuredData locale={locale} />
       </head>

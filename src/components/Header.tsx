@@ -78,7 +78,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2.5 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/company_log.svg"
+              src={`/images/company_log_${locale}.svg`}
               alt="ANDE Logo"
               width={40}
               height={40}

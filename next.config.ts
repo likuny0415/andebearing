@@ -4,6 +4,9 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizePackageImports: ['next-intl'],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -46,9 +49,9 @@ const nextConfig: NextConfig = {
         value: [
           "default-src 'self'",
           "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com",
-          "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+          "style-src 'self' 'unsafe-inline'",
           "img-src 'self' data: https:",
-          "font-src 'self' https://fonts.gstatic.com",
+          "font-src 'self'",
           "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
           "frame-ancestors 'none'",
           "base-uri 'self'",

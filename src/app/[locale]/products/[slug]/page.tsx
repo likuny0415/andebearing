@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { SITE_URL } from '@/lib/constants';
+import { alternatesForPath, localizedUrl } from '@/lib/url';
 import {
   PRODUCT_SLUGS,
   CATEGORY_SLUGS,
@@ -34,14 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: t(`categories.${catKey}.name`),
       description: t(`categories.${catKey}.description`),
-      alternates: {
-        canonical: `${SITE_URL}/${locale}/products/${slug}`,
-        languages: {
-          en: `${SITE_URL}/en/products/${slug}`,
-          zh: `${SITE_URL}/zh/products/${slug}`,
-          'x-default': `${SITE_URL}/en/products/${slug}`,
-        },
-      },
+      alternates: alternatesForPath(locale, `/products/${slug}`),
     };
   }
 
@@ -50,14 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: t(`items.${slug}.name`),
       description: t(`items.${slug}.description`),
-      alternates: {
-        canonical: `${SITE_URL}/${locale}/products/${slug}`,
-        languages: {
-          en: `${SITE_URL}/en/products/${slug}`,
-          zh: `${SITE_URL}/zh/products/${slug}`,
-          'x-default': `${SITE_URL}/en/products/${slug}`,
-        },
-      },
+      alternates: alternatesForPath(locale, `/products/${slug}`),
     };
   }
 
@@ -80,8 +66,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tc('home'), item: `${SITE_URL}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: tc('products'), item: `${SITE_URL}/${locale}/products` },
+      { '@type': 'ListItem', position: 1, name: tc('home'), item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: tc('products'), item: localizedUrl(locale, '/products') },
       { '@type': 'ListItem', position: 3, name: categoryName },
     ],
   };
@@ -97,7 +83,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
       '@type': 'ListItem',
       position: i + 1,
       name: t(`items.${pSlug}.name`),
-      url: `${SITE_URL}/${locale}/products/${pSlug}`,
+      url: localizedUrl(locale, `/products/${pSlug}`),
     })),
   };
 
@@ -232,15 +218,15 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
       name: 'Jiangsu ANDE Precision Bearing Technology Co., Ltd.',
     },
     category: 'Industrial Bearings',
-    url: `${SITE_URL}/${locale}/products/${slug}`,
+    url: localizedUrl(locale, `/products/${slug}`),
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: tc('home'), item: `${SITE_URL}/${locale}` },
-      { '@type': 'ListItem', position: 2, name: tc('products'), item: `${SITE_URL}/${locale}/products` },
+      { '@type': 'ListItem', position: 1, name: tc('home'), item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: tc('products'), item: localizedUrl(locale, '/products') },
       { '@type': 'ListItem', position: 3, name },
     ],
   };

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { SITE_URL } from '@/lib/constants';
+import { alternatesForPath } from '@/lib/url';
 import { PRODUCT_SLUGS, PRODUCT_CATEGORIES } from '@/lib/products';
 import type { Metadata } from 'next';
 
@@ -13,10 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t('products.title'),
     description: t('products.description'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/products`,
-      languages: { en: `${SITE_URL}/en/products`, zh: `${SITE_URL}/zh/products`, 'x-default': `${SITE_URL}/en/products` },
-    },
+    alternates: alternatesForPath(locale, '/products'),
   };
 }
 

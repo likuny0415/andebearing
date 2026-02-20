@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('home.title'),
       description: t('home.description'),
       siteName: isZh ? '安德精工轴承' : 'ANDE Precision Bearing',
-      url: `${SITE_URL}/${locale}`,
+      url: isZh ? `${SITE_URL}/zh` : SITE_URL,
       images: [
         {
           url: `${SITE_URL}/images/og-image.jpg`,
@@ -88,11 +88,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `${SITE_URL}/${locale}`,
+      canonical: isZh ? `${SITE_URL}/zh` : SITE_URL,
       languages: {
-        en: `${SITE_URL}/en`,
+        en: SITE_URL,
         zh: `${SITE_URL}/zh`,
-        'x-default': `${SITE_URL}/en`,
+        'x-default': SITE_URL,
       },
     },
     verification: {
@@ -174,7 +174,9 @@ function StructuredData({ locale }: { locale: string }) {
     },
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${SITE_URL}/${locale}/products?q={search_term_string}`,
+      target: isZh
+        ? `${SITE_URL}/zh/products?q={search_term_string}`
+        : `${SITE_URL}/products?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

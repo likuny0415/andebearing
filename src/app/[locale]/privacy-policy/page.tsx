@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/lib/constants';
+import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/lib/constants';
+import { alternatesForPath } from '@/lib/url';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -12,10 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: isZh
       ? '江苏安德精工轴承科技有限公司隐私政策。了解我们如何收集、使用和保护您的信息。'
       : 'Privacy Policy for Jiangsu ANDE Precision Bearing Technology Co., Ltd. Learn how we collect, use, and protect your information.',
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/privacy-policy`,
-      languages: { en: `${SITE_URL}/en/privacy-policy`, zh: `${SITE_URL}/zh/privacy-policy`, 'x-default': `${SITE_URL}/en/privacy-policy` },
-    },
+    alternates: alternatesForPath(locale, '/privacy-policy'),
   };
 }
 

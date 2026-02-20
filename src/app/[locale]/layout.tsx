@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t('home.description'),
     keywords: isZh
-      ? ['轴承', '安德轴承', '精密轴承', '工业轴承', '深沟球轴承', '滚子轴承', '直线导轨', '轴承制造商', '轴承出口']
-      : ['bearings', 'precision bearings', 'industrial bearings', 'ball bearings', 'roller bearings', 'bearing manufacturer', 'China bearing exporter', 'ANDE bearing'],
+      ? ['安德轴承', '安德精工轴承', 'ANDE轴承', '安德bearing', '精密轴承', '工业轴承', '深沟球轴承', '滚子轴承', '调心滚子轴承', '圆锥滚子轴承', '直线导轨', '轴承制造商', '轴承出口', '江阴轴承', '江苏轴承厂', '中国轴承出口']
+      : ['Ande Bearing', 'ANDE bearing', 'Ande Precision Bearing', 'andebearing', 'precision bearings', 'industrial bearings', 'ball bearings', 'roller bearings', 'spherical roller bearing', 'tapered roller bearing', 'bearing manufacturer', 'China bearing exporter', 'China bearing factory', 'bearing supplier'],
     authors: [{ name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN }],
     creator: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
     publisher: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
@@ -95,9 +95,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': `${SITE_URL}/en`,
       },
     },
-    // verification: {
-    //   google: process.env.GOOGLE_SITE_VERIFICATION || '',
-    // },
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION || '',
+    },
   };
 }
 
@@ -112,18 +112,33 @@ function StructuredData({ locale }: { locale: string }) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
-    alternateName: isZh ? COMPANY_NAME_EN : COMPANY_NAME_ZH,
+    alternateName: [
+      'Ande Bearing',
+      '安德轴承',
+      '安德精工轴承',
+      'ANDE Bearing',
+      'ANDE Precision Bearing',
+      isZh ? COMPANY_NAME_EN : COMPANY_NAME_ZH,
+    ],
     url: SITE_URL,
     logo: `${SITE_URL}/images/company_log.png`,
+    image: `${SITE_URL}/images/og-image.jpg`,
     description: isZh
-      ? 'ISO认证精密轴承制造商，产品涵盖球轴承、滚子轴承、直线导轨，服务全球50+国家。'
-      : 'ISO-certified precision bearing manufacturer. Ball bearings, roller bearings, linear motion systems for 50+ countries.',
+      ? '安德轴承（江苏安德精工轴承科技有限公司）— ISO认证精密轴承制造商，产品涵盖球轴承、滚子轴承、直线导轨，服务全球50+国家。'
+      : 'Ande Bearing (ANDE Precision Bearing Technology Co., Ltd.) — ISO-certified precision bearing manufacturer. Ball bearings, roller bearings, linear motion systems for 50+ countries.',
     foundingDate: '1985',
+    brand: {
+      '@type': 'Brand',
+      name: 'ANDE',
+      alternateName: ['Ande Bearing', '安德轴承', '安德精工轴承'],
+      url: SITE_URL,
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'No. 23 Lianxin Road, Huashi Industrial Park',
       addressLocality: 'Jiangyin',
       addressRegion: 'Jiangsu',
+      postalCode: '214421',
       addressCountry: 'CN',
     },
     contactPoint: {
@@ -134,14 +149,29 @@ function StructuredData({ locale }: { locale: string }) {
       availableLanguage: ['English', 'Chinese'],
     },
     sameAs: ['https://www.linkedin.com/company/andeprecisionbearing'],
+    knowsAbout: ['bearings', 'ball bearings', 'roller bearings', 'precision bearings', 'linear motion', 'bearing manufacturing'],
+    numberOfEmployees: {
+      '@type': 'QuantitativeValue',
+      minValue: 50,
+      maxValue: 200,
+    },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Worldwide',
+    },
   };
 
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: isZh ? '安德精工轴承' : 'ANDE Precision Bearing',
+    name: isZh ? '安德轴承 | 安德精工轴承' : 'Ande Bearing | ANDE Precision Bearing',
+    alternateName: isZh ? ['安德轴承', 'ANDE Bearing'] : ['Ande Bearing', '安德轴承'],
     url: SITE_URL,
     inLanguage: isZh ? 'zh-CN' : 'en',
+    publisher: {
+      '@type': 'Organization',
+      name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
+    },
     potentialAction: {
       '@type': 'SearchAction',
       target: `${SITE_URL}/${locale}/products?q={search_term_string}`,

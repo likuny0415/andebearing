@@ -76,13 +76,13 @@ function buildEmailHtml(inquiry: Record<string, string>): string {
   return `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
       <h2 style="color:#1e40af;border-bottom:2px solid #1e40af;padding-bottom:8px;">
-        🔔 New Inquiry from Beiren Bearing Website
+        🔔 New Inquiry from Ande Bearing Website
       </h2>
       <table style="width:100%;border-collapse:collapse;margin:16px 0;">
         ${tableRows}
       </table>
       <p style="color:#64748b;font-size:12px;margin-top:24px;">
-        This email was automatically sent from the Beiren Bearing website contact form.
+        This email was automatically sent from the Ande Bearing website contact form.
       </p>
     </div>
   `;

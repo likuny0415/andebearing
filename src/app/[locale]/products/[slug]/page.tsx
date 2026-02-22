@@ -219,6 +219,19 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
     },
     category: 'Industrial Bearings',
     url: localizedUrl(locale, `/products/${slug}`),
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: '0',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: 'Jiangsu ANDE Precision Bearing Technology Co., Ltd.',
+      },
+      url: localizedUrl(locale, '/contact'),
+      description: locale === 'zh' ? '请联系我们获取报价' : 'Contact us for pricing',
+    },
   };
 
   const breadcrumbSchema = {

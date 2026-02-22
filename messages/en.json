@@ -1,35 +1,35 @@
 {
   "metadata": {
     "home": {
-      "title": "Ande Bearing | ANDE Precision Bearing Manufacturer & Exporter — Ball, Roller & Linear Bearings",
+      "title": "ANDE Bearing — Precision Bearing Manufacturer & Exporter",
       "description": "Ande Bearing (ANDE Precision Bearing Technology Co., Ltd.) — ISO-certified bearing manufacturer since 1985. Ball bearings, roller bearings, and linear motion systems for steel mills, mining, energy, and OEM applications. Factory direct supply to 50+ countries."
     },
     "products": {
-      "title": "Bearing Products | Ball, Roller, Linear Motion & Mounted Units — ANDE",
+      "title": "Bearing Products — Ball, Roller & Linear",
       "description": "Browse our full range of precision bearings: deep groove ball bearings, tapered and spherical roller bearings, linear guides, mounted units, and accessories."
     },
     "about": {
-      "title": "About ANDE Precision Bearing — Factory Capabilities & Quality Assurance",
+      "title": "About ANDE — Factory & Quality Assurance",
       "description": "Founded in 1985, Jiangsu ANDE Precision Bearing Technology Co., Ltd. manufactures high-quality bearings with ISO 9001 certification. 30+ years of export experience."
     },
     "contact": {
-      "title": "Request a Quote | Contact ANDE Precision Bearing",
+      "title": "Request a Quote — Contact ANDE",
       "description": "Contact our engineering team for bearing selection, RFQ, or technical support. Response within 24 hours. Export to 50+ countries."
     },
     "industries": {
-      "title": "Industries Served | Steel, Mining, Energy, OEM — ANDE Bearing",
+      "title": "Industries — Steel, Mining, Energy & OEM",
       "description": "ANDE bearings serve demanding industries: steel mills, mining operations, wind energy, automotive OEM, manufacturing, and agriculture."
     },
     "services": {
-      "title": "Technical Services | Bearing Selection & Failure Analysis — ANDE",
+      "title": "Technical Services — Selection & Analysis",
       "description": "Expert bearing services: technical consultation, bearing selection, installation support, failure analysis, and preventive maintenance programs."
     },
     "faq": {
-      "title": "FAQ | Bearing Specifications, Ordering & Technical Questions — ANDE",
+      "title": "FAQ — Bearing Specs & Ordering",
       "description": "Frequently asked questions about bearing specifications, MOQ, lead times, OEM customization, certifications, and export packaging."
     },
     "quality": {
-      "title": "Quality Assurance & Certifications — ANDE Precision Bearing",
+      "title": "Quality Assurance & Certifications",
       "description": "ISO 9001:2015 certified bearing manufacturer. Rigorous QC process: incoming material inspection, hardness testing, dimensional verification, and final audit."
     }
   },
@@ -119,35 +119,60 @@
   "industries": {
     "title": "Industries We Serve",
     "subtitle": "Engineered bearing solutions for the most demanding operating environments across global heavy industry.",
+    "introText": "ANDE Precision Bearing supplies high-performance bearings to a wide range of industrial sectors worldwide. With over 30 years of manufacturing and export experience, we understand the unique operational demands of each industry. Our engineering team works closely with procurement managers and maintenance engineers to recommend the right bearing type, material, and configuration for every application. Whether you operate continuous casters in a steel mill, vibrating screens in a mine, or high-speed spindles in a CNC workshop, we deliver bearings that perform reliably under the toughest conditions.",
+    "keyBearingTypes": "Common bearing types used:",
+    "whyChoose": {
+      "title": "Why Choose ANDE for Your Industry",
+      "experience": {
+        "title": "30+ Years Industry Experience",
+        "description": "We have supplied bearings to steel mills, mining companies, power plants, and OEM manufacturers across more than 50 countries. Our team understands your operational requirements and procurement timelines."
+      },
+      "customization": {
+        "title": "Application-Specific Solutions",
+        "description": "Not every application fits a standard catalog bearing. We offer custom clearance configurations, special materials, coatings, and sealing options tailored to your specific operating environment and load conditions."
+      },
+      "supply": {
+        "title": "Reliable Global Supply Chain",
+        "description": "With annual production capacity exceeding 5 million units and a dedicated export logistics team, we ensure consistent supply with FOB, CIF, and DDP delivery terms to meet your project schedules."
+      }
+    },
+    "ctaTitle": "Need bearings for your specific application?",
+    "ctaDescription": "Our engineering team provides free technical consultation for bearing selection, sizing, and material recommendations. Get a response within 24 hours.",
     "items": {
       "steel": {
         "name": "Steel & Rolling Mills",
-        "description": "Heavy-duty spherical roller bearings and tapered roller bearings for continuous casters, rolling mills, and material handling in steel production.",
+        "description": "Heavy-duty spherical roller bearings and tapered roller bearings for continuous casters, rolling mills, and material handling in steel production. Our bearings are designed to withstand extreme heat, heavy shock loads, and continuous operation cycles typical in integrated steel plants. We supply work roll bearings, backup roll bearings, and conveyor bearings for hot strip mills, cold rolling mills, and plate mills.",
+        "bearingTypes": "Spherical roller bearings (22200–24100 series), tapered roller bearings, cylindrical roller bearings, and self-aligning ball bearings for auxiliary equipment.",
         "slug": "steel-mills"
       },
       "mining": {
         "name": "Mining & Minerals",
-        "description": "Robust bearings for crushers, conveyors, vibrating screens, and processing equipment in harsh mining environments.",
+        "description": "Robust bearings for crushers, conveyors, vibrating screens, and processing equipment in harsh mining environments. Mining operations demand bearings that resist heavy shock loads, abrasive dust ingress, and moisture contamination. ANDE bearings for mining applications feature enhanced sealing, hardened raceways, and optimized internal geometry for extended maintenance intervals in remote locations.",
+        "bearingTypes": "Spherical roller bearings, tapered roller bearings, pillow block mounted units, and heavy-duty ball bearings for conveyor idlers.",
         "slug": "mining"
       },
       "energy": {
         "name": "Energy & Power Generation",
-        "description": "Specialized bearings for wind turbines, generators, pumps, and compressors in conventional and renewable energy applications.",
+        "description": "Specialized bearings for wind turbines, generators, pumps, and compressors in conventional and renewable energy applications. From wind turbine main shaft bearings to generator bearings in thermal power plants, ANDE provides precision-engineered components rated for long service life, minimal friction, and reliable performance in demanding energy infrastructure applications.",
+        "bearingTypes": "Spherical roller bearings for wind turbines, deep groove ball bearings for motors, tapered roller bearings for gearboxes, and cylindrical roller bearings for generators.",
         "slug": "energy"
       },
       "automotive": {
         "name": "Automotive & Transport",
-        "description": "High-performance bearings for wheel hubs, transmissions, engines, and drivetrain components for automotive OEMs and aftermarket.",
+        "description": "High-performance bearings for wheel hubs, transmissions, engines, and drivetrain components for automotive OEMs and aftermarket. ANDE supplies precision-grade tapered roller bearings and deep groove ball bearings that meet the tight tolerance requirements of automotive applications, supporting high-speed operation, low noise, and extended service intervals demanded by modern vehicles.",
+        "bearingTypes": "Tapered roller bearings for wheel hubs, deep groove ball bearings for alternators and water pumps, angular contact ball bearings for transmissions.",
         "slug": "automotive"
       },
       "manufacturing": {
         "name": "General Manufacturing",
-        "description": "Reliable bearings for machine tools, conveyor systems, packaging equipment, and general industrial machinery.",
+        "description": "Reliable bearings for machine tools, conveyor systems, packaging equipment, and general industrial machinery. Manufacturing environments require bearings that deliver consistent precision, quiet operation, and long service life across diverse applications ranging from high-speed spindles to heavy-duty conveyors. ANDE provides a full range of standard and application-specific bearings for the manufacturing sector.",
+        "bearingTypes": "Deep groove ball bearings, linear guide systems, mounted bearing units, angular contact ball bearings for spindles, and miniature bearings for precision instruments.",
         "slug": "manufacturing"
       },
       "agriculture": {
         "name": "Agriculture & Forestry",
-        "description": "Durable bearings for tractors, harvesters, tillers, and agricultural processing equipment operating in dusty, wet conditions.",
+        "description": "Durable bearings for tractors, harvesters, tillers, and agricultural processing equipment operating in dusty, wet conditions. Agricultural machinery operates in some of the harshest environments, with exposure to dirt, moisture, crop residue, and extreme temperature swings. ANDE agricultural bearings feature robust sealing systems and corrosion-resistant treatments for reliable, maintenance-friendly operation throughout the growing season.",
+        "bearingTypes": "Mounted bearing units (pillow block, flange), deep groove ball bearings with seals, spherical roller bearings for heavy equipment, and disc harrow bearings.",
         "slug": "agriculture"
       }
     }
@@ -425,20 +450,35 @@
   "services": {
     "title": "Technical Services",
     "subtitle": "Comprehensive bearing support from application engineering to failure analysis.",
+    "introText": "At ANDE Precision Bearing, we go beyond manufacturing. Our experienced engineering team provides end-to-end technical support to help you select the right bearing, optimize installation procedures, and maximize service life. Whether you are designing a new machine, replacing failed bearings, or seeking to reduce maintenance costs, our technical services team is ready to assist. We combine field experience from serving heavy industries worldwide with deep product knowledge to deliver practical, actionable recommendations.",
+    "whatWeOffer": "What we offer:",
+    "ctaText": "Ready to discuss your bearing requirements? Our engineers respond within 24 hours with technical recommendations tailored to your application.",
+    "process": {
+      "title": "How We Work With You",
+      "steps": [
+        {"title": "Inquiry & Assessment", "description": "Share your application details, operating conditions, and requirements with our team."},
+        {"title": "Engineering Review", "description": "Our engineers analyze load, speed, environment, and alignment factors to recommend optimal solutions."},
+        {"title": "Proposal & Samples", "description": "Receive a detailed quotation with specifications. Request samples for testing and validation."},
+        {"title": "Ongoing Support", "description": "After delivery, we provide installation guidance, maintenance advice, and warranty support."}
+      ]
+    },
     "items": {
       "consultation": {
         "title": "Technical Consultation",
         "description": "Expert guidance on bearing selection based on your application requirements.",
+        "detail": "Choosing the right bearing is critical to equipment performance and longevity. Our engineers evaluate your operating parameters including radial and axial loads, rotational speed, temperature range, environmental contaminants, and space constraints. We then recommend the optimal bearing type, size, clearance class, material, and lubrication method. This service is available free of charge for all prospective and existing customers.",
         "points": ["Application analysis and bearing selection", "Load and speed calculations", "Lubrication and fitting recommendations", "Material selection for specific environments"]
       },
       "installation": {
         "title": "Installation & Maintenance Support",
         "description": "Professional guidance for bearing installation, alignment, and preventive maintenance.",
+        "detail": "Improper installation is one of the leading causes of premature bearing failure. Our team provides detailed mounting instructions, recommended fitting practices, and alignment verification procedures for every bearing type we supply. We also help you develop preventive maintenance schedules including relubrication intervals, condition monitoring checkpoints, and replacement criteria to minimize unplanned downtime.",
         "points": ["Mounting and dismounting guidance", "Preventive maintenance programs", "Lubrication schedules and procedures", "Condition monitoring recommendations"]
       },
       "failureAnalysis": {
         "title": "Failure Analysis",
         "description": "Systematic investigation of bearing failures to identify root causes and prevent recurrence.",
+        "detail": "When a bearing fails prematurely, understanding the root cause is essential to prevent future issues. Our failure analysis service examines failed bearings to identify damage patterns such as fatigue spalling, brinelling, corrosion, contamination, misalignment wear, or inadequate lubrication. We provide a detailed report with findings and corrective action recommendations to improve bearing life in your application.",
         "points": ["Comprehensive failure investigation", "Root cause identification", "Corrective action recommendations", "System optimization guidance"]
       }
     }

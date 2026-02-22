@@ -179,6 +179,128 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           })}
         </div>
 
+        {/* Applications section (rolling mill category) */}
+        {(() => {
+          let appsTitle = '';
+          try { appsTitle = t(`categories.${catKey}.applications.title`); } catch { /* no apps */ }
+          if (appsTitle && !appsTitle.startsWith('products.categories.')) {
+            const appKeys = ['hotRolling', 'coldRolling', 'plateMill', 'barWireMill', 'sectionMill'];
+            const apps: { title: string; description: string }[] = [];
+            for (const key of appKeys) {
+              try {
+                const title = t(`categories.${catKey}.applications.${key}.title`);
+                const desc = t(`categories.${catKey}.applications.${key}.description`);
+                if (title && !title.startsWith('products.categories.')) {
+                  apps.push({ title, description: desc });
+                }
+              } catch { /* skip */ }
+            }
+            if (apps.length > 0) {
+              return (
+                <section className="mb-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">{appsTitle}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {apps.map((app, i) => (
+                      <div key={i} className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-sm transition-shadow">
+                        <h3 className="text-base font-semibold text-gray-900 mb-2">{app.title}</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed">{app.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              );
+            }
+          }
+          return null;
+        })()}
+
+        {/* Selection Guide (rolling mill category) */}
+        {(() => {
+          let guideTitle = '';
+          let guideDesc = '';
+          try {
+            guideTitle = t(`categories.${catKey}.selectionGuide.title`);
+            guideDesc = t(`categories.${catKey}.selectionGuide.description`);
+          } catch { /* no guide */ }
+          if (guideTitle && !guideTitle.startsWith('products.categories.')) {
+            let factors: { title: string; description: string }[] = [];
+            try {
+              const raw = t.raw(`categories.${catKey}.selectionGuide.factors`);
+              if (Array.isArray(raw)) factors = raw;
+            } catch { /* no factors */ }
+            return (
+              <section className="mb-12 bg-gray-50 rounded-lg p-6 sm:p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">{guideTitle}</h2>
+                <p className="text-gray-600 mb-6 max-w-3xl">{guideDesc}</p>
+                {factors.length > 0 && (
+                  <div className="space-y-4">
+                    {factors.map((factor, i) => (
+                      <div key={i} className="flex items-start gap-4">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-sm font-bold text-blue-800">{i + 1}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-base font-semibold text-gray-900 mb-1">{factor.title}</h3>
+                          <p className="text-sm text-gray-600 leading-relaxed">{factor.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </section>
+            );
+          }
+          return null;
+        })()}
+
+        {/* Inline FAQ (rolling mill category) */}
+        {(() => {
+          let faqItems: { question: string; answer: string }[] = [];
+          try {
+            const raw = t.raw(`categories.${catKey}.faq`);
+            if (Array.isArray(raw)) faqItems = raw;
+          } catch { /* no faq */ }
+          if (faqItems.length > 0) {
+            const faqSchema = {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqItems.map(({ question, answer }) => ({
+                '@type': 'Question',
+                name: question,
+                acceptedAnswer: { '@type': 'Answer', text: answer },
+              })),
+            };
+            return (
+              <section className="mb-12">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqItems.map(({ question, answer }, i) => (
+                    <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+                      <h3 className="text-sm font-semibold text-gray-900 p-4 bg-gray-50">{question}</h3>
+                      <p className="text-sm text-gray-600 p-4 leading-relaxed">{answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          }
+          return null;
+        })()}
+
+        {/* Inquiry CTA module */}
+        <section className="mb-12 bg-blue-50 border border-blue-100 rounded-lg p-6 sm:p-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-gray-900 mb-1">Send Drawing / Model / Operating Conditions → Quote Within 24 Hours</h2>
+              <p className="text-sm text-gray-600">Our engineering team reviews your specifications and provides a detailed quotation with bearing selection recommendations.</p>
+            </div>
+            <Link href="/contact" className="bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
+              {tc('requestQuote')}
+            </Link>
+          </div>
+        </section>
+
         {/* Other categories */}
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-4">{tc('otherCategories', { fallback: 'Other Categories' })}</h2>

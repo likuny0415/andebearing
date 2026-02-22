@@ -7,10 +7,13 @@ import {
   ALL_PRODUCT_PAGE_SLUGS,
   CATEGORY_SLUG_TO_KEY,
   CATEGORY_PRODUCTS,
+  PRODUCT_IMAGES,
   isCategorySlug,
   isProductSlug,
 } from '@/lib/products';
-import { notFound } from 'next/navigation';
+import type { ProductSlug } from '@/lib/products';
+import { SITE_URL } from '@/lib/constants';
+import { notFound, permanentRedirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
 const SPEC_KEYS = [
@@ -212,6 +215,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
     '@type': 'Product',
     name,
     description: overview,
+    image: `${SITE_URL}${PRODUCT_IMAGES[slug as ProductSlug]}`,
     brand: { '@type': 'Brand', name: 'ANDE' },
     manufacturer: {
       '@type': 'Organization',
@@ -391,5 +395,6 @@ export default async function ProductSlugPage({ params }: Props) {
     return <ProductDetailPage locale={locale} slug={slug} />;
   }
 
-  notFound();
+  // Unknown slug — permanent redirect to home (301 equivalent)
+  permanentRedirect(`/${locale}`);
 }

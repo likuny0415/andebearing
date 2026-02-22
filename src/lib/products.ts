@@ -2,10 +2,6 @@ export const PRODUCT_SLUGS = [
   'deep-groove-ball-bearing',
   'tapered-roller-bearing',
   'spherical-roller-bearing',
-  'linear-guide',
-  'mounted-bearing-unit',
-  'bearing-housing',
-  'bearing-lubricant',
 ] as const;
 
 export type ProductSlug = (typeof PRODUCT_SLUGS)[number];
@@ -13,9 +9,6 @@ export type ProductSlug = (typeof PRODUCT_SLUGS)[number];
 export const PRODUCT_CATEGORIES = [
   'ballBearings',
   'rollerBearings',
-  'linearMotion',
-  'mountedUnits',
-  'accessories',
 ] as const;
 
 export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
@@ -24,9 +17,6 @@ export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
 export const CATEGORY_SLUGS = [
   'ball-bearings',
   'roller-bearings',
-  'linear-motion',
-  'mounted-units',
-  'accessories',
 ] as const;
 
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
@@ -35,18 +25,19 @@ export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 export const CATEGORY_SLUG_TO_KEY: Record<CategorySlug, ProductCategory> = {
   'ball-bearings': 'ballBearings',
   'roller-bearings': 'rollerBearings',
-  'linear-motion': 'linearMotion',
-  'mounted-units': 'mountedUnits',
-  'accessories': 'accessories',
 };
 
 // Map category slug → product slugs in that category
 export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = {
   'ball-bearings': ['deep-groove-ball-bearing'],
   'roller-bearings': ['tapered-roller-bearing', 'spherical-roller-bearing'],
-  'linear-motion': ['linear-guide'],
-  'mounted-units': ['mounted-bearing-unit'],
-  'accessories': ['bearing-housing', 'bearing-lubricant'],
+};
+
+// Map product slug → image path under /products/
+export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
+  'deep-groove-ball-bearing': '/products/Deep_Groove_Ball_Bearing.jpg',
+  'tapered-roller-bearing': '/products/Tapered-roller-bearing_din720.png',
+  'spherical-roller-bearing': '/products/Spherical-roller-bearing_double-row_din635-t2_180.png',
 };
 
 // Helper: check if a slug is a category

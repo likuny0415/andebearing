@@ -179,8 +179,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           })}
         </div>
 
-        {/* Applications section (rolling mill category) */}
-        {(() => {
+        {/* Applications section (rolling mill category only) */}
+        {catKey === 'rollingMillBearings' && (() => {
           let appsTitle = '';
           try { appsTitle = t(`categories.${catKey}.applications.title`); } catch { /* no apps */ }
           if (appsTitle && !appsTitle.startsWith('products.categories.')) {
@@ -214,8 +214,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           return null;
         })()}
 
-        {/* Selection Guide (rolling mill category) */}
-        {(() => {
+        {/* Selection Guide (rolling mill category only) */}
+        {catKey === 'rollingMillBearings' && (() => {
           let guideTitle = '';
           let guideDesc = '';
           try {
@@ -253,8 +253,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           return null;
         })()}
 
-        {/* Inline FAQ (rolling mill category) */}
-        {(() => {
+        {/* Inline FAQ (rolling mill category only) */}
+        {catKey === 'rollingMillBearings' && (() => {
           let faqItems: { question: string; answer: string }[] = [];
           try {
             const raw = t.raw(`categories.${catKey}.faq`);

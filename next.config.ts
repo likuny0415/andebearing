@@ -18,6 +18,22 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  async redirects() {
+    const removedSlugs = [
+      'linear-motion',
+      'linear-guide',
+      'accessories',
+      'bearing-housing',
+      'mounted-units',
+      'mounted-bearing-unit',
+      'bearing-lubricant',
+    ];
+    return removedSlugs.flatMap((slug) => [
+      { source: `/products/${slug}`, destination: '/', permanent: true },
+      { source: `/en/products/${slug}`, destination: '/en', permanent: true },
+      { source: `/zh/products/${slug}`, destination: '/zh', permanent: true },
+    ]);
+  },
   async headers() {
     const securityHeaders = [
       {

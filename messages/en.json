@@ -2,7 +2,7 @@
   "metadata": {
     "home": {
       "title": "ANDE Bearing — Precision Bearing Manufacturer & Exporter",
-      "description": "Ande Bearing (ANDE Precision Bearing Technology Co., Ltd.) — ISO-certified bearing manufacturer since 1985. Ball bearings, roller bearings, and linear motion systems for steel mills, mining, energy, and OEM applications. Factory direct supply to 50+ countries."
+      "description": "Ande Bearing (ANDE Precision Bearing Technology Co., Ltd.) — ISO-certified bearing manufacturer since 2019. Ball bearings, roller bearings, and linear motion systems for steel mills, mining, energy, and OEM applications. Factory direct supply to 50+ countries."
     },
     "products": {
       "title": "Bearing Products — Ball, Roller & Linear",
@@ -10,7 +10,7 @@
     },
     "about": {
       "title": "About ANDE — Factory & Quality Assurance",
-      "description": "Founded in 1985, Jiangsu ANDE Precision Bearing Technology Co., Ltd. manufactures high-quality bearings with ISO 9001 certification. 30+ years of export experience."
+      "description": "Founded in 2019, Jiangsu ANDE Precision Bearing Technology Co., Ltd. manufactures high-quality bearings with ISO 9001 certification. 7+ years of export experience."
     },
     "contact": {
       "title": "Request a Quote — Contact ANDE",
@@ -79,7 +79,7 @@
     "cta1": "View Products",
     "cta2": "Request a Quote",
     "badge1": "ISO 9001:2015",
-    "badge2": "30+ Years Export",
+    "badge2": "7+ Years Export",
     "badge3": "50+ Countries",
     "statsTitle": "Factory at a Glance",
     "stat1Label": "Annual Capacity",
@@ -103,7 +103,7 @@
     },
     "exportExperience": {
       "title": "Export Experience",
-      "description": "30+ years serving international markets with FOB/CIF terms, industrial packaging, and documentation for customs clearance.",
+      "description": "7+ years serving international markets with FOB/CIF terms, industrial packaging, and documentation for customs clearance.",
       "items": ["Export to 50+ countries worldwide", "FOB / CIF / DDP terms available", "Industrial-grade export packaging", "Full documentation & certificates of conformity"]
     },
     "responseSLA": {
@@ -119,12 +119,12 @@
   "industries": {
     "title": "Industries We Serve",
     "subtitle": "Engineered bearing solutions for the most demanding operating environments across global heavy industry.",
-    "introText": "ANDE Precision Bearing supplies high-performance bearings to a wide range of industrial sectors worldwide. With over 30 years of manufacturing and export experience, we understand the unique operational demands of each industry. Our engineering team works closely with procurement managers and maintenance engineers to recommend the right bearing type, material, and configuration for every application. Whether you operate continuous casters in a steel mill, vibrating screens in a mine, or high-speed spindles in a CNC workshop, we deliver bearings that perform reliably under the toughest conditions.",
+    "introText": "ANDE Precision Bearing supplies high-performance bearings to a wide range of industrial sectors worldwide. With over 7 years of manufacturing and export experience, we understand the unique operational demands of each industry. Our engineering team works closely with procurement managers and maintenance engineers to recommend the right bearing type, material, and configuration for every application. Whether you operate continuous casters in a steel mill, vibrating screens in a mine, or high-speed spindles in a CNC workshop, we deliver bearings that perform reliably under the toughest conditions.",
     "keyBearingTypes": "Common bearing types used:",
     "whyChoose": {
       "title": "Why Choose ANDE for Your Industry",
       "experience": {
-        "title": "30+ Years Industry Experience",
+        "title": "7+ Years Industry Experience",
         "description": "We have supplied bearings to steel mills, mining companies, power plants, and OEM manufacturers across more than 50 countries. Our team understands your operational requirements and procurement timelines."
       },
       "customization": {
@@ -190,21 +190,6 @@
         "name": "Roller Bearings",
         "slug": "roller-bearings",
         "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications."
-      },
-      "linearMotion": {
-        "name": "Linear Motion",
-        "slug": "linear-motion",
-        "description": "Linear guides, ball screws, and slide units for precision automated machinery and CNC equipment."
-      },
-      "mountedUnits": {
-        "name": "Mounted Units",
-        "slug": "mounted-units",
-        "description": "Pillow block, flange, and take-up mounted bearing units for quick installation and easy maintenance."
-      },
-      "accessories": {
-        "name": "Accessories",
-        "slug": "accessories",
-        "description": "Bearing housings, lubricants, seals, adapters, and maintenance tools to support bearing performance."
       }
     },
     "items": {
@@ -273,94 +258,6 @@
           "standards": "ISO 15:2017, ISO 492"
         },
         "category": "roller-bearings"
-      },
-      "linear-guide": {
-        "name": "Linear Guide System",
-        "description": "Precision-engineered linear motion systems for smooth, accurate movement in CNC machines and automation.",
-        "overview": "Linear Guide Systems enable smooth, accurate linear motion in industrial machinery and automation. Consisting of hardened steel rails and recirculating ball carriages, they deliver minimal friction, high rigidity, and excellent load capacity.",
-        "features": ["High positioning accuracy", "Low friction coefficient for smooth operation", "High load capacity in all directions", "Long service life: millions of cycles", "Available in multiple accuracy and preload grades"],
-        "applications": ["CNC machine tools and machining centers", "Semiconductor and electronics manufacturing", "Automated assembly and robotic systems", "Medical and precision instrumentation"],
-        "specifications": {
-          "type": "Ball Type Linear Guide System",
-          "boreDiameter": "N/A",
-          "outerDiameter": "N/A",
-          "width": "Rail widths: 15 mm - 65 mm",
-          "material": "Hardened steel with anti-corrosion treatment",
-          "cageType": "Recirculating ball retainer",
-          "precisionClass": "Normal / High / Precision / Super-Precision",
-          "speedRating": "Up to 5 m/s",
-          "dynamicLoad": "4.6 kN - 224.7 kN per block",
-          "staticLoad": "7.2 kN - 412 kN per block",
-          "sealOptions": "Standard seals / High-temperature / Dust-resistant",
-          "standards": "Interchangeable with major linear guide standards"
-        },
-        "category": "linear-motion"
-      },
-      "bearing-housing": {
-        "name": "Bearing Housing",
-        "description": "Protective enclosures for bearings providing secure mounting and contamination protection.",
-        "overview": "Our bearing housings are precision-machined enclosures designed to securely mount and protect bearings in industrial applications. Made from high-quality cast iron (GG25/GGG40).",
-        "features": ["Robust cast iron construction", "Precision-machined bore for accurate alignment", "Effective sealing to prevent contamination", "Multiple mounting configurations", "Relubrication ports for easy maintenance"],
-        "applications": ["Conveyors and material handling", "Agricultural and forestry equipment", "HVAC systems and industrial fans", "Mining and construction machinery"],
-        "specifications": {
-          "type": "Pillow Block / Flange Housing",
-          "boreDiameter": "Shaft: 20 mm - 160 mm",
-          "outerDiameter": "N/A",
-          "width": "Varies by model",
-          "material": "Cast Iron GG25 / Ductile Iron GGG40",
-          "cageType": "N/A",
-          "precisionClass": "Standard industrial tolerance",
-          "speedRating": "Dependent on installed bearing",
-          "dynamicLoad": "Up to 450 kN (size dependent)",
-          "staticLoad": "Per installed bearing specification",
-          "sealOptions": "Double-lip seals with optional dust covers",
-          "standards": "ISO 113, interchangeable dimensions"
-        },
-        "category": "accessories"
-      },
-      "bearing-lubricant": {
-        "name": "Bearing Lubricant",
-        "description": "High-performance lubricants formulated to reduce friction and extend bearing life.",
-        "overview": "Specially formulated bearing lubricants that create a protective film between bearing surfaces, preventing metal-to-metal contact while providing effective protection against contaminants.",
-        "features": ["Superior load-carrying capacity", "Excellent thermal stability up to 180C", "Outstanding water resistance and corrosion protection", "Extended relubrication intervals", "Compatible with common bearing materials and seals"],
-        "applications": ["High-speed electric motor bearings", "Heavy-duty industrial machinery", "Wet and corrosive environments", "High-temperature steel mill applications"],
-        "specifications": {
-          "type": "Synthetic Bearing Grease",
-          "boreDiameter": "N/A",
-          "outerDiameter": "N/A",
-          "width": "N/A",
-          "material": "Lithium complex thickener / Synthetic base oil",
-          "cageType": "N/A",
-          "precisionClass": "N/A",
-          "speedRating": "Suitable for up to 15,000 RPM",
-          "dynamicLoad": "Weld load: 315 kg (ASTM D2596)",
-          "staticLoad": "N/A",
-          "sealOptions": "N/A",
-          "standards": "DIN 51825, NLGI Grade 2"
-        },
-        "category": "accessories"
-      },
-      "mounted-bearing-unit": {
-        "name": "Mounted Bearing Unit",
-        "description": "Pre-assembled units combining bearing, housing, seal, and locking device for quick installation.",
-        "overview": "Mounted Bearing Units are pre-assembled components that combine a bearing, housing, sealing system, and locking device in a ready-to-install package.",
-        "features": ["Pre-assembled for quick installation", "Self-aligning to accommodate shaft misalignment", "Effective triple-lip sealing system", "Relubrication capability", "Multiple locking methods: set screw, eccentric collar, adapter"],
-        "applications": ["Conveyor systems in manufacturing and logistics", "Food processing and packaging lines", "Agricultural machinery and grain handling", "HVAC systems, fans, and cooling towers"],
-        "specifications": {
-          "type": "Pillow Block / Flange Mounted Unit",
-          "boreDiameter": "Shaft: 12 mm - 140 mm",
-          "outerDiameter": "N/A",
-          "width": "Varies by model",
-          "material": "Housing: Cast Iron / Bearing: Chrome Steel",
-          "cageType": "Pressed steel",
-          "precisionClass": "Standard industrial tolerance",
-          "speedRating": "Up to 5,000 RPM",
-          "dynamicLoad": "4.5 kN - 370 kN",
-          "staticLoad": "3.2 kN - 305 kN",
-          "sealOptions": "Triple-lip seals with optional end caps",
-          "standards": "ISO 3228, interchangeable dimensions"
-        },
-        "category": "mounted-units"
       }
     },
     "specLabels": {
@@ -392,10 +289,10 @@
   },
   "about": {
     "title": "About ANDE Precision Bearing",
-    "subtitle": "Over 30 years of precision bearing manufacturing for global industrial markets.",
+    "subtitle": "Over 7 years of precision bearing manufacturing for global industrial markets.",
     "story": {
       "title": "Our Story",
-      "p1": "Founded in 1985, Jiangsu ANDE Precision Bearing Technology Co., Ltd. has grown from a specialized local manufacturer to a global supplier of precision bearings. Located in Jiangyin, Jiangsu Province, we combine decades of metallurgical expertise with modern CNC manufacturing technology.",
+      "p1": "Founded in 2019, Jiangsu ANDE Precision Bearing Technology Co., Ltd. has grown from a specialized local manufacturer to a global supplier of precision bearings. Located in Jiangyin, Jiangsu Province, we combine decades of metallurgical expertise with modern CNC manufacturing technology.",
       "p2": "Our facility spans over 15,000 m2 with dedicated production lines for ball bearings, roller bearings, and mounted units. We serve distributors, steel mills, mining operations, and OEM procurement teams in more than 50 countries.",
       "p3": "Our commitment to quality, technical accuracy, and reliable delivery has earned us long-term partnerships with major industrial buyers across Southeast Asia, the Middle East, Europe, and the Americas."
     },
@@ -422,7 +319,7 @@
         {"label": "Product Lines", "value": "Ball, Roller, Linear, Mounted"},
         {"label": "Precision Classes", "value": "P0, P6, P5, P4"},
         {"label": "Export Markets", "value": "50+ countries"},
-        {"label": "Established", "value": "1985"}
+        {"label": "Established", "value": "2019"}
       ]
     }
   },

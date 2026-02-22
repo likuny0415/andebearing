@@ -126,7 +126,7 @@ function StructuredData({ locale }: { locale: string }) {
     description: isZh
       ? '安德轴承（江苏安德精工轴承科技有限公司）— ISO认证精密轴承制造商，产品涵盖球轴承、滚子轴承、直线导轨，服务全球50+国家。'
       : 'Ande Bearing (ANDE Precision Bearing Technology Co., Ltd.) — ISO-certified precision bearing manufacturer. Ball bearings, roller bearings, linear motion systems for 50+ countries.',
-    foundingDate: '1985',
+    foundingDate: '2019',
     brand: {
       '@type': 'Brand',
       name: 'ANDE',

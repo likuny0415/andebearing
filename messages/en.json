@@ -184,12 +184,16 @@
       "ballBearings": {
         "name": "Ball Bearings",
         "slug": "ball-bearings",
-        "description": "Deep groove, angular contact, and self-aligning ball bearings for high-speed and precision applications."
+        "description": "Deep groove, angular contact, and self-aligning ball bearings for high-speed and precision applications.",
+        "overview": "Ball bearings are one of the most widely used bearing types in modern industrial and commercial machinery. They use spherical rolling elements positioned between an inner and outer raceway to reduce rotational friction and support both radial and axial loads. ANDE manufactures a comprehensive range of ball bearings suitable for applications from small electric motors and household appliances to large industrial pumps and conveyor systems. Our ball bearings are manufactured from premium chrome steel (AISI 52100) or stainless steel (AISI 440C), with precision-ground raceways and optimized internal geometry for smooth, quiet operation and extended service life. Available in open, shielded, and sealed configurations with various cage materials including pressed steel and polyamide. All ball bearings conform to ISO 15:2017 dimensional standards and are available in precision classes from P0 (standard) through P5 for demanding high-speed applications.",
+        "keyFeatures": ["High-speed capability with low friction torque", "Available in bore diameters from 3mm to 200mm", "Multiple seal and shield configurations for contamination protection", "Chrome steel and stainless steel material options", "Precision classes: P0, P6, P5 to meet diverse application needs", "Conformance to ISO 15:2017 and ISO 492 standards"]
       },
       "rollerBearings": {
         "name": "Roller Bearings",
         "slug": "roller-bearings",
-        "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications."
+        "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications.",
+        "overview": "Roller bearings use cylindrical, tapered, or spherical rolling elements to carry heavier loads than ball bearings of comparable size. The line contact between rollers and raceways distributes stress over a larger area, enabling roller bearings to support substantial radial forces, axial thrust loads, or combined loads depending on the design. ANDE offers a comprehensive selection of roller bearings engineered for the most demanding heavy industrial environments including steel mills, mining operations, power generation facilities, and large-scale manufacturing plants. Our roller bearing product line includes tapered roller bearings for combined load applications, spherical roller bearings with self-aligning capability for installations with shaft deflection or misalignment, and cylindrical roller bearings for high radial load capacity. All roller bearings are manufactured from high-quality bearing steel with precision-machined raceways, heat-treated components, and carefully selected cage designs for optimal performance and durability under extreme operating conditions.",
+        "keyFeatures": ["Superior load capacity compared to ball bearings of equivalent size", "Tapered, spherical, and cylindrical roller configurations available", "Self-aligning designs accommodate up to 2 degrees of misalignment", "Bore diameter range from 15mm to 400mm for diverse applications", "Operating temperature range from -40°C to +150°C", "Manufactured to ISO 355, ISO 15:2017, and ISO 492 standards"]
       }
     },
     "items": {

@@ -4,7 +4,7 @@ import { Link } from '@/i18n/navigation';
 export default function HomePage() {
   const t = useTranslations();
 
-  const categories = ['ballBearings', 'rollerBearings', 'linearMotion', 'mountedUnits', 'accessories'] as const;
+  const categories = ['ballBearings', 'rollerBearings'] as const;
   const industries = ['steel', 'mining', 'energy', 'automotive', 'manufacturing', 'agriculture'] as const;
   const trustBlocks = ['factoryCapability', 'qualityControl', 'exportExperience', 'responseSLA'] as const;
 

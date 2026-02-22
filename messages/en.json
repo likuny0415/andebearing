@@ -322,8 +322,16 @@
         "applications": ["Sendzimir 20-high cold rolling mills", "Cluster mill intermediate and backup roll support", "Thin-gauge stainless steel strip rolling", "Silicon steel and specialty alloy cold rolling"],
         "specifications": {
           "type": "Multi-Row Backing Bearing (Sendzimir Type)",
+          "boreDiameter": "Varies by model (consult specification sheet)",
+          "outerDiameter": "Varies by model (consult specification sheet)",
+          "width": "Varies by model (consult specification sheet)",
           "material": "High-carbon chrome bearing steel, carburized",
+          "cageType": "Machined brass / Steel pin-type",
           "precisionClass": "P5 / P4 precision grade",
+          "speedRating": "Application-specific (consult engineering)",
+          "dynamicLoad": "Model dependent (consult specification sheet)",
+          "staticLoad": "Model dependent (consult specification sheet)",
+          "sealOptions": "Sealed / Open configurations available",
           "standards": "Manufacturer standard, interchangeable with major brands"
         },
         "category": "rolling-mill-bearings"
@@ -342,8 +350,10 @@
           "material": "High-carbon chrome bearing steel / Carburized steel",
           "cageType": "Machined brass / Pin-type steel cage",
           "precisionClass": "Normal / P6 available",
+          "speedRating": "Up to 800 RPM (size dependent)",
           "dynamicLoad": "800 kN - 12,000 kN",
           "staticLoad": "1,200 kN - 18,000 kN",
+          "sealOptions": "Open / Custom sealing configurations available",
           "standards": "ISO 15:2017, manufacturer standard"
         },
         "category": "rolling-mill-bearings"
@@ -362,6 +372,10 @@
           "material": "Chrome Steel AISI 52100",
           "cageType": "Machined brass / Pressed steel",
           "precisionClass": "P0 standard, P6/P5 on request",
+          "speedRating": "Up to 3,000 RPM (size dependent)",
+          "dynamicLoad": "20 kN - 800 kN",
+          "staticLoad": "30 kN - 1,500 kN",
+          "sealOptions": "Open / Shielded configurations available",
           "standards": "ISO 15:2017, ISO 492"
         },
         "category": "ball-bearings"
@@ -380,8 +394,10 @@
           "material": "Case-hardened bearing steel / Through-hardened steel",
           "cageType": "Machined brass / Pin-type steel cage",
           "precisionClass": "Normal / P6 available",
+          "speedRating": "Up to 600 RPM (size dependent)",
           "dynamicLoad": "900 kN - 15,000 kN",
           "staticLoad": "1,500 kN - 22,000 kN",
+          "sealOptions": "Open / Custom sealing configurations available",
           "standards": "ISO 355, manufacturer standard"
         },
         "category": "rolling-mill-bearings"

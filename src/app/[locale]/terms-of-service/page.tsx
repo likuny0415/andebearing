@@ -23,7 +23,7 @@ export default async function TermsOfServicePage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto prose prose-gray">
+      <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           {isZh ? '服务条款' : 'Terms of Service'}
         </h1>
@@ -31,122 +31,228 @@ export default async function TermsOfServicePage({ params }: Props) {
           {isZh ? '最后更新：2026年1月' : 'Last updated: January 2026'}
         </p>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
+        {/* Acceptance */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
             {isZh ? '接受条款' : 'Acceptance of Terms'}
           </h2>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh
+              ? `欢迎访问${companyName}官方网站（www.andebearing.com）。`
+              : `Welcome to the website of ${companyName} (www.andebearing.com).`}
+          </p>
           <p className="text-gray-600 leading-relaxed">
             {isZh
-              ? `欢迎访问${companyName}的官方网站（www.andebearing.com）。通过访问、浏览或使用本网站，您确认已阅读、理解并同意受这些服务条款的约束。如果您不同意这些条款中的任何部分，请停止使用本网站。这些条款构成您与本公司之间关于使用本网站的完整协议。本公司保留随时修改这些条款的权利，修改后的条款自发布之日起生效。`
-              : `Welcome to the official website of ${companyName} (www.andebearing.com). By accessing, browsing, or using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of this website. These terms constitute the entire agreement between you and the company regarding the use of this website. The company reserves the right to modify these terms at any time, and modified terms become effective upon publication.`}
+              ? '使用本网站即表示您同意受这些条款约束。如不同意，请停止使用。我们可能随时更新条款，更新自发布之日起生效。'
+              : 'By using this site, you agree to these terms. If you disagree, please stop using the site. We may update these terms at any time, effective upon posting.'}
           </p>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
+        {/* Terms of Use */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
             {isZh ? '使用条款' : 'Terms of Use'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? '本网站上的所有内容仅供信息参考和商业沟通目的。您可以浏览网站内容、下载产品目录并通过询价表单与我们联系。您同意不会将本网站用于任何非法目的，不会试图未经授权访问我们的系统，不会使用自动化工具大量抓取网站内容，也不会以任何可能损害网站正常运行的方式使用本网站。我们保留在不事先通知的情况下限制或终止任何用户访问本网站的权利。'
-              : 'All content on this website is provided for informational and business communication purposes only. You may browse website content, download product catalogs, and contact us through the inquiry form. You agree not to use this website for any unlawful purpose, not to attempt unauthorized access to our systems, not to use automated tools to scrape website content in bulk, and not to use this website in any manner that could impair its normal operation. We reserve the right to restrict or terminate any user access to this website without prior notice.'}
+              ? '网站内容仅供信息参考和商业沟通。您可以浏览内容、下载目录并发送询价。'
+              : 'Website content is for information and business communication only. You may browse content, download catalogs, and send inquiries.'}
           </p>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh ? '您同意不会：' : 'You agree not to:'}
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>{isZh ? '将网站用于非法目的' : 'Use the site for unlawful purposes'}</li>
+            <li>{isZh ? '尝试未经授权访问我们的系统' : 'Attempt unauthorized access to our systems'}</li>
+            <li>{isZh ? '使用自动化工具大量抓取内容' : 'Use automated tools to scrape content in bulk'}</li>
+            <li>{isZh ? '以任何方式损害网站正常运行' : 'Impair normal website operation in any way'}</li>
+          </ul>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
-            {isZh ? '产品信息与报价' : 'Product Information and Quotations'}
+        {/* Product Info */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            {isZh ? '产品信息与报价' : 'Product Information & Quotations'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? '我们尽力确保网站上所有产品信息、技术规格、图片和描述的准确性。但由于产品持续改进和制造工艺优化，规格可能随时变更，恕不另行通知。网站上展示的产品图片仅供参考，实际产品外观可能因批次、材料和表面处理工艺的不同而略有差异。所有通过网站或邮件提供的报价均为初步报价，最终价格以双方签订的正式销售合同或形式发票（Proforma Invoice）为准。报价的有效期通常为30天，除非另行书面说明。'
-              : 'We make every effort to ensure the accuracy of all product information, technical specifications, images, and descriptions on our website. However, due to continuous product improvement and manufacturing process optimization, specifications are subject to change without notice. Product images displayed on the website are for reference only, and actual product appearance may vary slightly due to differences in batch, material, and surface treatment processes. All quotations provided through the website or email are preliminary, and final pricing is subject to the formal sales contract or Proforma Invoice agreed upon by both parties. Quotations are typically valid for 30 days unless otherwise stated in writing.'}
+              ? '我们尽力确保产品信息准确。但由于持续改进，规格可能变更，恕不另行通知。'
+              : 'We strive for accuracy in product information. However, specs may change without notice due to ongoing improvements.'}
           </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>{isZh ? '产品图片仅供参考，实际外观可能略有差异' : 'Product images are for reference only; actual appearance may vary slightly'}</li>
+            <li>{isZh ? '所有报价均为初步报价，以正式合同或形式发票为准' : 'All quotes are preliminary; final pricing is per the signed contract or Proforma Invoice'}</li>
+            <li>{isZh ? '报价有效期通常为30天，除非另行书面说明' : 'Quotes are typically valid for 30 days unless otherwise stated in writing'}</li>
+          </ul>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
-            {isZh ? '订单与交易条款' : 'Orders and Transaction Terms'}
+        {/* Orders */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            {isZh ? '订单与交易条款' : 'Orders & Transaction Terms'}
           </h2>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh
+              ? '网站询价不构成正式订单。正式订单须经双方确认规格、价格、数量、交期和付款条件。'
+              : 'Website inquiries are not formal orders. Orders are established after both parties confirm specs, pricing, quantity, delivery, and payment terms.'}
+          </p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '付款方式' : 'Payment Methods'}
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600 mb-3">
+            <li>{isZh ? '电汇（T/T）' : 'Wire transfer (T/T)'}</li>
+            <li>{isZh ? '信用证（L/C）' : 'Letter of credit (L/C)'}</li>
+            <li>{isZh ? '西联汇款' : 'Western Union'}</li>
+          </ul>
           <p className="text-gray-600 leading-relaxed">
             {isZh
-              ? '通过本网站提交的询价不构成正式订单或购买承诺。正式订单须经双方确认产品规格、价格、数量、交期和付款条件后方可成立。我们接受的标准付款方式包括电汇（T/T）、信用证（L/C）和西联汇款。标准付款条款为：订单确认后支付30%定金，提单副本确认后支付70%尾款，除非双方另有书面约定。所有价格均以报价时注明的货币为准，不包含可能产生的银行手续费。'
-              : 'Inquiries submitted through this website do not constitute formal orders or purchase commitments. Formal orders are established only after both parties confirm product specifications, pricing, quantities, delivery schedules, and payment terms. Our accepted standard payment methods include wire transfer (T/T), letter of credit (L/C), and Western Union. Standard payment terms are: 30% deposit upon order confirmation, 70% balance against copy of Bill of Lading, unless otherwise agreed in writing. All prices are denominated in the currency specified at the time of quotation and do not include any applicable bank charges.'}
+              ? '标准条款：订单确认后30%定金，提单副本后70%尾款。价格不含银行手续费。'
+              : 'Standard terms: 30% deposit on order confirmation, 70% balance against copy of B/L. Prices exclude bank charges.'}
           </p>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
-            {isZh ? '发货与交付' : 'Shipping and Delivery'}
+        {/* Shipping */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            {isZh ? '发货与交付' : 'Shipping & Delivery'}
           </h2>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh
+              ? '交货期自订单确认和定金到账之日起计算。'
+              : 'Delivery times start from order confirmation and deposit receipt.'}
+          </p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '交货期' : 'Lead Times'}
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600 mb-3">
+            <li>{isZh ? '标准产品：2–4周' : 'Standard products: 2–4 weeks'}</li>
+            <li>{isZh ? '非标/大批量订单：4–8周' : 'Non-standard / large orders: 4–8 weeks'}</li>
+          </ul>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '贸易条款' : 'Trade Terms'}
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600 mb-3">
+            <li>FOB, CIF, CFR, DDP, EXW</li>
+          </ul>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '包装' : 'Packaging'}
+          </h3>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh
+              ? '防锈纸包裹 + VCI薄膜保护 + 加固纸箱或木箱，适合海运。'
+              : 'Anti-rust paper + VCI film + reinforced cartons or wooden cases, suitable for ocean freight.'}
+          </p>
           <p className="text-gray-600 leading-relaxed">
             {isZh
-              ? '交货期自订单确认和定金到账之日起计算。标准目录产品的交货期通常为2至4周，非标产品或大批量订单为4至8周。我们支持FOB、CIF、CFR、DDP和EXW等国际贸易条款。所有产品均采用适合海运的工业级出口包装，包括防锈纸包裹、VCI薄膜保护和加固纸箱或木箱。具体的运输方式、港口和保险安排以销售合同中的约定为准。由于不可抗力因素（如自然灾害、政府管制、物流中断等）导致的交货延迟，不视为违约。'
-              : 'Delivery times are calculated from the date of order confirmation and deposit receipt. Standard catalog products typically have a delivery time of 2 to 4 weeks, while non-standard products or large-volume orders require 4 to 8 weeks. We support international trade terms including FOB, CIF, CFR, DDP, and EXW. All products are packed in industrial-grade export packaging suitable for ocean freight, including anti-rust paper wrapping, VCI film protection, and reinforced cartons or wooden cases. Specific shipping methods, ports, and insurance arrangements are subject to the terms agreed upon in the sales contract. Delivery delays caused by force majeure events (such as natural disasters, government regulations, logistics disruptions, etc.) are not considered a breach of contract.'}
+              ? '不可抗力（自然灾害、政府管制、物流中断等）导致的延迟不视为违约。'
+              : 'Delays from force majeure (natural disasters, regulations, logistics disruptions) are not considered breach of contract.'}
           </p>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
-            {isZh ? '质量保证与索赔' : 'Quality Assurance and Claims'}
+        {/* Quality */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            {isZh ? '质量保证与索赔' : 'Quality Assurance & Claims'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? '我们的所有产品均经过严格的质量控制流程，包括来料检验、过程检测和成品审核。每批货物均附带合格证书（Certificate of Conformity）。如果您收到的产品存在制造缺陷或与订单规格不符，请在收货后14天内以书面形式通知我们并提供详细的缺陷描述和照片证据。经核实确认后，我们将根据具体情况提供换货、补货或信用额度调整。因安装不当、使用超出额定工况、改装或正常磨损造成的损坏不在保修范围之内。'
-              : 'All our products undergo rigorous quality control processes, including incoming material inspection, in-process testing, and final product audit. Every shipment includes a Certificate of Conformity. If you receive products with manufacturing defects or that do not conform to order specifications, please notify us in writing within 14 days of receipt, providing detailed defect descriptions and photographic evidence. Upon verification, we will provide replacement, supplementary shipment, or credit adjustment as appropriate. Damage caused by improper installation, operation beyond rated conditions, modification, or normal wear is not covered under warranty.'}
+              ? '所有产品经过严格质控，每批货物附带合格证书。'
+              : 'All products undergo strict quality control. Every shipment includes a Certificate of Conformity.'}
           </p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '索赔流程' : 'Claims Process'}
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600 mb-3">
+            <li>{isZh ? '收货后14天内书面通知' : 'Notify us in writing within 14 days of receipt'}</li>
+            <li>{isZh ? '提供缺陷描述和照片证据' : 'Provide defect description and photo evidence'}</li>
+            <li>{isZh ? '核实后提供换货、补货或信用调整' : 'After verification: replacement, supplementary shipment, or credit adjustment'}</li>
+          </ul>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '不在保修范围内' : 'Not Covered Under Warranty'}
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>{isZh ? '安装不当造成的损坏' : 'Damage from improper installation'}</li>
+            <li>{isZh ? '超出额定工况使用' : 'Operation beyond rated conditions'}</li>
+            <li>{isZh ? '产品改装' : 'Product modification'}</li>
+            <li>{isZh ? '正常磨损' : 'Normal wear and tear'}</li>
+          </ul>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
+        {/* IP */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
             {isZh ? '知识产权' : 'Intellectual Property'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? '本网站上的所有内容，包括但不限于文字、产品描述、技术规格、图片、图表、标志、页面布局和软件代码，均为本公司或其内容提供商的知识产权，受中国和国际知识产权法律保护。未经本公司事先书面许可，任何个人或组织不得复制、分发、修改、展示或以其他方式使用本网站上的任何内容用于商业目的。允许为个人参考目的下载和打印产品信息，但必须保留所有版权和知识产权声明。'
-              : 'All content on this website, including but not limited to text, product descriptions, technical specifications, images, graphics, logos, page layouts, and software code, is the intellectual property of the company or its content providers and is protected by Chinese and international intellectual property laws. No individual or organization may reproduce, distribute, modify, display, or otherwise use any content from this website for commercial purposes without prior written permission from the company. Downloading and printing product information for personal reference purposes is permitted, provided that all copyright and intellectual property notices are retained.'}
+              ? '网站所有内容（文字、图片、标志、代码等）均受中国和国际知识产权法保护。'
+              : 'All website content (text, images, logos, code, etc.) is protected by Chinese and international IP laws.'}
           </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-600">
+            <li>{isZh ? '未经书面许可不得用于商业目的' : 'Commercial use requires prior written permission'}</li>
+            <li>{isZh ? '允许为个人参考目的下载和打印，但须保留版权声明' : 'Personal reference downloads are permitted with copyright notices retained'}</li>
+          </ul>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
+        {/* Liability */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
             {isZh ? '免责声明' : 'Limitation of Liability'}
           </h2>
+          <p className="text-gray-600 leading-relaxed mb-3">
+            {isZh
+              ? '网站内容按"现状"提供，不附带任何保证。我们不保证网站不间断运行或完全无错。'
+              : 'Website content is provided "as is" without warranties. We do not guarantee uninterrupted or error-free operation.'}
+          </p>
           <p className="text-gray-600 leading-relaxed">
             {isZh
-              ? '本网站及其内容按"现状"和"可用状态"提供，不附带任何形式的明示或暗示保证。我们不保证网站将不间断运行或完全无错误。对于因使用本网站或依赖网站内容而导致的任何直接、间接、附带、特殊或后果性损失，包括但不限于利润损失、数据丢失或业务中断，本公司不承担任何责任。本网站上的技术建议和产品推荐仅供参考，最终的轴承选型和应用决策应基于专业的工程评估。'
-              : 'This website and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not guarantee that the website will operate uninterrupted or be completely error-free. The company shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use of this website or reliance on its content, including but not limited to loss of profits, data loss, or business interruption. Technical advice and product recommendations on this website are for reference only, and final bearing selection and application decisions should be based on professional engineering evaluation.'}
+              ? '技术建议和产品推荐仅供参考。最终的轴承选型应基于专业工程评估。对因使用本网站导致的任何损失，本公司不承担责任。'
+              : 'Technical advice and recommendations are for reference only. Final bearing selection should be based on professional engineering evaluation. We are not liable for damages from website use.'}
           </p>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
-            {isZh ? '适用法律与争议解决' : 'Governing Law and Dispute Resolution'}
+        {/* Governing Law */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
+            {isZh ? '适用法律与争议解决' : 'Governing Law & Disputes'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? '本服务条款受中华人民共和国法律管辖并按其解释。因使用本网站或与本服务条款相关的任何争议，双方应首先通过友好协商解决。如协商不成，任何一方均可将争议提交至本公司所在地有管辖权的人民法院诉讼解决。对于国际贸易争议，双方可约定将争议提交中国国际经济贸易仲裁委员会（CIETAC）按其届时有效的仲裁规则进行仲裁。'
-              : 'These Terms of Service are governed by and construed in accordance with the laws of the People\'s Republic of China. Any dispute arising from the use of this website or related to these Terms of Service shall first be resolved through friendly negotiation between the parties. If negotiation fails, either party may submit the dispute to the competent People\'s Court at the location of the company. For international trade disputes, the parties may agree to submit the dispute to the China International Economic and Trade Arbitration Commission (CIETAC) for arbitration in accordance with its then-effective arbitration rules.'}
+              ? '本条款受中华人民共和国法律管辖。'
+              : 'These terms are governed by the laws of the People\'s Republic of China.'}
           </p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">
+            {isZh ? '争议解决步骤' : 'Dispute Resolution Steps'}
+          </h3>
+          <ol className="list-decimal list-inside space-y-2 text-gray-600">
+            <li>{isZh ? '双方友好协商' : 'Friendly negotiation between parties'}</li>
+            <li>{isZh ? '协商不成，提交本公司所在地法院' : 'If unresolved, submit to the competent court at the company\'s location'}</li>
+            <li>{isZh ? '国际贸易争议可提交CIETAC仲裁' : 'International trade disputes may go to CIETAC arbitration'}</li>
+          </ol>
         </section>
 
-        <section className="space-y-4 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">
+        {/* Contact */}
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">
             {isZh ? '联系我们' : 'Contact Us'}
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed mb-3">
             {isZh
-              ? `如您对本服务条款有任何疑问或需要进一步说明，请通过以下方式联系我们。我们的团队将在两个工作日内回复您的咨询。邮箱：`
-              : `If you have any questions about these Terms of Service or require further clarification, please contact us. Our team will respond to your inquiry within two business days. Email: `}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-800 hover:underline">
-              {CONTACT_EMAIL}
-            </a>
+              ? '如有条款相关问题，我们将在两个工作日内回复。'
+              : 'For questions about these terms, we respond within two business days.'}
           </p>
-          <p className="text-gray-600 leading-relaxed">
-            {isZh
-              ? `公司地址：中国江苏省江阴市华士工业园联新路23号`
-              : `Company Address: No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China`}
-          </p>
+          <ul className="list-none space-y-2 text-gray-600">
+            <li>
+              <strong>{isZh ? '邮箱：' : 'Email: '}</strong>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-800 hover:underline">{CONTACT_EMAIL}</a>
+            </li>
+            <li>
+              <strong>{isZh ? '地址：' : 'Address: '}</strong>
+              {isZh
+                ? '中国江苏省江阴市华士工业园联新路23号'
+                : 'No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China'}
+            </li>
+          </ul>
         </section>
       </div>
     </div>

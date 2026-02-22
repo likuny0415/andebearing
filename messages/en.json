@@ -194,6 +194,13 @@
         "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications.",
         "overview": "Roller bearings use cylindrical, tapered, or spherical rolling elements to carry heavier loads than ball bearings of comparable size. The line contact between rollers and raceways distributes stress over a larger area, enabling roller bearings to support substantial radial forces, axial thrust loads, or combined loads depending on the design. ANDE offers a comprehensive selection of roller bearings engineered for the most demanding heavy industrial environments including steel mills, mining operations, power generation facilities, and large-scale manufacturing plants. Our roller bearing product line includes tapered roller bearings for combined load applications, spherical roller bearings with self-aligning capability for installations with shaft deflection or misalignment, and cylindrical roller bearings for high radial load capacity. All roller bearings are manufactured from high-quality bearing steel with precision-machined raceways, heat-treated components, and carefully selected cage designs for optimal performance and durability under extreme operating conditions.",
         "keyFeatures": ["Superior load capacity compared to ball bearings of equivalent size", "Tapered, spherical, and cylindrical roller configurations available", "Self-aligning designs accommodate up to 2 degrees of misalignment", "Bore diameter range from 15mm to 400mm for diverse applications", "Operating temperature range from -40°C to +150°C", "Manufactured to ISO 355, ISO 15:2017, and ISO 492 standards"]
+      },
+      "rollingMillBearings": {
+        "name": "Rolling Mill Bearings",
+        "slug": "rolling-mill-bearings",
+        "description": "Specialized backing bearings, four-row cylindrical and tapered roller bearings engineered for Sendzimir mills and heavy rolling mill applications.",
+        "overview": "Rolling mill bearings are precision-engineered components designed specifically for the extreme demands of steel and metal rolling operations. These bearings must withstand very heavy loads, high temperatures, shock impacts, and continuous operation cycles while maintaining tight dimensional tolerances. ANDE specializes in manufacturing rolling mill bearings including backing bearings for Sendzimir cluster mills, four-row cylindrical roller bearings for work rolls and backup rolls, and four-row tapered roller bearings for rolling mill applications requiring combined radial and axial load support. Our rolling mill bearings are manufactured from premium bearing steel with special heat treatment processes, precision-ground raceways, and robust cage designs to ensure reliable performance in the harsh operating environment of hot and cold rolling mills. We supply bearings for plate mills, strip mills, section mills, and tube mills across the global steel industry.",
+        "keyFeatures": ["Designed for extreme loads and continuous operation in rolling mills", "Backing bearings for Sendzimir and cluster mill configurations", "Four-row designs for maximum load distribution across work rolls", "Premium bearing steel with specialized heat treatment", "Tight dimensional tolerances for precision rolling operations", "Proven performance in hot strip, cold rolling, and plate mills worldwide"]
       }
     },
     "items": {
@@ -262,6 +269,78 @@
           "standards": "ISO 15:2017, ISO 492"
         },
         "category": "roller-bearings"
+      },
+      "backing-bearing": {
+        "name": "Backing Bearing",
+        "description": "Specialized multi-row bearings for Sendzimir cluster mills and other multi-roll cold rolling mill configurations.",
+        "overview": "Backing Bearings (also known as Sendzimir mill bearings) are precision multi-row bearings specifically designed for cluster-type cold rolling mills. These bearings support the intermediate and backup rolls in Sendzimir 20-high mills and similar multi-roll configurations used for rolling thin-gauge stainless steel, silicon steel, and other specialty metal strips. ANDE backing bearings feature precision-ground raceways, optimized roller geometry, and tight dimensional tolerances to ensure uniform strip thickness and surface quality during high-precision cold rolling operations.",
+        "features": ["Designed specifically for Sendzimir 20-high cluster mills", "Multi-row configuration for maximum radial load support", "Precision-ground raceways for uniform rolling pressure distribution", "Tight dimensional tolerances ensure consistent strip thickness", "Premium bearing steel with specialized heat treatment for long service life"],
+        "applications": ["Sendzimir 20-high cold rolling mills", "Cluster mill intermediate and backup roll support", "Thin-gauge stainless steel strip rolling", "Silicon steel and specialty alloy cold rolling"],
+        "specifications": {
+          "type": "Multi-Row Backing Bearing (Sendzimir Type)",
+          "material": "High-carbon chrome bearing steel, carburized",
+          "precisionClass": "P5 / P4 precision grade",
+          "standards": "Manufacturer standard, interchangeable with major brands"
+        },
+        "category": "rolling-mill-bearings"
+      },
+      "four-row-cylindrical-roller-bearing": {
+        "name": "Four-Row Cylindrical Roller Bearing",
+        "description": "Heavy-duty four-row cylindrical roller bearings for rolling mill work rolls and backup rolls requiring maximum radial load capacity.",
+        "overview": "Four-Row Cylindrical Roller Bearings are designed for the most demanding heavy-load applications in steel rolling mills. The four-row configuration distributes extremely high radial loads across four rows of cylindrical rollers, providing the maximum radial load capacity in a compact design. These bearings are primarily used in the chock assemblies of work rolls and backup rolls in hot strip mills, plate mills, and section mills. ANDE four-row cylindrical roller bearings are manufactured from premium bearing steel with precision-machined raceways and robust brass or steel cage designs for reliable operation under the extreme conditions of continuous steel rolling.",
+        "features": ["Four-row design for maximum radial load capacity", "Compact cross-section for space-constrained roll chock assemblies", "Precision-machined raceways for uniform load distribution", "Robust cage designs for high-speed and heavy-load operation", "Available with tapered bore for easy mounting on roll necks"],
+        "applications": ["Hot strip mill work roll and backup roll chocks", "Plate mill roll assemblies", "Section mill and bar mill roll bearings", "Heavy-duty industrial roll support applications"],
+        "specifications": {
+          "type": "Four-Row Cylindrical Roller Bearing",
+          "boreDiameter": "100 mm - 900 mm",
+          "outerDiameter": "150 mm - 1280 mm",
+          "width": "140 mm - 860 mm",
+          "material": "High-carbon chrome bearing steel / Carburized steel",
+          "cageType": "Machined brass / Pin-type steel cage",
+          "precisionClass": "Normal / P6 available",
+          "dynamicLoad": "800 kN - 12,000 kN",
+          "staticLoad": "1,200 kN - 18,000 kN",
+          "standards": "ISO 15:2017, manufacturer standard"
+        },
+        "category": "rolling-mill-bearings"
+      },
+      "four-point-contact-ball-bearing": {
+        "name": "Four-Point Contact Ball Bearing",
+        "description": "Single-row bearings capable of supporting axial loads in both directions, ideal for rolling mill and heavy machinery applications.",
+        "overview": "Four-Point Contact Ball Bearings are a specialized type of single-row angular contact ball bearing where the inner and outer rings have gothic arch raceways that create four contact points with each ball. This unique geometry allows a single bearing to support axial loads in both directions as well as radial loads, making it functionally equivalent to a back-to-back arrangement of two angular contact bearings but in a more compact envelope. ANDE four-point contact ball bearings are used in rolling mill applications, large gearboxes, crane slewing rings, and other heavy machinery where bidirectional axial load support is required in a space-efficient design.",
+        "features": ["Four-point contact geometry supports axial loads in both directions", "Compact single-row design replaces two angular contact bearings", "Gothic arch raceway profile for optimal load distribution", "Suitable for combined radial and bidirectional axial loads", "Available in large bore diameters for heavy machinery applications"],
+        "applications": ["Rolling mill roll axial positioning", "Large industrial gearbox thrust support", "Crane and excavator slewing mechanisms", "Wind turbine blade pitch systems"],
+        "specifications": {
+          "type": "Four-Point Contact Ball Bearing",
+          "boreDiameter": "30 mm - 500 mm",
+          "outerDiameter": "62 mm - 670 mm",
+          "width": "16 mm - 80 mm",
+          "material": "Chrome Steel AISI 52100",
+          "cageType": "Machined brass / Pressed steel",
+          "precisionClass": "P0 standard, P6/P5 on request",
+          "standards": "ISO 15:2017, ISO 492"
+        },
+        "category": "ball-bearings"
+      },
+      "four-row-tapered-roller-bearing": {
+        "name": "Four-Row Tapered Roller Bearing",
+        "description": "Heavy-duty four-row tapered roller bearings for rolling mill applications requiring combined radial and axial load support.",
+        "overview": "Four-Row Tapered Roller Bearings combine the heavy radial load capacity of a four-row design with the ability to support significant axial thrust loads in both directions. The tapered roller geometry creates line contact for high load capacity while the four-row arrangement distributes the load across multiple rows for maximum bearing life. These bearings are essential components in rolling mill work roll and backup roll chock assemblies where both radial and axial forces are present. ANDE four-row tapered roller bearings are manufactured to exacting standards with precision-ground tapered raceways, heat-treated rollers, and robust cage assemblies designed for the continuous high-load operation typical in hot and cold steel rolling mills.",
+        "features": ["Four-row tapered design for combined radial and axial loads", "High load capacity with extended service life", "Precision-ground tapered raceways for smooth operation", "Adjustable internal clearance for optimal performance", "Interchangeable with major international brands"],
+        "applications": ["Rolling mill work roll chock assemblies", "Backup roll bearing arrangements in strip mills", "Plate mill roll support with axial thrust requirements", "Heavy industrial applications with combined loading"],
+        "specifications": {
+          "type": "Four-Row Tapered Roller Bearing",
+          "boreDiameter": "130 mm - 1060 mm",
+          "outerDiameter": "180 mm - 1400 mm",
+          "width": "150 mm - 920 mm",
+          "material": "Case-hardened bearing steel / Through-hardened steel",
+          "cageType": "Machined brass / Pin-type steel cage",
+          "precisionClass": "Normal / P6 available",
+          "dynamicLoad": "900 kN - 15,000 kN",
+          "staticLoad": "1,500 kN - 22,000 kN",
+          "standards": "ISO 355, manufacturer standard"
+        },
+        "category": "rolling-mill-bearings"
       }
     },
     "specLabels": {

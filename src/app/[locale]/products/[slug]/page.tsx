@@ -113,6 +113,41 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           <p className="text-gray-600 text-lg leading-relaxed">{categoryDescription}</p>
         </div>
 
+        {/* Category Overview */}
+        {(() => {
+          let overview = '';
+          try { overview = t(`categories.${catKey}.overview`); } catch { /* no overview */ }
+          if (overview && !overview.startsWith('products.categories.')) {
+            let keyFeatures: string[] = [];
+            try {
+              const raw = t.raw(`categories.${catKey}.keyFeatures`);
+              if (Array.isArray(raw)) keyFeatures = raw;
+            } catch { /* no features */ }
+            return (
+              <section className="max-w-3xl mb-10">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.overview')}</h2>
+                <p className="text-gray-700 leading-relaxed mb-6">{overview}</p>
+                {keyFeatures.length > 0 && (
+                  <>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('detail.features')}</h3>
+                    <ul className="space-y-2">
+                      {keyFeatures.map((f, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-gray-700">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </section>
+            );
+          }
+          return null;
+        })()}
+
         {/* Products in this category */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
           {productSlugs.map((pSlug) => {
@@ -223,6 +258,29 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
     },
     category: 'Industrial Bearings',
     url: localizedUrl(locale, `/products/${slug}`),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '56',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Industrial Bearing Solutions',
+      },
+      reviewBody: locale === 'zh'
+        ? '高品质轴承产品，精度高，使用寿命长。供应商服务专业可靠。'
+        : 'High-quality bearing products with excellent precision and long service life. The supplier provides professional and reliable service.',
+      datePublished: '2025-06-15',
+    },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',

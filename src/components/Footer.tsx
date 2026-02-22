@@ -13,9 +13,6 @@ export default function Footer() {
   const productLinks = [
     { href: '/products/ball-bearings' as const, key: 'ballBearings' },
     { href: '/products/roller-bearings' as const, key: 'rollerBearings' },
-    { href: '/products/linear-motion' as const, key: 'linearMotion' },
-    { href: '/products/mounted-units' as const, key: 'mountedUnits' },
-    { href: '/products/accessories' as const, key: 'accessories' },
   ];
 
   const companyLinks = [

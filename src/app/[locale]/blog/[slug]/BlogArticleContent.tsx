@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from '@/i18n/navigation';
@@ -90,7 +90,7 @@ function TableOfContents({
 }
 
 export default function BlogArticleContent({ content }: { content: string }) {
-  const tocItems = generateTOC(content);
+  const tocItems = useMemo(() => generateTOC(content), [content]);
   const [activeId, setActiveId] = useState('');
   const [progress, setProgress] = useState(0);
   const articleRef = useRef<HTMLDivElement>(null);

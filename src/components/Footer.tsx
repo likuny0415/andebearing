@@ -13,13 +13,14 @@ export default function Footer() {
   const productLinks = [
     { href: '/products/ball-bearings' as const, key: 'ballBearings' },
     { href: '/products/roller-bearings' as const, key: 'rollerBearings' },
+    { href: '/products/rolling-mill-bearings' as const, key: 'rollingMillBearings' },
   ];
 
   const companyLinks = [
     { href: '/about' as const, label: t('nav.about') },
-    { href: '/quality' as const, label: t('nav.quality') },
     { href: '/industries' as const, label: t('nav.industries') },
     { href: '/services' as const, label: t('nav.services') },
+    { href: '/blog' as const, label: t('nav.blog') },
     { href: '/faq' as const, label: t('nav.faq') },
   ];
 

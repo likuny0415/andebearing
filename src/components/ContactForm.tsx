@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { CheckCircleIcon } from '@/components/Icons';
 
@@ -12,7 +12,27 @@ export default function ContactForm() {
     quantity: '', application: '', incoterms: '', message: '',
     honeypot: '',
   });
+  const [trackingData, setTrackingData] = useState({
+    utmSource: '', utmMedium: '', utmCampaign: '', utmContent: '', utmTerm: '',
+    referrer: '', landingPage: '',
+  });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  // Capture UTM params, referrer, and landing page on mount
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      setTrackingData({
+        utmSource: params.get('utm_source') || '',
+        utmMedium: params.get('utm_medium') || '',
+        utmCampaign: params.get('utm_campaign') || '',
+        utmContent: params.get('utm_content') || '',
+        utmTerm: params.get('utm_term') || '',
+        referrer: document.referrer || '',
+        landingPage: window.location.pathname,
+      });
+    } catch { /* SSR safety */ }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,6 +53,7 @@ export default function ContactForm() {
           bearingSize: formData.bearingSize, quantity: formData.quantity,
           application: formData.application, incoterms: formData.incoterms,
           message: formData.message,
+          ...trackingData,
         }),
       });
       if (res.ok) {

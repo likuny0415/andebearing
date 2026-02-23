@@ -8,6 +8,7 @@ import { routing, type Locale } from '@/i18n/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../globals.css';
 
@@ -172,13 +173,6 @@ function StructuredData({ locale }: { locale: string }) {
       '@type': 'Organization',
       name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: isZh
-        ? `${SITE_URL}/zh/products?q={search_term_string}`
-        : `${SITE_URL}/products?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   return (
@@ -220,6 +214,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <WhatsAppFloat />
           <SpeedInsights />
         </NextIntlClientProvider>
       </body>

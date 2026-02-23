@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath, localizedUrl } from '@/lib/url';
@@ -153,6 +154,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
           {productSlugs.map((pSlug) => {
             const productName = t(`items.${pSlug}.name`);
             const productDesc = t(`items.${pSlug}.description`);
+            const productImage = PRODUCT_IMAGES[pSlug as ProductSlug];
 
             return (
               <Link
@@ -160,13 +162,23 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
                 href={`/products/${pSlug}`}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
               >
-                <div className="h-32 sm:h-40 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
+                <div className="h-40 sm:h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                  {productImage ? (
+                    <Image
+                      src={productImage}
+                      alt={productName}
+                      width={300}
+                      height={200}
+                      className="object-contain max-h-[160px] w-auto group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg className="w-7 h-7 sm:w-8 sm:h-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
                 <div className="p-4 sm:p-5">
                   <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
@@ -273,7 +285,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
             return (
               <section className="mb-12">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('detail.faqTitle')}</h2>
                 <div className="space-y-4">
                   {faqItems.map(({ question, answer }, i) => (
                     <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -292,8 +304,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
         <section className="mb-12 bg-blue-50 border border-blue-100 rounded-lg p-6 sm:p-8">
           <div className="flex flex-col md:flex-row md:items-center gap-4">
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-gray-900 mb-1">Send Drawing / Model / Operating Conditions → Quote Within 24 Hours</h2>
-              <p className="text-sm text-gray-600">Our engineering team reviews your specifications and provides a detailed quotation with bearing selection recommendations.</p>
+              <h2 className="text-lg font-bold text-gray-900 mb-1">{t('detail.inquiryCta')}</h2>
+              <p className="text-sm text-gray-600">{t('detail.inquiryCtaDescription')}</p>
             </div>
             <Link href="/contact" className="bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
               {tc('requestQuote')}
@@ -303,7 +315,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: string }) 
 
         {/* Other categories */}
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">{tc('otherCategories', { fallback: 'Other Categories' })}</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">{tc('otherCategories')}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {CATEGORY_SLUGS.filter((s) => s !== slug).map((otherSlug) => {
               const otherKey = CATEGORY_SLUG_TO_KEY[otherSlug];
@@ -380,29 +392,6 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
     },
     category: 'Industrial Bearings',
     url: localizedUrl(locale, `/products/${slug}`),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '56',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Industrial Bearing Solutions',
-      },
-      reviewBody: locale === 'zh'
-        ? '高品质轴承产品，精度高，使用寿命长。供应商服务专业可靠。'
-        : 'High-quality bearing products with excellent precision and long service life. The supplier provides professional and reliable service.',
-      datePublished: '2025-06-15',
-    },
     offers: {
       '@type': 'Offer',
       priceCurrency: 'USD',
@@ -454,6 +443,22 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-10">
+            {/* Product Image */}
+            {PRODUCT_IMAGES[slug as ProductSlug] && (
+              <section>
+                <div className="bg-gray-50 rounded-lg p-6 sm:p-8 flex items-center justify-center border border-gray-200">
+                  <Image
+                    src={PRODUCT_IMAGES[slug as ProductSlug]}
+                    alt={name}
+                    width={500}
+                    height={500}
+                    className="object-contain max-h-[400px] w-auto"
+                    priority
+                  />
+                </div>
+              </section>
+            )}
+
             {/* Overview */}
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.overview')}</h2>

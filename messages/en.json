@@ -28,9 +28,9 @@
       "title": "FAQ — Bearing Specs & Ordering",
       "description": "Frequently asked questions about bearing specifications, MOQ, lead times, OEM customization, certifications, and export packaging."
     },
-    "quality": {
-      "title": "Quality Assurance & Certifications",
-      "description": "ISO 9001:2015 certified bearing manufacturer. Rigorous QC process: incoming material inspection, hardness testing, dimensional verification, and final audit."
+    "blog": {
+      "title": "Blog — Bearing Industry Insights & Procurement Guides",
+      "description": "Expert articles on bearing procurement, selection guides, industry trends, and supply chain best practices from ANDE Precision Bearing."
     }
   },
   "common": {
@@ -41,6 +41,7 @@
     "about": "About",
     "contact": "Contact",
     "quality": "Quality",
+    "blog": "Blog",
     "faq": "FAQ",
     "requestQuote": "Request a Quote",
     "talkToEngineering": "Talk to Engineering",
@@ -68,7 +69,7 @@
     "products": "Products",
     "industries": "Industries",
     "about": "About Us",
-    "quality": "Quality",
+    "blog": "Blog",
     "services": "Services",
     "contact": "Contact / RFQ",
     "faq": "FAQ"
@@ -427,7 +428,10 @@
       "value": "Value",
       "ctaTitle": "Need this bearing for your application?",
       "ctaDescription": "Our engineering team can help with bearing selection, custom specifications, and volume pricing.",
-      "qualityNote": "All products undergo 100% inspection before shipment. Certificate of Conformity included with every order."
+      "qualityNote": "All products undergo 100% inspection before shipment. Certificate of Conformity included with every order.",
+      "inquiryCta": "Send Drawing / Model / Operating Conditions → Quote Within 24 Hours",
+      "inquiryCtaDescription": "Our engineering team reviews your specifications and provides a detailed quotation with bearing selection recommendations.",
+      "faqTitle": "Frequently Asked Questions"
     }
   },
   "about": {
@@ -464,27 +468,6 @@
         {"label": "Export Markets", "value": "50+ countries"},
         {"label": "Established", "value": "2019"}
       ]
-    }
-  },
-  "quality": {
-    "title": "Quality Assurance & Certifications",
-    "subtitle": "Rigorous quality control at every stage of production ensures our bearings meet the highest international standards.",
-    "certifications": {
-      "title": "Certifications",
-      "items": ["ISO 9001:2015 Quality Management System", "ISO 14001 Environmental Management (in progress)", "Products conform to ISO, JIS, ABEC, DIN standards", "CE marking available for European market requirements"]
-    },
-    "process": {
-      "title": "Quality Control Process",
-      "steps": [
-        {"title": "Incoming Material Inspection", "description": "Chemical composition analysis, hardness testing, and metallurgical structure verification of all raw steel materials."},
-        {"title": "In-Process Dimensional Inspection", "description": "Continuous monitoring of bore, OD, width, and raceway geometry using precision measuring instruments during production."},
-        {"title": "Surface & Roundness Measurement", "description": "Roundness, waviness, and surface roughness measurements on critical raceway and rolling element surfaces."},
-        {"title": "Final Audit & Testing", "description": "100% inspection for noise, vibration, radial clearance, and rotational accuracy before packaging and shipment."}
-      ]
-    },
-    "equipment": {
-      "title": "Inspection Equipment",
-      "items": ["Roundness measuring machines", "Surface roughness testers (Ra, Rz)", "Hardness testers (Rockwell / Vickers)", "Vibration & noise measuring instruments", "Profile projectors and CMM", "Bore gauges, micrometers, height gauges"]
     }
   },
   "services": {
@@ -593,6 +576,27 @@
         "exw": "EXW (Ex Works)",
         "other": "Other / To discuss"
       }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Industry insights, procurement guides, and technical knowledge for bearing professionals.",
+    "latestArticles": "Latest Articles",
+    "allArticles": "All Articles",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published",
+    "readTime": "min read",
+    "author": "Author",
+    "categories": {
+      "procurement": "Procurement & Sourcing",
+      "technical": "Technical Knowledge",
+      "industry": "Industry Trends"
+    },
+    "readMoreLink": "Read more",
+    "cta": {
+      "title": "Need expert advice on bearing procurement?",
+      "description": "Our engineering and export team can help you navigate the sourcing process. Get a response within 24 hours.",
+      "button": "Contact Us"
     }
   },
   "footer": {

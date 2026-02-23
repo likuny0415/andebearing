@@ -28,9 +28,9 @@
       "title": "常见问题 — 轴承规格与订购",
       "description": "关于轴承规格、最小起订量、交货期、OEM定制、认证及出口包装的常见问题解答。"
     },
-    "quality": {
-      "title": "质量保证与认证",
-      "description": "ISO 9001:2015认证轴承制造商。严格的质量控制流程：来料检验、硬度测试、尺寸验证及成品审核。"
+    "blog": {
+      "title": "博客 — 轴承行业洞察与采购指南",
+      "description": "来自安德精工轴承的专业文章：轴承采购指南、选型知识、行业趋势及供应链最佳实践。"
     }
   },
   "common": {
@@ -41,6 +41,7 @@
     "about": "关于我们",
     "contact": "联系我们",
     "quality": "质量保证",
+    "blog": "博客",
     "faq": "常见问题",
     "requestQuote": "获取报价",
     "talkToEngineering": "咨询工程师",
@@ -68,7 +69,7 @@
     "products": "产品中心",
     "industries": "应用行业",
     "about": "关于我们",
-    "quality": "质量保证",
+    "blog": "博客",
     "services": "技术服务",
     "contact": "联系 / 询价",
     "faq": "常见问题"
@@ -427,7 +428,10 @@
       "value": "数值",
       "ctaTitle": "需要此轴承用于您的应用？",
       "ctaDescription": "我们的工程团队可提供轴承选型、定制规格及批量价格支持。",
-      "qualityNote": "所有产品出厂前经100%检验。每批订单附带合格证书。"
+      "qualityNote": "所有产品出厂前经100%检验。每批订单附带合格证书。",
+      "inquiryCta": "发送图纸 / 型号 / 工况条件 → 24小时内报价",
+      "inquiryCtaDescription": "我们的工程团队将审核您的技术规格，并提供详细的报价及轴承选型建议。",
+      "faqTitle": "常见问题"
     }
   },
   "about": {
@@ -464,27 +468,6 @@
         {"label": "出口市场", "value": "50+国家和地区"},
         {"label": "创立年份", "value": "2019年"}
       ]
-    }
-  },
-  "quality": {
-    "title": "质量保证与认证",
-    "subtitle": "生产全流程严格质量控制，确保轴承产品达到最高国际标准。",
-    "certifications": {
-      "title": "资质认证",
-      "items": ["ISO 9001:2015质量管理体系", "ISO 14001环境管理体系（筹备中）", "产品符合ISO、JIS、ABEC、DIN标准", "可提供CE标志，满足欧洲市场要求"]
-    },
-    "process": {
-      "title": "质量控制流程",
-      "steps": [
-        {"title": "来料检验", "description": "对所有原材料钢材进行化学成分分析、硬度测试及金相组织验证。"},
-        {"title": "过程尺寸检测", "description": "生产过程中对内径、外径、宽度及滚道几何尺寸进行连续监测。"},
-        {"title": "表面与圆度检测", "description": "对关键滚道及滚动体表面进行圆度、波纹度和表面粗糙度测量。"},
-        {"title": "成品审核与测试", "description": "出厂前100%检验噪音、振动、径向游隙及旋转精度。"}
-      ]
-    },
-    "equipment": {
-      "title": "检测设备",
-      "items": ["圆度测量仪", "表面粗糙度仪（Ra, Rz）", "硬度计（洛氏/维氏）", "振动与噪音检测仪", "投影仪与三坐标测量机", "内径量规、千分尺、高度规"]
     }
   },
   "services": {
@@ -585,6 +568,27 @@
         "exw": "EXW（工厂交货）",
         "other": "其他 / 待定"
       }
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "面向轴承行业专业人士的行业洞察、采购指南与技术知识。",
+    "latestArticles": "最新文章",
+    "allArticles": "所有文章",
+    "backToBlog": "返回博客",
+    "publishedOn": "发布日期",
+    "readTime": "分钟阅读",
+    "author": "作者",
+    "categories": {
+      "procurement": "采购与供应链",
+      "technical": "技术知识",
+      "industry": "行业趋势"
+    },
+    "readMoreLink": "阅读全文",
+    "cta": {
+      "title": "需要轴承采购方面的专业建议？",
+      "description": "我们的工程和外贸团队可以帮助您优化采购流程。24小时内回复。",
+      "button": "联系我们"
     }
   },
   "footer": {

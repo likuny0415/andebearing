@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
 import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/lib/products';
+import { BLOG_SLUGS } from '@/lib/blog';
 
 // Helper: English (default locale) has no prefix, Chinese uses /zh
 function localizedUrl(locale: string, path: string) {
@@ -9,7 +10,7 @@ function localizedUrl(locale: string, path: string) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'zh'];
-  const routes = ['', '/products', '/about', '/contact', '/industries', '/services', '/quality', '/faq', '/privacy-policy', '/terms-of-service'];
+  const routes = ['', '/products', '/about', '/contact', '/industries', '/services', '/faq', '/blog', '/privacy-policy', '/terms-of-service'];
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [];
@@ -44,6 +45,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             en: `${SITE_URL}/products/${slug}`,
             zh: `${SITE_URL}/zh/products/${slug}`,
             'x-default': `${SITE_URL}/products/${slug}`,
+          },
+        },
+      });
+    }
+
+    // Blog article pages
+    for (const slug of BLOG_SLUGS) {
+      entries.push({
+        url: localizedUrl(locale, `/blog/${slug}`),
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: {
+          languages: {
+            en: `${SITE_URL}/blog/${slug}`,
+            zh: `${SITE_URL}/zh/blog/${slug}`,
+            'x-default': `${SITE_URL}/blog/${slug}`,
           },
         },
       });

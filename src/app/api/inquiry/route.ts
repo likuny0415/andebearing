@@ -14,6 +14,14 @@ interface InquiryData {
   application?: string;
   incoterms?: string;
   message?: string;
+  // UTM tracking fields
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+  utmTerm?: string;
+  referrer?: string;
+  landingPage?: string;
 }
 
 // Simple in-memory rate limiter (resets on cold start, sufficient for basic protection)
@@ -64,6 +72,14 @@ function buildEmailHtml(inquiry: Record<string, string>): string {
     { label: 'Application', value: inquiry.application },
     { label: 'Incoterms', value: inquiry.incoterms },
     { label: 'Message', value: inquiry.message },
+    { label: '── Attribution ──', value: '' },
+    { label: 'UTM Source', value: inquiry.utmSource },
+    { label: 'UTM Medium', value: inquiry.utmMedium },
+    { label: 'UTM Campaign', value: inquiry.utmCampaign },
+    { label: 'UTM Content', value: inquiry.utmContent },
+    { label: 'UTM Term', value: inquiry.utmTerm },
+    { label: 'Referrer', value: inquiry.referrer },
+    { label: 'Landing Page', value: inquiry.landingPage },
   ].filter(row => row.value); // Only include fields that have values
 
   const tableRows = rows.map(row =>
@@ -98,12 +114,13 @@ async function sendEmail(inquiry: Record<string, string>): Promise<void> {
   }
 
   const resend = new Resend(resendApiKey);
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'noreply@andebearing.com';
 
   const companyPart = inquiry.company ? ` from ${inquiry.company}` : '';
   const subject = `New Inquiry ${inquiry.id}${companyPart} - ${inquiry.name}`;
 
   const { error } = await resend.emails.send({
-    from: 'Beiren Bearing <onboarding@resend.dev>',
+    from: `ANDE Bearing <${fromEmail}>`,
     to: [notifyEmail],
     subject,
     html: buildEmailHtml(inquiry),
@@ -171,6 +188,13 @@ export async function POST(request: NextRequest) {
       application: data.application || '',
       incoterms: data.incoterms || '',
       message: data.message || '',
+      utmSource: data.utmSource || '',
+      utmMedium: data.utmMedium || '',
+      utmCampaign: data.utmCampaign || '',
+      utmContent: data.utmContent || '',
+      utmTerm: data.utmTerm || '',
+      referrer: data.referrer || '',
+      landingPage: data.landingPage || '',
     };
 
     console.log(`[Inquiry] ${inquiry.id} from ${inquiry.name} (${inquiry.email})${inquiry.company ? ` - ${inquiry.company}` : ''}`);

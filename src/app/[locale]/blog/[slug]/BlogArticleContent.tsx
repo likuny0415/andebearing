@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Link } from '@/i18n/navigation';
 
 interface TOCItem {
   id: string;
@@ -38,7 +39,7 @@ function TableOfContents({
   if (items.length === 0) return null;
 
   return (
-    <nav aria-label="Table of contents" className="sticky top-28">
+    <nav aria-label="Table of contents">
       <div>
         {/* Reading progress bar */}
         <div className="flex items-center gap-2 mb-4">
@@ -89,7 +90,7 @@ function TableOfContents({
 }
 
 export default function BlogArticleContent({ content }: { content: string }) {
-  const tocItems = generateTOC(content);
+  const tocItems = useMemo(() => generateTOC(content), [content]);
   const [activeId, setActiveId] = useState('');
   const [progress, setProgress] = useState(0);
   const articleRef = useRef<HTMLDivElement>(null);
@@ -175,7 +176,7 @@ export default function BlogArticleContent({ content }: { content: string }) {
   );
 
   return (
-    <div className="flex gap-10">
+    <div className="flex items-start gap-10">
       {/* Main article content */}
       <article
         ref={articleRef}
@@ -186,6 +187,30 @@ export default function BlogArticleContent({ content }: { content: string }) {
           components={{
             h2: H2,
             h3: H3,
+            img: ({ src, alt, ...props }) => (
+              <img
+                src={src}
+                alt={alt || ''}
+                className="max-w-md mx-auto rounded-lg"
+                {...props}
+              />
+            ),
+            a: ({ href, children, ...props }) => {
+              // Use next-intl Link for internal paths (locale-aware navigation)
+              if (href && href.startsWith('/')) {
+                return (
+                  <Link href={href as never} {...props}>
+                    {children}
+                  </Link>
+                );
+              }
+              // External links open in a new tab
+              return (
+                <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+                  {children}
+                </a>
+              );
+            },
           }}
         >
           {content}
@@ -193,7 +218,7 @@ export default function BlogArticleContent({ content }: { content: string }) {
       </article>
 
       {/* Sidebar TOC — visible on lg+ screens */}
-      <aside className="hidden lg:block w-56 flex-shrink-0">
+      <aside className="hidden lg:block w-56 flex-shrink-0 sticky top-28">
         <TableOfContents items={tocItems} activeId={activeId} progress={progress} />
       </aside>
     </div>

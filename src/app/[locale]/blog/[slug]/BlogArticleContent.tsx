@@ -89,20 +89,56 @@ function TableOfContents({
   );
 }
 
+// ── Stable markdown component overrides (defined outside render to avoid DOM remounting) ──
+
+function getHeadingId(children: React.ReactNode): string {
+  const text =
+    typeof children === 'string'
+      ? children
+      : Array.isArray(children)
+        ? children.map((c) => (typeof c === 'string' ? c : '')).join('')
+        : '';
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fff\u3400-\u4dbf-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+$/, '');
+}
+
+const markdownComponents = {
+  h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 id={getHeadingId(children)} className="scroll-mt-24" {...props}>{children}</h2>
+  ),
+  h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h3 id={getHeadingId(children)} className="scroll-mt-24" {...props}>{children}</h3>
+  ),
+  img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <img src={src} alt={alt || ''} className="max-w-md mx-auto rounded-lg" {...props} />
+  ),
+  a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+    if (href && href.startsWith('/')) {
+      return <Link href={href as never} {...props}>{children}</Link>;
+    }
+    return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
+  },
+};
+
+const remarkPlugins = [remarkGfm];
+
+// ── Main component ──
+
 export default function BlogArticleContent({ content }: { content: string }) {
   const tocItems = useMemo(() => generateTOC(content), [content]);
   const [activeId, setActiveId] = useState('');
   const [progress, setProgress] = useState(0);
   const articleRef = useRef<HTMLDivElement>(null);
 
-  // Scroll-based heading tracking — always highlights the last heading scrolled past
   const handleScroll = useCallback(() => {
     if (tocItems.length === 0) return;
 
     const scrollY = window.scrollY;
-    const headerOffset = 100; // account for sticky header
+    const headerOffset = 100;
 
-    // Calculate reading progress based on article element
     if (articleRef.current) {
       const rect = articleRef.current.getBoundingClientRect();
       const articleTop = rect.top + scrollY;
@@ -113,7 +149,6 @@ export default function BlogArticleContent({ content }: { content: string }) {
       setProgress(Math.max(0, Math.min(pct, 100)));
     }
 
-    // Find the last heading that has been scrolled past
     let currentId = '';
     for (const item of tocItems) {
       const el = document.getElementById(item.id);
@@ -134,90 +169,21 @@ export default function BlogArticleContent({ content }: { content: string }) {
 
   useEffect(() => {
     if (tocItems.length === 0) return;
-
-    // Initial check
     handleScroll();
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll, tocItems]);
 
-  // Generate id from heading text for anchor links
-  const getHeadingId = (children: React.ReactNode): string => {
-    const text =
-      typeof children === 'string'
-        ? children
-        : Array.isArray(children)
-          ? children.map((c) => (typeof c === 'string' ? c : '')).join('')
-          : '';
-    return text
-      .toLowerCase()
-      .replace(/[^\w\s\u4e00-\u9fff\u3400-\u4dbf-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+$/, '');
-  };
-
-  const H2 = ({
-    children,
-    ...props
-  }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 id={getHeadingId(children)} className="scroll-mt-24" {...props}>
-      {children}
-    </h2>
-  );
-
-  const H3 = ({
-    children,
-    ...props
-  }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3 id={getHeadingId(children)} className="scroll-mt-24" {...props}>
-      {children}
-    </h3>
-  );
-
   return (
     <div className="flex items-start gap-10">
-      {/* Main article content */}
       <article
         ref={articleRef}
         className="prose prose-gray prose-lg max-w-none flex-1 min-w-0 prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-semibold prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-gray-900 prose-blockquote:border-blue-300 prose-blockquote:text-gray-600 prose-hr:border-gray-200 prose-hr:my-10"
       >
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            h2: H2,
-            h3: H3,
-            img: ({ src, alt, ...props }) => (
-              <img
-                src={src}
-                alt={alt || ''}
-                className="max-w-md mx-auto rounded-lg"
-                {...props}
-              />
-            ),
-            a: ({ href, children, ...props }) => {
-              // Use next-intl Link for internal paths (locale-aware navigation)
-              if (href && href.startsWith('/')) {
-                return (
-                  <Link href={href as never} {...props}>
-                    {children}
-                  </Link>
-                );
-              }
-              // External links open in a new tab
-              return (
-                <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
-                  {children}
-                </a>
-              );
-            },
-          }}
-        >
+        <ReactMarkdown remarkPlugins={remarkPlugins} components={markdownComponents}>
           {content}
         </ReactMarkdown>
       </article>
-
-      {/* Sidebar TOC — visible on lg+ screens */}
       <aside className="hidden lg:block w-56 flex-shrink-0 sticky top-28">
         <TableOfContents items={tocItems} activeId={activeId} progress={progress} />
       </aside>

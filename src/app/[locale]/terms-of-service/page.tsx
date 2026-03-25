@@ -249,7 +249,7 @@ export default async function TermsOfServicePage({ params }: Props) {
             <li>
               <strong>{isZh ? '地址：' : 'Address: '}</strong>
               {isZh
-                ? '中国江苏省江阴市华士工业园联新路23号'
+                ? '中国江苏省江阴市华士工业园连心路23号'
                 : 'No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China'}
             </li>
           </ul>

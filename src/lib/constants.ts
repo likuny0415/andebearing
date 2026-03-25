@@ -8,5 +8,5 @@ export const CONTACT_PHONE = '(+86) 13906240166';
 export const WHATSAPP_NUMBER = '+18573191070';
 export const WHATSAPP_URL = 'https://wa.me/18573191070';
 export const COMPANY_ADDRESS_EN = 'No. 23 Lianxin Road, Huashi Industrial Park, Jiangyin, Jiangsu, China';
-export const COMPANY_ADDRESS_ZH = '中国江苏省江阴市华士工业园联新路23号';
+export const COMPANY_ADDRESS_ZH = '中国江苏省江阴市华士工业园连心路23号';
 export const FOUNDED_YEAR = '2019';

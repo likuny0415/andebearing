@@ -11,7 +11,7 @@ function localizedUrl(locale: string, path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'zh'];
   const routes = ['', '/products', '/about', '/contact', '/industries', '/services', '/faq', '/blog', '/privacy-policy', '/terms-of-service'];
-  const now = new Date();
+  const lastBuilt = new Date('2026-03-25');
 
   const entries: MetadataRoute.Sitemap = [];
 
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const route of routes) {
       entries.push({
         url: localizedUrl(locale, route),
-        lastModified: now,
+        lastModified: lastBuilt,
         changeFrequency: route === '' ? 'weekly' : 'monthly',
         priority: route === '' ? 1.0 : route === '/products' ? 0.9 : 0.8,
         alternates: {
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of CATEGORY_SLUGS) {
       entries.push({
         url: localizedUrl(locale, `/products/${slug}`),
-        lastModified: now,
+        lastModified: lastBuilt,
         changeFrequency: 'weekly',
         priority: 0.85,
         alternates: {
@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of BLOG_SLUGS) {
       entries.push({
         url: localizedUrl(locale, `/blog/${slug}`),
-        lastModified: now,
+        lastModified: lastBuilt,
         changeFrequency: 'monthly',
         priority: 0.7,
         alternates: {
@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of PRODUCT_SLUGS) {
       entries.push({
         url: localizedUrl(locale, `/products/${slug}`),
-        lastModified: now,
+        lastModified: lastBuilt,
         changeFrequency: 'monthly',
         priority: 0.7,
         alternates: {

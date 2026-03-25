@@ -95,22 +95,42 @@
     "factoryCapability": {
       "title": "Factory Capabilities",
       "description": "Modern manufacturing facility with CNC grinding, superfinishing, and automated assembly lines. Annual capacity: 5 million+ bearing units.",
-      "items": ["CNC precision grinding & superfinishing", "Automated assembly & inspection lines", "Annual capacity: 5,000,000+ units", "Tolerance class: P0 / P6 / P5 available"]
+      "items": [
+        "CNC precision grinding & superfinishing",
+        "Automated assembly & inspection lines",
+        "Annual capacity: 5,000,000+ units",
+        "Tolerance class: P0 / P6 / P5 available"
+      ]
     },
     "qualityControl": {
       "title": "Quality Control Process",
       "description": "Every bearing undergoes multi-stage inspection from raw material to finished product, ensuring compliance with ISO, JIS, and ABEC standards.",
-      "items": ["Incoming material verification (hardness, chemistry)", "In-process dimensional inspection", "Roundness & surface roughness measurement", "Final audit: noise, vibration, clearance testing"]
+      "items": [
+        "Incoming material verification (hardness, chemistry)",
+        "In-process dimensional inspection",
+        "Roundness & surface roughness measurement",
+        "Final audit: noise, vibration, clearance testing"
+      ]
     },
     "exportExperience": {
       "title": "Export Experience",
       "description": "7+ years serving international markets with FOB/CIF terms, industrial packaging, and documentation for customs clearance.",
-      "items": ["Export to 50+ countries worldwide", "FOB / CIF / DDP terms available", "Industrial-grade export packaging", "Full documentation & certificates of conformity"]
+      "items": [
+        "Export to 50+ countries worldwide",
+        "FOB / CIF / DDP terms available",
+        "Industrial-grade export packaging",
+        "Full documentation & certificates of conformity"
+      ]
     },
     "responseSLA": {
       "title": "Responsive Service",
       "description": "Dedicated export team with technical engineering support. We understand procurement timelines.",
-      "items": ["RFQ response within 24 hours", "Technical drawing review in 48 hours", "Sample delivery: 5-7 business days", "Dedicated account manager for key accounts"]
+      "items": [
+        "RFQ response within 24 hours",
+        "Technical drawing review in 48 hours",
+        "Sample delivery: 5-7 business days",
+        "Dedicated account manager for key accounts"
+      ]
     }
   },
   "featuredProducts": {
@@ -187,21 +207,42 @@
         "slug": "ball-bearings",
         "description": "Deep groove, angular contact, and self-aligning ball bearings for high-speed and precision applications.",
         "overview": "Ball bearings are one of the most widely used bearing types in modern industrial and commercial machinery. They use spherical rolling elements positioned between an inner and outer raceway to reduce rotational friction and support both radial and axial loads. ANDE manufactures a comprehensive range of ball bearings suitable for applications from small electric motors and household appliances to large industrial pumps and conveyor systems. Our ball bearings are manufactured from premium chrome steel (AISI 52100) or stainless steel (AISI 440C), with precision-ground raceways and optimized internal geometry for smooth, quiet operation and extended service life. Available in open, shielded, and sealed configurations with various cage materials including pressed steel and polyamide. All ball bearings conform to ISO 15:2017 dimensional standards and are available in precision classes from P0 (standard) through P5 for demanding high-speed applications.",
-        "keyFeatures": ["High-speed capability with low friction torque", "Available in bore diameters from 3mm to 200mm", "Multiple seal and shield configurations for contamination protection", "Chrome steel and stainless steel material options", "Precision classes: P0, P6, P5 to meet diverse application needs", "Conformance to ISO 15:2017 and ISO 492 standards"]
+        "keyFeatures": [
+          "High-speed capability with low friction torque",
+          "Available in bore diameters from 3mm to 200mm",
+          "Multiple seal and shield configurations for contamination protection",
+          "Chrome steel and stainless steel material options",
+          "Precision classes: P0, P6, P5 to meet diverse application needs",
+          "Conformance to ISO 15:2017 and ISO 492 standards"
+        ]
       },
       "rollerBearings": {
         "name": "Roller Bearings",
         "slug": "roller-bearings",
         "description": "Tapered, spherical, cylindrical, and needle roller bearings for heavy radial and axial load applications.",
         "overview": "Roller bearings use cylindrical, tapered, or spherical rolling elements to carry heavier loads than ball bearings of comparable size. The line contact between rollers and raceways distributes stress over a larger area, enabling roller bearings to support substantial radial forces, axial thrust loads, or combined loads depending on the design. ANDE offers a comprehensive selection of roller bearings engineered for the most demanding heavy industrial environments including steel mills, mining operations, power generation facilities, and large-scale manufacturing plants. Our roller bearing product line includes tapered roller bearings for combined load applications, spherical roller bearings with self-aligning capability for installations with shaft deflection or misalignment, and cylindrical roller bearings for high radial load capacity. All roller bearings are manufactured from high-quality bearing steel with precision-machined raceways, heat-treated components, and carefully selected cage designs for optimal performance and durability under extreme operating conditions.",
-        "keyFeatures": ["Superior load capacity compared to ball bearings of equivalent size", "Tapered, spherical, and cylindrical roller configurations available", "Self-aligning designs accommodate up to 2 degrees of misalignment", "Bore diameter range from 15mm to 400mm for diverse applications", "Operating temperature range from -40°C to +150°C", "Manufactured to ISO 355, ISO 15:2017, and ISO 492 standards"]
+        "keyFeatures": [
+          "Superior load capacity compared to ball bearings of equivalent size",
+          "Tapered, spherical, and cylindrical roller configurations available",
+          "Self-aligning designs accommodate up to 2 degrees of misalignment",
+          "Bore diameter range from 15mm to 400mm for diverse applications",
+          "Operating temperature range from -40°C to +150°C",
+          "Manufactured to ISO 355, ISO 15:2017, and ISO 492 standards"
+        ]
       },
       "rollingMillBearings": {
         "name": "Rolling Mill Bearings",
         "slug": "rolling-mill-bearings",
         "description": "Rolling mill bearings manufacturer — four-row tapered roller bearings, four-row cylindrical roller bearings, backing bearings for Sendzimir mills. Bearing block and chock assembly solutions for hot strip, cold rolling, plate, bar & wire mills.",
         "overview": "Rolling mill bearings are precision-engineered components designed specifically for the extreme demands of steel and metal rolling operations. These bearings must withstand very heavy loads, high temperatures, shock impacts, and continuous operation cycles while maintaining tight dimensional tolerances. ANDE specializes in manufacturing rolling mill bearings including backing bearings for Sendzimir cluster mills, four-row cylindrical roller bearings for work rolls and backup rolls, and four-row tapered roller bearings for rolling mill applications requiring combined radial and axial load support. Our rolling mill bearings are manufactured from premium bearing steel with special heat treatment processes, precision-ground raceways, and robust cage designs to ensure reliable performance in the harsh operating environment of hot and cold rolling mills. We supply complete rolling mill bearing assemblies — including bearings, bearing blocks (housings), and bearing chocks — for plate mills, strip mills, section mills, bar & wire rod mills, and tube mills across the global steel industry. We provide interchangeable size and performance benchmarking solutions for bearings from major international manufacturers; all trademarks belong to their respective owners.",
-        "keyFeatures": ["Designed for extreme loads and continuous operation in rolling mills", "Backing bearings for Sendzimir and cluster mill configurations", "Four-row designs for maximum load distribution across work rolls", "Premium bearing steel with specialized heat treatment", "Tight dimensional tolerances for precision rolling operations", "Proven performance in hot strip, cold rolling, and plate mills worldwide"],
+        "keyFeatures": [
+          "Designed for extreme loads and continuous operation in rolling mills",
+          "Backing bearings for Sendzimir and cluster mill configurations",
+          "Four-row designs for maximum load distribution across work rolls",
+          "Premium bearing steel with specialized heat treatment",
+          "Tight dimensional tolerances for precision rolling operations",
+          "Proven performance in hot strip, cold rolling, and plate mills worldwide"
+        ],
         "applications": {
           "title": "Rolling Mill Applications",
           "hotRolling": {
@@ -229,22 +270,61 @@
           "title": "Rolling Mill Bearing Selection Guide",
           "description": "Selecting the right bearing for your rolling mill application depends on several key factors. Our engineering team provides free consultation to help you choose the optimal bearing configuration.",
           "factors": [
-            {"title": "Load Type & Magnitude", "description": "Determine whether your application requires primarily radial load support (four-row cylindrical), combined radial and axial load support (four-row tapered), or cluster mill backup support (backing bearings)."},
-            {"title": "Speed & Temperature", "description": "Hot rolling mills require bearings rated for elevated temperatures with appropriate clearance and lubrication. Cold rolling mills prioritize precision at higher rotational speeds."},
-            {"title": "Lubrication & Sealing", "description": "Choose between oil or grease lubrication based on speed and temperature. Effective sealing is critical to prevent scale, water, and coolant ingress in the mill environment."},
-            {"title": "Clearance & Preload", "description": "Internal clearance must be specified to account for thermal expansion, interference fit, and operating loads. Incorrect clearance is a leading cause of premature rolling mill bearing failure."},
-            {"title": "Bearing Block & Chock Compatibility", "description": "The bearing must fit precisely within the bearing block (housing) or bearing chock assembly. We supply bearings matched to your existing chock dimensions or as complete bearing assemblies."}
+            {
+              "title": "Load Type & Magnitude",
+              "description": "Determine whether your application requires primarily radial load support (four-row cylindrical), combined radial and axial load support (four-row tapered), or cluster mill backup support (backing bearings)."
+            },
+            {
+              "title": "Speed & Temperature",
+              "description": "Hot rolling mills require bearings rated for elevated temperatures with appropriate clearance and lubrication. Cold rolling mills prioritize precision at higher rotational speeds."
+            },
+            {
+              "title": "Lubrication & Sealing",
+              "description": "Choose between oil or grease lubrication based on speed and temperature. Effective sealing is critical to prevent scale, water, and coolant ingress in the mill environment."
+            },
+            {
+              "title": "Clearance & Preload",
+              "description": "Internal clearance must be specified to account for thermal expansion, interference fit, and operating loads. Incorrect clearance is a leading cause of premature rolling mill bearing failure."
+            },
+            {
+              "title": "Bearing Block & Chock Compatibility",
+              "description": "The bearing must fit precisely within the bearing block (housing) or bearing chock assembly. We supply bearings matched to your existing chock dimensions or as complete bearing assemblies."
+            }
           ]
         },
         "faq": [
-          {"question": "What types of rolling mill bearings does ANDE manufacture?", "answer": "ANDE manufactures four-row tapered roller bearings, four-row cylindrical roller bearings, and backing bearings (Sendzimir type) for rolling mill applications. We supply bearings for work rolls, backup rolls, and intermediate rolls across hot strip mills, cold rolling mills, plate mills, section mills, and bar & wire rod mills."},
-          {"question": "Can ANDE rolling mill bearings replace SKF, Timken, or NSK equivalents?", "answer": "Yes. We provide interchangeable size and performance benchmarking solutions that can directly replace equivalent bearings from major international manufacturers. Our bearings match the same dimensional standards, load ratings, and precision grades. All trademarks mentioned belong to their respective owners."},
-          {"question": "Do you supply complete rolling mill bearing assemblies?", "answer": "Yes. We can supply bearings individually or as complete rolling mill bearing assemblies including the bearing, bearing block (housing), and bearing chock, pre-assembled and ready for installation in your mill stand."},
-          {"question": "What is the lead time for rolling mill bearings?", "answer": "Standard rolling mill bearing sizes: 4-6 weeks from order confirmation. Non-standard or large-bore custom bearings: 6-10 weeks. We can arrange expedited production for urgent mill shutdown situations."},
-          {"question": "How do I select between four-row cylindrical and four-row tapered roller bearings?", "answer": "Four-row cylindrical roller bearings provide maximum radial load capacity and are ideal when axial loads are minimal. Four-row tapered roller bearings handle both radial and significant axial thrust loads simultaneously, making them suitable for mill stands with axial positioning requirements. Our engineers can help you determine the optimal type for your application."},
-          {"question": "What bearing clearance should I specify for a hot rolling mill?", "answer": "Hot rolling mill bearings typically require C3 or C4 clearance to account for thermal expansion at operating temperatures of 80-150°C. The exact clearance depends on bearing size, operating temperature, and fit interference. Contact our engineering team with your operating conditions for a specific recommendation."},
-          {"question": "Do you supply rolling mill bearing blocks and chocks?", "answer": "We supply bearings designed to fit standard bearing block and chock assemblies. For customers requiring complete solutions, we can provide bearings matched to your specific bearing block or chock dimensions, or recommend compatible housing configurations."},
-          {"question": "What is the price range for rolling mill bearings?", "answer": "Rolling mill bearing pricing depends on type, size, precision grade, and quantity. As a factory-direct manufacturer, we offer competitive pricing compared to trading companies. Contact us with your bearing model number or drawing for a specific quotation within 24 hours."}
+          {
+            "question": "What types of rolling mill bearings does ANDE manufacture?",
+            "answer": "ANDE manufactures four-row tapered roller bearings, four-row cylindrical roller bearings, and backing bearings (Sendzimir type) for rolling mill applications. We supply bearings for work rolls, backup rolls, and intermediate rolls across hot strip mills, cold rolling mills, plate mills, section mills, and bar & wire rod mills."
+          },
+          {
+            "question": "Can ANDE rolling mill bearings replace SKF, Timken, or NSK equivalents?",
+            "answer": "Yes. We provide interchangeable size and performance benchmarking solutions that can directly replace equivalent bearings from major international manufacturers. Our bearings match the same dimensional standards, load ratings, and precision grades. All trademarks mentioned belong to their respective owners."
+          },
+          {
+            "question": "Do you supply complete rolling mill bearing assemblies?",
+            "answer": "Yes. We can supply bearings individually or as complete rolling mill bearing assemblies including the bearing, bearing block (housing), and bearing chock, pre-assembled and ready for installation in your mill stand."
+          },
+          {
+            "question": "What is the lead time for rolling mill bearings?",
+            "answer": "Standard rolling mill bearing sizes: 4-6 weeks from order confirmation. Non-standard or large-bore custom bearings: 6-10 weeks. We can arrange expedited production for urgent mill shutdown situations."
+          },
+          {
+            "question": "How do I select between four-row cylindrical and four-row tapered roller bearings?",
+            "answer": "Four-row cylindrical roller bearings provide maximum radial load capacity and are ideal when axial loads are minimal. Four-row tapered roller bearings handle both radial and significant axial thrust loads simultaneously, making them suitable for mill stands with axial positioning requirements. Our engineers can help you determine the optimal type for your application."
+          },
+          {
+            "question": "What bearing clearance should I specify for a hot rolling mill?",
+            "answer": "Hot rolling mill bearings typically require C3 or C4 clearance to account for thermal expansion at operating temperatures of 80-150°C. The exact clearance depends on bearing size, operating temperature, and fit interference. Contact our engineering team with your operating conditions for a specific recommendation."
+          },
+          {
+            "question": "Do you supply rolling mill bearing blocks and chocks?",
+            "answer": "We supply bearings designed to fit standard bearing block and chock assemblies. For customers requiring complete solutions, we can provide bearings matched to your specific bearing block or chock dimensions, or recommend compatible housing configurations."
+          },
+          {
+            "question": "What is the price range for rolling mill bearings?",
+            "answer": "Rolling mill bearing pricing depends on type, size, precision grade, and quantity. As a factory-direct manufacturer, we offer competitive pricing compared to trading companies. Contact us with your bearing model number or drawing for a specific quotation within 24 hours."
+          }
         ]
       }
     },
@@ -253,8 +333,19 @@
         "name": "Deep Groove Ball Bearing",
         "description": "Versatile bearing type suitable for high-speed applications with radial and axial loads in both directions.",
         "overview": "Our Deep Groove Ball Bearings are designed for high speed and precision applications requiring excellent axial and radial load capacity. They feature low friction and high rotational accuracy, making them ideal for electric motors, pumps, and various industrial machinery.",
-        "features": ["Low friction design for efficient operation", "High speed capability up to 17,000 RPM", "Excellent noise and vibration characteristics", "Available with various sealing and lubrication options", "Conformance to ISO 15:2017 dimensional standards"],
-        "applications": ["Electric motors and generators", "Pumps and compressors", "Automotive auxiliary components", "Conveyor idlers and material handling"],
+        "features": [
+          "Low friction design for efficient operation",
+          "High speed capability up to 17,000 RPM",
+          "Excellent noise and vibration characteristics",
+          "Available with various sealing and lubrication options",
+          "Conformance to ISO 15:2017 dimensional standards"
+        ],
+        "applications": [
+          "Electric motors and generators",
+          "Pumps and compressors",
+          "Automotive auxiliary components",
+          "Conveyor idlers and material handling"
+        ],
         "specifications": {
           "type": "Single Row Deep Groove Ball Bearing",
           "boreDiameter": "10 mm - 200 mm (standard range)",
@@ -275,8 +366,19 @@
         "name": "Tapered Roller Bearing",
         "description": "Designed to handle combined radial and axial loads with tapered raceways for heavy-duty applications.",
         "overview": "Tapered Roller Bearings handle combined radial and axial loads simultaneously. The tapered design creates line contact between rollers and raceways, providing high load capacity and excellent resistance to axial forces.",
-        "features": ["High combined load capacity (radial + axial)", "Excellent shock load resistance", "Adjustable clearance for precision applications", "Available in single, double, and four-row configurations", "Operating temperature: -40C to +150C"],
-        "applications": ["Automotive wheel hubs and axle assemblies", "Gearboxes and power transmissions", "Rolling mill work rolls and backup rolls", "Machine tool spindles"],
+        "features": [
+          "High combined load capacity (radial + axial)",
+          "Excellent shock load resistance",
+          "Adjustable clearance for precision applications",
+          "Available in single, double, and four-row configurations",
+          "Operating temperature: -40C to +150C"
+        ],
+        "applications": [
+          "Automotive wheel hubs and axle assemblies",
+          "Gearboxes and power transmissions",
+          "Rolling mill work rolls and backup rolls",
+          "Machine tool spindles"
+        ],
         "specifications": {
           "type": "Single Row Tapered Roller Bearing",
           "boreDiameter": "15 mm - 300 mm",
@@ -297,8 +399,19 @@
         "name": "Spherical Roller Bearing",
         "description": "Self-aligning bearings with high load capacity for applications with misalignment or shaft deflection.",
         "overview": "Spherical Roller Bearings are self-aligning bearings designed for heavy loads while accommodating misalignment up to 2 degrees, shaft deflection, and thermal expansion.",
-        "features": ["Self-aligning capability: up to 2 degrees misalignment", "Very high radial load capacity", "Excellent shock and vibration resistance", "Compact design with high load-to-size ratio", "Extended service life with proper lubrication"],
-        "applications": ["Steel mill rolling equipment and continuous casters", "Mining crushers, conveyors, and vibrating screens", "Paper and pulp mill machinery", "Wind turbine main shaft and gearbox"],
+        "features": [
+          "Self-aligning capability: up to 2 degrees misalignment",
+          "Very high radial load capacity",
+          "Excellent shock and vibration resistance",
+          "Compact design with high load-to-size ratio",
+          "Extended service life with proper lubrication"
+        ],
+        "applications": [
+          "Steel mill rolling equipment and continuous casters",
+          "Mining crushers, conveyors, and vibrating screens",
+          "Paper and pulp mill machinery",
+          "Wind turbine main shaft and gearbox"
+        ],
         "specifications": {
           "type": "Spherical Roller Bearing",
           "boreDiameter": "20 mm - 400 mm",
@@ -319,8 +432,19 @@
         "name": "Backing Bearing",
         "description": "Specialized multi-row bearings for Sendzimir cluster mills and other multi-roll cold rolling mill configurations.",
         "overview": "Backing Bearings (also known as Sendzimir mill bearings) are precision multi-row bearings specifically designed for cluster-type cold rolling mills. These bearings support the intermediate and backup rolls in Sendzimir 20-high mills and similar multi-roll configurations used for rolling thin-gauge stainless steel, silicon steel, and other specialty metal strips. ANDE backing bearings feature precision-ground raceways, optimized roller geometry, and tight dimensional tolerances to ensure uniform strip thickness and surface quality during high-precision cold rolling operations.",
-        "features": ["Designed specifically for Sendzimir 20-high cluster mills", "Multi-row configuration for maximum radial load support", "Precision-ground raceways for uniform rolling pressure distribution", "Tight dimensional tolerances ensure consistent strip thickness", "Premium bearing steel with specialized heat treatment for long service life"],
-        "applications": ["Sendzimir 20-high cold rolling mills", "Cluster mill intermediate and backup roll support", "Thin-gauge stainless steel strip rolling", "Silicon steel and specialty alloy cold rolling"],
+        "features": [
+          "Designed specifically for Sendzimir 20-high cluster mills",
+          "Multi-row configuration for maximum radial load support",
+          "Precision-ground raceways for uniform rolling pressure distribution",
+          "Tight dimensional tolerances ensure consistent strip thickness",
+          "Premium bearing steel with specialized heat treatment for long service life"
+        ],
+        "applications": [
+          "Sendzimir 20-high cold rolling mills",
+          "Cluster mill intermediate and backup roll support",
+          "Thin-gauge stainless steel strip rolling",
+          "Silicon steel and specialty alloy cold rolling"
+        ],
         "specifications": {
           "type": "Multi-Row Backing Bearing (Sendzimir Type)",
           "boreDiameter": "Varies by model (consult specification sheet)",
@@ -341,8 +465,23 @@
         "name": "Four-Row Cylindrical Roller Bearing",
         "description": "Four-row cylindrical roller bearings for rolling mill work rolls and backup rolls — maximum radial load capacity for hot strip mills, plate mills, and section mills. Factory direct from ANDE bearing manufacturer.",
         "overview": "Four-Row Cylindrical Roller Bearings are designed for the most demanding heavy-load applications in steel rolling mills. The four-row configuration distributes extremely high radial loads across four rows of cylindrical rollers, providing the maximum radial load capacity in a compact design. These bearings are primarily used in the bearing chock assemblies of work rolls and backup rolls in hot strip mills, plate mills, and section mills. ANDE four-row cylindrical roller bearings are manufactured from premium bearing steel with precision-machined raceways and robust brass or steel cage designs for reliable operation under the extreme conditions of continuous steel rolling. We provide interchangeable size and performance benchmarking solutions that can directly replace equivalent four-row cylindrical roller bearings from major international manufacturers. All trademarks mentioned belong to their respective owners.",
-        "features": ["Four-row design for maximum radial load capacity", "Compact cross-section for space-constrained roll chock assemblies", "Precision-machined raceways for uniform load distribution", "Robust cage designs (machined brass / pin-type steel) for high-speed and heavy-load operation", "Available with tapered bore for easy mounting on roll necks", "Interchangeable dimensions with SKF, Timken, NSK, and other major brand equivalents", "Multiple clearance options (CN, C3, C4) for different operating temperatures", "Available with custom lubrication grooves and sealing configurations"],
-        "applications": ["Hot strip mill work roll and backup roll chocks", "Plate mill roll assemblies", "Section mill and bar mill roll bearings", "Bar & wire rod mill roll support", "Heavy-duty industrial roll support applications"],
+        "features": [
+          "Four-row design for maximum radial load capacity",
+          "Compact cross-section for space-constrained roll chock assemblies",
+          "Precision-machined raceways for uniform load distribution",
+          "Robust cage designs (machined brass / pin-type steel) for high-speed and heavy-load operation",
+          "Available with tapered bore for easy mounting on roll necks",
+          "Interchangeable dimensions with SKF, Timken, NSK, and other major brand equivalents",
+          "Multiple clearance options (CN, C3, C4) for different operating temperatures",
+          "Available with custom lubrication grooves and sealing configurations"
+        ],
+        "applications": [
+          "Hot strip mill work roll and backup roll chocks",
+          "Plate mill roll assemblies",
+          "Section mill and bar mill roll bearings",
+          "Bar & wire rod mill roll support",
+          "Heavy-duty industrial roll support applications"
+        ],
         "specifications": {
           "type": "Four-Row Cylindrical Roller Bearing",
           "boreDiameter": "100 mm - 900 mm",
@@ -363,8 +502,19 @@
         "name": "Four-Point Contact Ball Bearing",
         "description": "Single-row bearings capable of supporting axial loads in both directions, ideal for rolling mill and heavy machinery applications.",
         "overview": "Four-Point Contact Ball Bearings are a specialized type of single-row angular contact ball bearing where the inner and outer rings have gothic arch raceways that create four contact points with each ball. This unique geometry allows a single bearing to support axial loads in both directions as well as radial loads, making it functionally equivalent to a back-to-back arrangement of two angular contact bearings but in a more compact envelope. ANDE four-point contact ball bearings are used in rolling mill applications, large gearboxes, crane slewing rings, and other heavy machinery where bidirectional axial load support is required in a space-efficient design.",
-        "features": ["Four-point contact geometry supports axial loads in both directions", "Compact single-row design replaces two angular contact bearings", "Gothic arch raceway profile for optimal load distribution", "Suitable for combined radial and bidirectional axial loads", "Available in large bore diameters for heavy machinery applications"],
-        "applications": ["Rolling mill roll axial positioning", "Large industrial gearbox thrust support", "Crane and excavator slewing mechanisms", "Wind turbine blade pitch systems"],
+        "features": [
+          "Four-point contact geometry supports axial loads in both directions",
+          "Compact single-row design replaces two angular contact bearings",
+          "Gothic arch raceway profile for optimal load distribution",
+          "Suitable for combined radial and bidirectional axial loads",
+          "Available in large bore diameters for heavy machinery applications"
+        ],
+        "applications": [
+          "Rolling mill roll axial positioning",
+          "Large industrial gearbox thrust support",
+          "Crane and excavator slewing mechanisms",
+          "Wind turbine blade pitch systems"
+        ],
         "specifications": {
           "type": "Four-Point Contact Ball Bearing",
           "boreDiameter": "30 mm - 500 mm",
@@ -385,8 +535,22 @@
         "name": "Four-Row Tapered Roller Bearing",
         "description": "Four-row tapered roller bearings for rolling mill applications — combined radial and axial load support for work roll and backup roll chock assemblies. Interchangeable with major brand equivalents. Factory direct from ANDE.",
         "overview": "Four-Row Tapered Roller Bearings combine the heavy radial load capacity of a four-row design with the ability to support significant axial thrust loads in both directions. The tapered roller geometry creates line contact for high load capacity while the four-row arrangement distributes the load across multiple rows for maximum bearing life. These bearings are essential components in rolling mill work roll and backup roll bearing chock assemblies where both radial and axial forces are present. ANDE four-row tapered roller bearings are manufactured to exacting standards with precision-ground tapered raceways, heat-treated rollers, and robust cage assemblies designed for the continuous high-load operation typical in hot and cold steel rolling mills. Our four-row tapered roller bearings serve as the primary roll neck support in main mill stands, handling the combined forces generated during hot strip rolling, cold rolling, and plate rolling operations. We provide interchangeable size and performance benchmarking solutions that can directly replace equivalent bearings from major international manufacturers. All trademarks mentioned belong to their respective owners.",
-        "features": ["Four-row tapered design for combined radial and axial loads", "High load capacity with extended service life in continuous rolling operations", "Precision-ground tapered raceways for smooth, low-vibration operation", "Adjustable internal clearance and preload for optimal performance at operating temperature", "Interchangeable dimensions with SKF, Timken, NSK, and other major brand equivalents", "Available with custom clearance, lubrication, and sealing configurations", "Robust cage assemblies (machined brass / pin-type steel) for extreme operating conditions"],
-        "applications": ["Rolling mill work roll chock assemblies (hot strip & cold rolling)", "Backup roll bearing arrangements in strip mills", "Main mill stand roll neck support", "Plate mill roll support with axial thrust requirements", "Heavy industrial applications with combined radial and axial loading"],
+        "features": [
+          "Four-row tapered design for combined radial and axial loads",
+          "High load capacity with extended service life in continuous rolling operations",
+          "Precision-ground tapered raceways for smooth, low-vibration operation",
+          "Adjustable internal clearance and preload for optimal performance at operating temperature",
+          "Interchangeable dimensions with SKF, Timken, NSK, and other major brand equivalents",
+          "Available with custom clearance, lubrication, and sealing configurations",
+          "Robust cage assemblies (machined brass / pin-type steel) for extreme operating conditions"
+        ],
+        "applications": [
+          "Rolling mill work roll chock assemblies (hot strip & cold rolling)",
+          "Backup roll bearing arrangements in strip mills",
+          "Main mill stand roll neck support",
+          "Plate mill roll support with axial thrust requirements",
+          "Heavy industrial applications with combined radial and axial loading"
+        ],
         "specifications": {
           "type": "Four-Row Tapered Roller Bearing",
           "boreDiameter": "130 mm - 1060 mm",
@@ -461,12 +625,30 @@
     "capabilities": {
       "title": "Factory Capabilities",
       "items": [
-        {"label": "Facility Size", "value": "15,000+ m2"},
-        {"label": "Annual Capacity", "value": "5,000,000+ units"},
-        {"label": "Product Lines", "value": "Ball, Roller, Linear, Mounted"},
-        {"label": "Precision Classes", "value": "P0, P6, P5, P4"},
-        {"label": "Export Markets", "value": "50+ countries"},
-        {"label": "Established", "value": "2019"}
+        {
+          "label": "Facility Size",
+          "value": "15,000+ m2"
+        },
+        {
+          "label": "Annual Capacity",
+          "value": "5,000,000+ units"
+        },
+        {
+          "label": "Product Lines",
+          "value": "Ball, Roller, Linear, Mounted"
+        },
+        {
+          "label": "Precision Classes",
+          "value": "P0, P6, P5, P4"
+        },
+        {
+          "label": "Export Markets",
+          "value": "50+ countries"
+        },
+        {
+          "label": "Established",
+          "value": "2019"
+        }
       ]
     }
   },
@@ -479,10 +661,22 @@
     "process": {
       "title": "How We Work With You",
       "steps": [
-        {"title": "Inquiry & Assessment", "description": "Share your application details, operating conditions, and requirements with our team."},
-        {"title": "Engineering Review", "description": "Our engineers analyze load, speed, environment, and alignment factors to recommend optimal solutions."},
-        {"title": "Proposal & Samples", "description": "Receive a detailed quotation with specifications. Request samples for testing and validation."},
-        {"title": "Ongoing Support", "description": "After delivery, we provide installation guidance, maintenance advice, and warranty support."}
+        {
+          "title": "Inquiry & Assessment",
+          "description": "Share your application details, operating conditions, and requirements with our team."
+        },
+        {
+          "title": "Engineering Review",
+          "description": "Our engineers analyze load, speed, environment, and alignment factors to recommend optimal solutions."
+        },
+        {
+          "title": "Proposal & Samples",
+          "description": "Receive a detailed quotation with specifications. Request samples for testing and validation."
+        },
+        {
+          "title": "Ongoing Support",
+          "description": "After delivery, we provide installation guidance, maintenance advice, and warranty support."
+        }
       ]
     },
     "items": {
@@ -490,19 +684,34 @@
         "title": "Technical Consultation",
         "description": "Expert guidance on bearing selection based on your application requirements.",
         "detail": "Choosing the right bearing is critical to equipment performance and longevity. Our engineers evaluate your operating parameters including radial and axial loads, rotational speed, temperature range, environmental contaminants, and space constraints. We then recommend the optimal bearing type, size, clearance class, material, and lubrication method. This service is available free of charge for all prospective and existing customers.",
-        "points": ["Application analysis and bearing selection", "Load and speed calculations", "Lubrication and fitting recommendations", "Material selection for specific environments"]
+        "points": [
+          "Application analysis and bearing selection",
+          "Load and speed calculations",
+          "Lubrication and fitting recommendations",
+          "Material selection for specific environments"
+        ]
       },
       "installation": {
         "title": "Installation & Maintenance Support",
         "description": "Professional guidance for bearing installation, alignment, and preventive maintenance.",
         "detail": "Improper installation is one of the leading causes of premature bearing failure. Our team provides detailed mounting instructions, recommended fitting practices, and alignment verification procedures for every bearing type we supply. We also help you develop preventive maintenance schedules including relubrication intervals, condition monitoring checkpoints, and replacement criteria to minimize unplanned downtime.",
-        "points": ["Mounting and dismounting guidance", "Preventive maintenance programs", "Lubrication schedules and procedures", "Condition monitoring recommendations"]
+        "points": [
+          "Mounting and dismounting guidance",
+          "Preventive maintenance programs",
+          "Lubrication schedules and procedures",
+          "Condition monitoring recommendations"
+        ]
       },
       "failureAnalysis": {
         "title": "Failure Analysis",
         "description": "Systematic investigation of bearing failures to identify root causes and prevent recurrence.",
         "detail": "When a bearing fails prematurely, understanding the root cause is essential to prevent future issues. Our failure analysis service examines failed bearings to identify damage patterns such as fatigue spalling, brinelling, corrosion, contamination, misalignment wear, or inadequate lubrication. We provide a detailed report with findings and corrective action recommendations to improve bearing life in your application.",
-        "points": ["Comprehensive failure investigation", "Root cause identification", "Corrective action recommendations", "System optimization guidance"]
+        "points": [
+          "Comprehensive failure investigation",
+          "Root cause identification",
+          "Corrective action recommendations",
+          "System optimization guidance"
+        ]
       }
     }
   },
@@ -510,22 +719,70 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Common questions from distributors, procurement managers, and engineers.",
     "items": [
-      {"question": "What is the minimum order quantity (MOQ)?", "answer": "MOQ varies by bearing type and size. For standard catalog items, typical MOQ is 50-100 pieces. For rolling mill bearings, MOQ can be as low as 1-2 pieces due to the high unit value. For non-standard or customized bearings, please contact our sales team for specific quantities."},
-      {"question": "What are your standard lead times?", "answer": "Standard catalog bearings: 2-4 weeks from order confirmation. Rolling mill bearings (four-row tapered, four-row cylindrical, backing bearings): 4-6 weeks for standard sizes, 6-10 weeks for non-standard or large-bore sizes. Express delivery can be arranged for urgent mill shutdown situations."},
-      {"question": "Do you provide OEM/ODM services?", "answer": "Yes. We offer custom branding, specific packaging, and bearing modifications including non-standard dimensions, special materials, coatings, and clearance configurations. For rolling mill bearings, we can manufacture to your specific drawing or provide interchangeable replacements for existing mill bearings."},
-      {"question": "What certifications do your bearings carry?", "answer": "Our manufacturing facility is ISO 9001:2015 certified. Products conform to ISO, JIS, ABEC, and DIN dimensional and tolerance standards. We provide Certificates of Conformity with every shipment."},
-      {"question": "What payment terms do you accept?", "answer": "We accept T/T (wire transfer), L/C (letter of credit), and Western Union. Standard terms: 30% deposit upon order confirmation, 70% balance against copy of B/L."},
-      {"question": "How is the bearing quality compared to known brands?", "answer": "Our bearings are manufactured from the same grade of bearing steel (GCr15/AISI 52100) used by major international brands. We follow the same ISO dimensional and tolerance standards. Our rolling mill bearings provide interchangeable size and performance benchmarking solutions for equivalent products from leading manufacturers. All trademarks belong to their respective owners."},
-      {"question": "Can you provide bearing samples?", "answer": "Yes. We provide samples for testing and evaluation. Standard catalog items can typically ship within 5-7 business days. Sample costs are usually applied to the first production order."},
-      {"question": "What export packaging do you use?", "answer": "Bearings are individually wrapped with anti-rust paper and VCI film, then packed in industrial cartons or wooden cases suitable for ocean freight. Rolling mill bearings receive additional heavy-duty packaging with wooden crates and moisture barriers. Custom packaging available."},
-      {"question": "What types of rolling mill bearings do you manufacture?", "answer": "We manufacture four-row tapered roller bearings, four-row cylindrical roller bearings, and backing bearings (Sendzimir type) for rolling mill applications. These bearings are used in work roll and backup roll chock assemblies across hot strip mills, cold rolling mills, plate mills, section mills, and bar & wire rod mills."},
-      {"question": "What is the difference between a bearing block, bearing housing, and bearing chock?", "answer": "A bearing block (or bearing housing) is the structural component that holds the bearing in place and provides a mounting interface. A bearing chock is the complete assembly that slides within the mill stand window — it includes the bearing block, the bearing itself, and typically sealing and lubrication systems. In rolling mill terminology, the chock is the unit that sits in the mill stand and transmits rolling forces from the roll through the bearing to the mill housing."},
-      {"question": "Can your four-row tapered roller bearings replace SKF or Timken equivalents?", "answer": "Yes. Our four-row tapered roller bearings are manufactured to the same dimensional standards and load ratings as equivalent bearings from major international manufacturers. We provide interchangeable size and performance benchmarking solutions for direct replacement in existing mill stand chock assemblies. All trademarks mentioned belong to their respective owners."},
-      {"question": "What clearance should I specify for hot rolling mill bearings?", "answer": "Hot rolling mill bearings typically require C3 or C4 internal clearance to account for thermal expansion at operating temperatures of 80-150°C. The exact clearance depends on bearing size, shaft interference fit, and operating temperature. Our engineering team can provide specific clearance recommendations based on your operating conditions."},
-      {"question": "Do you supply complete rolling mill bearing assemblies?", "answer": "Yes. We can supply bearings individually or as complete rolling mill bearing assemblies including the bearing, bearing block (housing), and bearing chock, pre-assembled and ready for installation in your mill stand. This simplifies procurement and ensures proper bearing-to-housing fit."},
-      {"question": "What is the price of rolling mill bearings?", "answer": "Rolling mill bearing pricing depends on type (four-row tapered, four-row cylindrical, backing bearing), size, precision grade, and order quantity. As a factory-direct manufacturer, we offer competitive pricing compared to trading companies and distributors. Contact us with your bearing model number or drawing for a specific quotation — we respond within 24 hours."},
-      {"question": "How do I choose between four-row cylindrical and four-row tapered roller bearings for my rolling mill?", "answer": "Four-row cylindrical roller bearings provide maximum radial load capacity and are ideal for mill stands where axial loads are minimal or handled by separate thrust bearings. Four-row tapered roller bearings handle both radial and significant axial thrust loads simultaneously in a single bearing, making them suitable for mill stands with axial positioning requirements. Our engineers can help you determine the optimal type based on your specific load conditions, speed, and mill configuration."},
-      {"question": "Do you ship rolling mill bearings to India?", "answer": "Yes. We export rolling mill bearings to steel mills and bearing distributors across India, including major steel-producing regions. We offer FOB, CIF, and DDP delivery terms to all Indian ports. Our bearings are used in hot rolling mill bearing stands, cold rolling mills, and plate mills throughout India's steel industry."}
+      {
+        "question": "What is the minimum order quantity (MOQ)?",
+        "answer": "MOQ varies by bearing type and size. For standard catalog items, typical MOQ is 50-100 pieces. For rolling mill bearings, MOQ can be as low as 1-2 pieces due to the high unit value. For non-standard or customized bearings, please contact our sales team for specific quantities."
+      },
+      {
+        "question": "What are your standard lead times?",
+        "answer": "Standard catalog bearings: 2-4 weeks from order confirmation. Rolling mill bearings (four-row tapered, four-row cylindrical, backing bearings): 4-6 weeks for standard sizes, 6-10 weeks for non-standard or large-bore sizes. Express delivery can be arranged for urgent mill shutdown situations."
+      },
+      {
+        "question": "Do you provide OEM/ODM services?",
+        "answer": "Yes. We offer custom branding, specific packaging, and bearing modifications including non-standard dimensions, special materials, coatings, and clearance configurations. For rolling mill bearings, we can manufacture to your specific drawing or provide interchangeable replacements for existing mill bearings."
+      },
+      {
+        "question": "What certifications do your bearings carry?",
+        "answer": "Our manufacturing facility is ISO 9001:2015 certified. Products conform to ISO, JIS, ABEC, and DIN dimensional and tolerance standards. We provide Certificates of Conformity with every shipment."
+      },
+      {
+        "question": "What payment terms do you accept?",
+        "answer": "We accept T/T (wire transfer), L/C (letter of credit), and Western Union. Standard terms: 30% deposit upon order confirmation, 70% balance against copy of B/L."
+      },
+      {
+        "question": "How is the bearing quality compared to known brands?",
+        "answer": "Our bearings are manufactured from the same grade of bearing steel (GCr15/AISI 52100) used by major international brands. We follow the same ISO dimensional and tolerance standards. Our rolling mill bearings provide interchangeable size and performance benchmarking solutions for equivalent products from leading manufacturers. All trademarks belong to their respective owners."
+      },
+      {
+        "question": "Can you provide bearing samples?",
+        "answer": "Yes. We provide samples for testing and evaluation. Standard catalog items can typically ship within 5-7 business days. Sample costs are usually applied to the first production order."
+      },
+      {
+        "question": "What export packaging do you use?",
+        "answer": "Bearings are individually wrapped with anti-rust paper and VCI film, then packed in industrial cartons or wooden cases suitable for ocean freight. Rolling mill bearings receive additional heavy-duty packaging with wooden crates and moisture barriers. Custom packaging available."
+      },
+      {
+        "question": "What types of rolling mill bearings do you manufacture?",
+        "answer": "We manufacture four-row tapered roller bearings, four-row cylindrical roller bearings, and backing bearings (Sendzimir type) for rolling mill applications. These bearings are used in work roll and backup roll chock assemblies across hot strip mills, cold rolling mills, plate mills, section mills, and bar & wire rod mills."
+      },
+      {
+        "question": "What is the difference between a bearing block, bearing housing, and bearing chock?",
+        "answer": "A bearing block (or bearing housing) is the structural component that holds the bearing in place and provides a mounting interface. A bearing chock is the complete assembly that slides within the mill stand window — it includes the bearing block, the bearing itself, and typically sealing and lubrication systems. In rolling mill terminology, the chock is the unit that sits in the mill stand and transmits rolling forces from the roll through the bearing to the mill housing."
+      },
+      {
+        "question": "Can your four-row tapered roller bearings replace SKF or Timken equivalents?",
+        "answer": "Yes. Our four-row tapered roller bearings are manufactured to the same dimensional standards and load ratings as equivalent bearings from major international manufacturers. We provide interchangeable size and performance benchmarking solutions for direct replacement in existing mill stand chock assemblies. All trademarks mentioned belong to their respective owners."
+      },
+      {
+        "question": "What clearance should I specify for hot rolling mill bearings?",
+        "answer": "Hot rolling mill bearings typically require C3 or C4 internal clearance to account for thermal expansion at operating temperatures of 80-150°C. The exact clearance depends on bearing size, shaft interference fit, and operating temperature. Our engineering team can provide specific clearance recommendations based on your operating conditions."
+      },
+      {
+        "question": "Do you supply complete rolling mill bearing assemblies?",
+        "answer": "Yes. We can supply bearings individually or as complete rolling mill bearing assemblies including the bearing, bearing block (housing), and bearing chock, pre-assembled and ready for installation in your mill stand. This simplifies procurement and ensures proper bearing-to-housing fit."
+      },
+      {
+        "question": "What is the price of rolling mill bearings?",
+        "answer": "Rolling mill bearing pricing depends on type (four-row tapered, four-row cylindrical, backing bearing), size, precision grade, and order quantity. As a factory-direct manufacturer, we offer competitive pricing compared to trading companies and distributors. Contact us with your bearing model number or drawing for a specific quotation — we respond within 24 hours."
+      },
+      {
+        "question": "How do I choose between four-row cylindrical and four-row tapered roller bearings for my rolling mill?",
+        "answer": "Four-row cylindrical roller bearings provide maximum radial load capacity and are ideal for mill stands where axial loads are minimal or handled by separate thrust bearings. Four-row tapered roller bearings handle both radial and significant axial thrust loads simultaneously in a single bearing, making them suitable for mill stands with axial positioning requirements. Our engineers can help you determine the optimal type based on your specific load conditions, speed, and mill configuration."
+      },
+      {
+        "question": "Do you ship rolling mill bearings to India?",
+        "answer": "Yes. We export rolling mill bearings to steel mills and bearing distributors across India, including major steel-producing regions. We offer FOB, CIF, and DDP delivery terms to all Indian ports. Our bearings are used in hot rolling mill bearing stands, cold rolling mills, and plate mills throughout India's steel industry."
+      }
     ]
   },
   "contact": {
@@ -608,5 +865,10 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "sitemap": "Sitemap"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or contact us if the problem persists.",
+    "retry": "Try Again"
   }
 }

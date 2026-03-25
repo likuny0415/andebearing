@@ -130,9 +130,7 @@ export default function ContactForm() {
               <option value="">{t('selectProduct')}</option>
               <option value="ball-bearings">Ball Bearings / 球轴承</option>
               <option value="roller-bearings">Roller Bearings / 滚子轴承</option>
-              <option value="linear-motion">Linear Motion / 直线运动</option>
-              <option value="mounted-units">Mounted Units / 带座轴承</option>
-              <option value="accessories">Accessories / 配件</option>
+              <option value="rolling-mill-bearings">Rolling Mill Bearings / 轧机轴承</option>
               <option value="custom">Custom / Drawing-based</option>
             </select>
           </div>

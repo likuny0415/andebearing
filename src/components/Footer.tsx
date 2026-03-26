@@ -107,18 +107,6 @@ export default function Footer() {
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <PhoneIcon className="w-4 h-4 flex-shrink-0" />
-                <a href={`tel:${t('contact.info.phone')}`} className="hover:text-white transition-colors">
-                  {t('contact.info.phone')}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <PhoneIcon className="w-4 h-4 flex-shrink-0" />
-                <a href={`tel:${t('contact.info.phone2')}`} className="hover:text-white transition-colors">
-                  {t('contact.info.phone2')}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 flex-shrink-0" />
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   {t('contact.info.whatsappLabel')}: {t('contact.info.whatsapp')}

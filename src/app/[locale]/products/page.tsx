@@ -3,15 +3,9 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
-import { PRODUCT_SLUGS, PRODUCT_CATEGORIES, PRODUCT_IMAGES } from '@/lib/products';
+import { PRODUCT_SLUGS, PRODUCT_CATEGORIES, PRODUCT_IMAGES, CATEGORY_IMAGES } from '@/lib/products';
 import type { ProductSlug } from '@/lib/products';
 import type { Metadata } from 'next';
-
-const CATEGORY_IMAGES: Record<string, string> = {
-  ballBearings: '/home/ball_bearing.png',
-  rollerBearings: '/home/roller_bearings.png',
-  rollingMillBearings: '/home/four_row_tapered_roller_bearing.png',
-};
 
 type Props = { params: Promise<{ locale: string }> };
 

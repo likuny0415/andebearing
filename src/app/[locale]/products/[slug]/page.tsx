@@ -394,9 +394,6 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
     url: localizedUrl(locale, `/products/${slug}`),
     offers: {
       '@type': 'Offer',
-      priceCurrency: 'USD',
-      price: '0',
-      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

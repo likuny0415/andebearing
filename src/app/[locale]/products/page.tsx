@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
@@ -19,8 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProductsPage() {
-  const t = useTranslations();
+export default async function ProductsPage() {
+  const t = await getTranslations();
 
   return (
     <div className="container mx-auto px-4 py-12">

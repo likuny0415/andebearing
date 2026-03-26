@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
@@ -16,9 +15,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServicesPage() {
-  const t = useTranslations('services');
-  const tc = useTranslations('common');
+export default async function ServicesPage() {
+  const t = await getTranslations('services');
+  const tc = await getTranslations('common');
   const serviceKeys = ['consultation', 'installation', 'failureAnalysis'] as const;
 
   return (

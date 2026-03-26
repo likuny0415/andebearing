@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
@@ -20,21 +19,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPage() {
   const locale = await getLocale();
   const posts = getAllBlogPosts(locale);
-
-  return <BlogPageContent posts={posts} />;
-}
-
-function BlogPageContent({ posts }: { posts: { slug: string; title: string; excerpt: string; date: string; category: string; readTime: number }[] }) {
-  const t = useTranslations('blog');
+  const t = await getTranslations('blog');
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{t('title')}</h1>
         <p className="text-lg text-gray-600 mb-12">{t('subtitle')}</p>
 
-        {/* Articles List */}
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-3">
             {t('allArticles')}
@@ -72,7 +64,6 @@ function BlogPageContent({ posts }: { posts: { slug: string; title: string; exce
           </div>
         </section>
 
-        {/* CTA */}
         <section className="mt-16 bg-blue-50 border border-blue-100 rounded-lg p-8 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-2">{t('cta.title')}</h2>
           <p className="text-gray-600 mb-6">{t('cta.description')}</p>

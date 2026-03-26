@@ -434,7 +434,21 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: strin
         {/* Product Header */}
         <div className="mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{name}</h1>
-          <p className="text-gray-600 text-lg max-w-3xl">{t(`items.${slug}.description`)}</p>
+          <p className="text-gray-600 text-lg max-w-3xl mb-4">{t(`items.${slug}.description`)}</p>
+          <div className="flex flex-wrap gap-3">
+            <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-800 text-sm font-medium px-3 py-1.5 rounded-full border border-green-200">
+              {t('equivalentBadge')}
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-800 text-xs px-3 py-1.5 rounded-full border border-blue-200">
+              {t('leadTime')}
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-800 text-xs px-3 py-1.5 rounded-full border border-blue-200">
+              {t('moq')}
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 text-xs px-3 py-1.5 rounded-full border border-amber-200">
+              {t('sampleAvailable')}
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">

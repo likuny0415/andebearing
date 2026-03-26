@@ -100,6 +100,38 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Social Proof */}
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10">
+            {t('trust.socialProof.title')}
+          </h2>
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center mb-12">
+            {[0, 1, 2].map((i) => (
+              <div key={i}>
+                <div className="text-2xl sm:text-3xl font-bold text-blue-800">{t(`trust.socialProof.stats.${i}.value`)}</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1">{t(`trust.socialProof.stats.${i}.label`)}</div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {[0, 1, 2].map((i) => (
+              <blockquote key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <p className="text-sm text-gray-700 leading-relaxed mb-4 italic">
+                  &ldquo;{t(`trust.socialProof.testimonials.${i}.quote`)}&rdquo;
+                </p>
+                <footer className="text-xs text-gray-500">
+                  <span className="font-semibold text-gray-700">{t(`trust.socialProof.testimonials.${i}.author`)}</span>
+                  <br />
+                  {t(`trust.socialProof.testimonials.${i}.company`)}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+          <p className="text-center text-sm text-gray-500">{t('trust.socialProof.countries')}</p>
+        </div>
+      </section>
+
       {/* Product Categories */}
       <section className="py-10 sm:py-16">
         <div className="container mx-auto px-4">

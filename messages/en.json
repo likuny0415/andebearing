@@ -2,19 +2,19 @@
   "metadata": {
     "home": {
       "title": "Rolling Mill Bearings Manufacturer — ANDE Precision Bearing",
-      "description": "ANDE Precision Bearing — ISO-certified rolling mill bearings manufacturer. Four-row tapered roller bearings, four-row cylindrical roller bearings, backing bearings for Sendzimir mills. Factory direct supply to steel mills in 50+ countries."
+      "description": "ANDE Precision Bearing — factory-direct rolling mill bearings manufacturer. Direct replacement for SKF, Timken & NSK. ISO certified, shipped to 50+ countries. Get a quote in 24 hours."
     },
     "products": {
       "title": "Rolling Mill Bearings & Industrial Bearing Products — ANDE",
-      "description": "Browse our full range: four-row tapered roller bearings, four-row cylindrical roller bearings, backing bearings, spherical roller bearings, deep groove ball bearings. Rolling mill bearing manufacturer with factory direct pricing."
+      "description": "Precision rolling mill bearings — factory direct from ISO-certified manufacturer. Four-row tapered, cylindrical roller & backing bearings. Get specs and pricing within 24 hours."
     },
     "about": {
       "title": "About ANDE — Factory & Quality Assurance",
-      "description": "Founded in 2019, Jiangsu ANDE Precision Bearing Technology Co., Ltd. manufactures high-quality bearings with ISO 9001 certification. 7+ years of export experience."
+      "description": "ANDE Precision Bearing — ISO 9001 certified bearing manufacturer since 2019. 5M+ annual capacity, 50+ export countries, 85% repeat order rate."
     },
     "contact": {
       "title": "Request a Quote — Contact ANDE",
-      "description": "Contact our engineering team for bearing selection, RFQ, or technical support. Response within 24 hours. Export to 50+ countries."
+      "description": "Get a bearing quote within 24 hours. Free technical consultation for bearing selection and sizing. Factory-direct pricing from ISO-certified manufacturer."
     },
     "industries": {
       "title": "Industries — Steel, Mining, Energy & OEM",
@@ -43,8 +43,8 @@
     "quality": "Quality",
     "blog": "Blog",
     "faq": "FAQ",
-    "requestQuote": "Request a Quote",
-    "talkToEngineering": "Talk to Engineering",
+    "requestQuote": "Get a Quote in 24 Hours",
+    "talkToEngineering": "Talk to an Engineer",
     "downloadDatasheet": "Download Datasheet",
     "downloadCatalog": "Download Catalog",
     "viewProducts": "View Products",
@@ -55,15 +55,16 @@
     "readMore": "Read More",
     "backToProducts": "Back to Products",
     "backToIndustries": "Back to Industries",
-    "sendInquiry": "Send Inquiry",
+    "sendInquiry": "Get a Quote in 24 Hours",
     "sending": "Sending...",
-    "submitRFQ": "Submit RFQ",
-    "getInTouch": "Get in Touch",
+    "submitRFQ": "Get a Quote in 24 Hours",
+    "getInTouch": "Talk to an Engineer",
     "responseTime": "Response within 24 hours",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "businessHours": "Business Hours"
+    "businessHours": "Business Hours",
+    "requestSample": "Request a Sample"
   },
   "nav": {
     "products": "Products",
@@ -75,10 +76,10 @@
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Ande Bearing — Rolling Mill & Heavy-Duty Bearing Solutions",
-    "subtitle": "ANDE Precision Bearing — ISO-certified manufacturer specializing in spherical roller bearings, tapered roller bearings, and precision ball bearings for steel mills, mining, energy, and OEM applications. Direct factory supply to distributors in 50+ countries.",
+    "title": "Factory-Direct Rolling Mill Bearings — Premium Quality, Competitive Pricing",
+    "subtitle": "ISO-certified manufacturer of four-row tapered roller bearings, cylindrical roller bearings, and backing bearings. Direct replacement for SKF, Timken & NSK equivalents — shipped to 50+ countries.",
     "cta1": "View Products",
-    "cta2": "Request a Quote",
+    "cta2": "Get a Quote in 24 Hours",
     "badge1": "ISO 9001:2015",
     "badge2": "7+ Years Export",
     "badge3": "50+ Countries",
@@ -131,6 +132,41 @@
         "Sample delivery: 5-7 business days",
         "Dedicated account manager for key accounts"
       ]
+    },
+    "socialProof": {
+      "title": "Trusted by Buyers Worldwide",
+      "stats": [
+        {
+          "value": "85%",
+          "label": "Repeat Order Rate"
+        },
+        {
+          "value": "2,000+",
+          "label": "Tons Shipped in 2024"
+        },
+        {
+          "value": "72h",
+          "label": "Avg. Quote-to-Order Time"
+        }
+      ],
+      "testimonials": [
+        {
+          "quote": "We switched from a trading company to ANDE for our rolling mill bearings. Same quality as our previous SKF supplier, significantly better pricing and lead time.",
+          "author": "Procurement Manager",
+          "company": "Steel Mill, India"
+        },
+        {
+          "quote": "ANDE has been our go-to bearing supplier for 3 years. Their engineering team helped us select the right bearings for our crusher application, reducing our downtime by 40%.",
+          "author": "Maintenance Director",
+          "company": "Mining Company, South Africa"
+        },
+        {
+          "quote": "Fast response, competitive pricing, and reliable quality. The sample arrived in 5 days and matched our specifications perfectly.",
+          "author": "Purchasing Director",
+          "company": "Manufacturing Group, Turkey"
+        }
+      ],
+      "countries": "Shipped to buyers in India, Turkey, South Africa, Brazil, Indonesia, Vietnam, Mexico, Egypt, Pakistan, UAE, and 40+ more countries."
     }
   },
   "featuredProducts": {
@@ -596,7 +632,12 @@
       "inquiryCta": "Send Drawing / Model / Operating Conditions → Quote Within 24 Hours",
       "inquiryCtaDescription": "Our engineering team reviews your specifications and provides a detailed quotation with bearing selection recommendations.",
       "faqTitle": "Frequently Asked Questions"
-    }
+    },
+    "equivalentBadge": "✓ Direct replacement for SKF / Timken / NSK equivalents",
+    "leadTime": "Standard lead time: 2-4 weeks",
+    "moq": "MOQ: 1 piece for samples, 10+ pieces for orders",
+    "sampleAvailable": "Samples available — 5-7 day delivery",
+    "factoryDirect": "Factory-direct pricing — no middleman markup"
   },
   "about": {
     "title": "About ANDE Precision Bearing",
@@ -682,7 +723,7 @@
     "items": {
       "consultation": {
         "title": "Technical Consultation",
-        "description": "Expert guidance on bearing selection based on your application requirements.",
+        "description": "Free bearing selection within 48 hours based on your application requirements.",
         "detail": "Choosing the right bearing is critical to equipment performance and longevity. Our engineers evaluate your operating parameters including radial and axial loads, rotational speed, temperature range, environmental contaminants, and space constraints. We then recommend the optimal bearing type, size, clearance class, material, and lubrication method. This service is available free of charge for all prospective and existing customers.",
         "points": [
           "Application analysis and bearing selection",
@@ -693,7 +734,7 @@
       },
       "installation": {
         "title": "Installation & Maintenance Support",
-        "description": "Professional guidance for bearing installation, alignment, and preventive maintenance.",
+        "description": "Detailed mounting guides and alignment procedures for every bearing type we supply.",
         "detail": "Improper installation is one of the leading causes of premature bearing failure. Our team provides detailed mounting instructions, recommended fitting practices, and alignment verification procedures for every bearing type we supply. We also help you develop preventive maintenance schedules including relubrication intervals, condition monitoring checkpoints, and replacement criteria to minimize unplanned downtime.",
         "points": [
           "Mounting and dismounting guidance",
@@ -704,7 +745,7 @@
       },
       "failureAnalysis": {
         "title": "Failure Analysis",
-        "description": "Systematic investigation of bearing failures to identify root causes and prevent recurrence.",
+        "description": "Root cause analysis with actionable recommendations to prevent repeat failures.",
         "detail": "When a bearing fails prematurely, understanding the root cause is essential to prevent future issues. Our failure analysis service examines failed bearings to identify damage patterns such as fatigue spalling, brinelling, corrosion, contamination, misalignment wear, or inadequate lubrication. We provide a detailed report with findings and corrective action recommendations to improve bearing life in your application.",
         "points": [
           "Comprehensive failure investigation",
@@ -832,7 +873,9 @@
         "ddp": "DDP (Delivered Duty Paid)",
         "exw": "EXW (Ex Works)",
         "other": "Other / To discuss"
-      }
+      },
+      "sectionTechnical": "Add Technical Details (Optional)",
+      "sectionTechnicalHint": "Provide bearing specs if you have them — or just describe what you need in the message."
     }
   },
   "blog": {
@@ -853,13 +896,14 @@
     "readMoreLink": "Read more",
     "cta": {
       "title": "Need expert advice on bearing procurement?",
-      "description": "Our engineering and export team can help you navigate the sourcing process. Get a response within 24 hours.",
-      "button": "Contact Us"
+      "description": "Our engineering team provides free technical consultation for bearing selection, sizing, and application optimization.",
+      "button": "Contact Us",
+      "downloadCta": "Download Rolling Mill Bearing Selection Guide (PDF)"
     }
   },
   "footer": {
     "companyName": "Jiangsu ANDE Precision Bearing Technology Co., Ltd.",
-    "description": "ISO-certified manufacturer of precision bearings for global industrial applications. Ball bearings, roller bearings, linear motion systems, and mounted units.",
+    "description": "ISO-certified manufacturer of precision rolling mill bearings and industrial bearings. Ball bearings, roller bearings, and rolling mill bearing assemblies for global heavy industry.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
     "copyright": "2026 Jiangsu ANDE Precision Bearing Technology Co., Ltd. All rights reserved.",

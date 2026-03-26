@@ -16,6 +16,7 @@ export default function ContactForm() {
     utmSource: '', utmMedium: '', utmCampaign: '', utmContent: '', utmTerm: '',
     referrer: '', landingPage: '',
   });
+  const [showTechnical, setShowTechnical] = useState(false);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // Capture UTM params, referrer, and landing page on mount
@@ -119,63 +120,79 @@ export default function ContactForm() {
         </div>
       </fieldset>
 
-      {/* Section: Product & Technical Details */}
-      <fieldset className="space-y-4 border-t border-gray-100 pt-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionProduct')}</legend>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="productInterest" className="block text-sm font-medium text-gray-700 mb-1">{t('productInterest')}</label>
-            <select id="productInterest" name="productInterest" value={formData.productInterest} onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">
-              <option value="">{t('selectProduct')}</option>
-              <option value="ball-bearings">Ball Bearings / 球轴承</option>
-              <option value="roller-bearings">Roller Bearings / 滚子轴承</option>
-              <option value="rolling-mill-bearings">Rolling Mill Bearings / 轧机轴承</option>
-              <option value="custom">Custom / Drawing-based</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="bearingModel" className="block text-sm font-medium text-gray-700 mb-1">{t('bearingModel')}</label>
-            <input type="text" id="bearingModel" name="bearingModel" value={formData.bearingModel} onChange={handleChange} placeholder="e.g. 6205-2RS, 22316 E"
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
-          </div>
-          <div>
-            <label htmlFor="bearingSize" className="block text-sm font-medium text-gray-700 mb-1">{t('bearingSize')}</label>
-            <input type="text" id="bearingSize" name="bearingSize" value={formData.bearingSize} onChange={handleChange} placeholder="e.g. 25 x 62 x 17 mm"
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
-          </div>
-          <div>
-            <label htmlFor="application" className="block text-sm font-medium text-gray-700 mb-1">{t('application')}</label>
-            <input type="text" id="application" name="application" value={formData.application} onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
-          </div>
-        </div>
-      </fieldset>
+      {/* Section: Product & Technical Details — Collapsible */}
+      <div className="border-t border-gray-100 pt-4">
+        <button
+          type="button"
+          onClick={() => setShowTechnical(!showTechnical)}
+          className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-wider hover:text-gray-700 transition-colors"
+        >
+          <svg className={`w-4 h-4 transition-transform ${showTechnical ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          {t('sectionTechnical')}
+        </button>
+        <p className="text-xs text-gray-400 mt-1 ml-6">{t('sectionTechnicalHint')}</p>
+      </div>
 
-      {/* Section: Order Details */}
-      <fieldset className="space-y-4 border-t border-gray-100 pt-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionOrder')}</legend>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">{t('quantity')}</label>
-            <input type="text" id="quantity" name="quantity" value={formData.quantity} onChange={handleChange} placeholder="e.g. 500 pcs, Q2 2025"
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
+      {showTechnical && (
+        <>
+        <fieldset className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="productInterest" className="block text-sm font-medium text-gray-700 mb-1">{t('productInterest')}</label>
+              <select id="productInterest" name="productInterest" value={formData.productInterest} onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">
+                <option value="">{t('selectProduct')}</option>
+                <option value="ball-bearings">Ball Bearings / 球轴承</option>
+                <option value="roller-bearings">Roller Bearings / 滚子轴承</option>
+                <option value="rolling-mill-bearings">Rolling Mill Bearings / 轧机轴承</option>
+                <option value="custom">Custom / Drawing-based</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="bearingModel" className="block text-sm font-medium text-gray-700 mb-1">{t('bearingModel')}</label>
+              <input type="text" id="bearingModel" name="bearingModel" value={formData.bearingModel} onChange={handleChange} placeholder="e.g. 6205-2RS, 22316 E"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
+            </div>
+            <div>
+              <label htmlFor="bearingSize" className="block text-sm font-medium text-gray-700 mb-1">{t('bearingSize')}</label>
+              <input type="text" id="bearingSize" name="bearingSize" value={formData.bearingSize} onChange={handleChange} placeholder="e.g. 25 x 62 x 17 mm"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
+            </div>
+            <div>
+              <label htmlFor="application" className="block text-sm font-medium text-gray-700 mb-1">{t('application')}</label>
+              <input type="text" id="application" name="application" value={formData.application} onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
+            </div>
           </div>
-          <div>
-            <label htmlFor="incoterms" className="block text-sm font-medium text-gray-700 mb-1">{t('incoterms')}</label>
-            <select id="incoterms" name="incoterms" value={formData.incoterms} onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">
-              <option value="">{t('selectIncoterms')}</option>
-              <option value="fob">{t('incotermsOptions.fob')}</option>
-              <option value="cif">{t('incotermsOptions.cif')}</option>
-              <option value="cfr">{t('incotermsOptions.cfr')}</option>
-              <option value="ddp">{t('incotermsOptions.ddp')}</option>
-              <option value="exw">{t('incotermsOptions.exw')}</option>
-              <option value="other">{t('incotermsOptions.other')}</option>
-            </select>
+        </fieldset>
+
+        <fieldset className="space-y-4 border-t border-gray-100 pt-4">
+          <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{t('sectionOrder')}</legend>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">{t('quantity')}</label>
+              <input type="text" id="quantity" name="quantity" value={formData.quantity} onChange={handleChange} placeholder="e.g. 500 pcs, Q2 2025"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm" />
+            </div>
+            <div>
+              <label htmlFor="incoterms" className="block text-sm font-medium text-gray-700 mb-1">{t('incoterms')}</label>
+              <select id="incoterms" name="incoterms" value={formData.incoterms} onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">
+                <option value="">{t('selectIncoterms')}</option>
+                <option value="fob">{t('incotermsOptions.fob')}</option>
+                <option value="cif">{t('incotermsOptions.cif')}</option>
+                <option value="cfr">{t('incotermsOptions.cfr')}</option>
+                <option value="ddp">{t('incotermsOptions.ddp')}</option>
+                <option value="exw">{t('incotermsOptions.exw')}</option>
+                <option value="other">{t('incotermsOptions.other')}</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </fieldset>
+        </fieldset>
+        </>
+      )}
 
       {/* Message */}
       <div className="border-t border-gray-100 pt-4">

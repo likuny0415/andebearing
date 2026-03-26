@@ -2,6 +2,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
 import { getBlogPost, getBlogSlugs } from '@/lib/blog';
+import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH } from '@/lib/constants';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import BlogArticleContent from './BlogArticleContent';
@@ -32,8 +33,23 @@ export default async function BlogArticlePage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'blog' });
   const tc = await getTranslations({ locale, namespace: 'common' });
 
+  const isZh = locale === 'zh';
+  const articleUrl = isZh ? `${SITE_URL}/zh/blog/${slug}` : `${SITE_URL}/blog/${slug}`;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { '@type': 'Organization', name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN, url: SITE_URL },
+    publisher: { '@type': 'Organization', name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/company_log_en.png` } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    inLanguage: isZh ? 'zh-CN' : 'en',
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <nav className="mb-8">

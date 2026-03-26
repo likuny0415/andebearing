@@ -2,6 +2,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
 import { getAllBlogPosts } from '@/lib/blog';
+import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH } from '@/lib/constants';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -21,8 +22,27 @@ export default async function BlogPage() {
   const posts = getAllBlogPosts(locale);
   const t = await getTranslations('blog');
 
+  const isZh = locale === 'zh';
+  const blogListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: t('title'),
+    description: t('subtitle'),
+    url: isZh ? `${SITE_URL}/zh/blog` : `${SITE_URL}/blog`,
+    inLanguage: isZh ? 'zh-CN' : 'en',
+    publisher: { '@type': 'Organization', name: isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN, url: SITE_URL },
+    blogPost: posts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      url: isZh ? `${SITE_URL}/zh/blog/${post.slug}` : `${SITE_URL}/blog/${post.slug}`,
+    })),
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }} />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{t('title')}</h1>
         <p className="text-lg text-gray-600 mb-12">{t('subtitle')}</p>

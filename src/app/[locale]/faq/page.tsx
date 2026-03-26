@@ -25,7 +25,9 @@ export default async function FAQPage({ params }: Props) {
     if (Array.isArray(rawItems)) {
       faqItems = rawItems;
     }
-  } catch { /* no items */ }
+  } catch (e) {
+    console.error('[FAQ] Failed to load FAQ items:', e);
+  }
 
   const faqSchema = {
     '@context': 'https://schema.org',

@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { alternatesForPath } from '@/lib/url';
@@ -16,9 +15,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function IndustriesPage() {
-  const t = useTranslations('industries');
-  const tc = useTranslations('common');
+export default async function IndustriesPage() {
+  const t = await getTranslations('industries');
+  const tc = await getTranslations('common');
   const industries = ['steel', 'mining', 'energy', 'automotive', 'manufacturing', 'agriculture'] as const;
 
   return (

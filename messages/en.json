@@ -847,7 +847,8 @@
     "categories": {
       "procurement": "Procurement & Sourcing",
       "technical": "Technical Knowledge",
-      "industry": "Industry Trends"
+      "industry": "Industry Trends",
+      "general": "General"
     },
     "readMoreLink": "Read more",
     "cta": {

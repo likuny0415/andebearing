@@ -56,6 +56,10 @@ function cleanupRateLimitMap() {
   }
 }
 
+function escapeHtml(str: string): string {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function buildEmailHtml(inquiry: Record<string, string>): string {
   const rows = [
     { label: 'Inquiry ID', value: inquiry.id },
@@ -84,8 +88,8 @@ function buildEmailHtml(inquiry: Record<string, string>): string {
 
   const tableRows = rows.map(row =>
     `<tr>
-      <td style="padding:8px 12px;border:1px solid #e2e8f0;font-weight:600;background:#f8fafc;white-space:nowrap;vertical-align:top;">${row.label}</td>
-      <td style="padding:8px 12px;border:1px solid #e2e8f0;">${row.value}</td>
+      <td style="padding:8px 12px;border:1px solid #e2e8f0;font-weight:600;background:#f8fafc;white-space:nowrap;vertical-align:top;">${escapeHtml(row.label)}</td>
+      <td style="padding:8px 12px;border:1px solid #e2e8f0;">${escapeHtml(row.value)}</td>
     </tr>`
   ).join('');
 

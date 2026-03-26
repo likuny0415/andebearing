@@ -3,7 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
+import { CONTACT_EMAIL, WHATSAPP_URL, WHATSAPP_NUMBER } from '@/lib/constants';
 import { MenuIcon } from '@/components/Icons';
 
 const PRODUCT_CATEGORIES = [
@@ -76,8 +76,8 @@ export default function Header() {
             <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">
               {CONTACT_EMAIL}
             </a>
-            <a href={`tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`} className="hover:text-white transition-colors">
-              {CONTACT_PHONE}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              WhatsApp: {WHATSAPP_NUMBER}
             </a>
           </div>
           <div className="flex items-center gap-3">

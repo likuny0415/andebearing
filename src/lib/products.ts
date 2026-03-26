@@ -53,6 +53,12 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
 };
 
 // Helper: check if a slug is a category
+export const CATEGORY_IMAGES: Record<string, string> = {
+  ballBearings: '/home/ball_bearing.png',
+  rollerBearings: '/home/roller_bearings.png',
+  rollingMillBearings: '/home/four_row_tapered_roller_bearing.png',
+};
+
 export function isCategorySlug(slug: string): slug is CategorySlug {
   return CATEGORY_SLUGS.includes(slug as CategorySlug);
 }

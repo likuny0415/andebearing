@@ -808,7 +808,8 @@
     "categories": {
       "procurement": "采购与供应链",
       "technical": "技术知识",
-      "industry": "行业趋势"
+      "industry": "行业趋势",
+      "general": "综合"
     },
     "readMoreLink": "阅读全文",
     "cta": {

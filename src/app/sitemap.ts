@@ -11,7 +11,7 @@ function localizedUrl(locale: string, path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['en', 'zh'];
   const routes = ['', '/products', '/about', '/contact', '/industries', '/services', '/faq', '/blog', '/privacy-policy', '/terms-of-service'];
-  const lastBuilt = new Date('2026-03-25');
+  const lastBuilt = new Date();
 
   const entries: MetadataRoute.Sitemap = [];
 
